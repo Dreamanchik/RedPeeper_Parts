@@ -26,7 +26,7 @@ public class RedPeeper_CyclopsEngine
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(3, 4)); // РАЗМЕР В ИНВЕНТАРЕ
-        CraftDataHandler.SetBackgroundType(RedPeeper_CyclopsEngine.Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
+        CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
 
         var _prefab = new CustomPrefab(Info);
 

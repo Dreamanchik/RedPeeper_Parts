@@ -41,7 +41,7 @@ public class RedPeeper_StorageConcentrate
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
             .WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
-            .WithCraftingTime(60f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(3f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
