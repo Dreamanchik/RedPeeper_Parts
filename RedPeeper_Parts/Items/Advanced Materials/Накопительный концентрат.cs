@@ -20,7 +20,7 @@ public class RedPeeper_StorageConcentrate
     {
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
-            "RedPeeper_Storage_Concentrate",
+            "RedPeeper_Storage_Concentratee",
             "Накопительный концентрат",
             "Сложная комбинация органических веществ, способная задерживать, сохранять и передавать электрический ток. Применятся в производстве базовой электроники."
             )
