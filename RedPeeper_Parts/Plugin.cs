@@ -45,6 +45,10 @@ namespace RedPeeper_Parts
 
             //    MATERIALS
 
+            //    EXOSUIT
+            HolyOasis_PrawnArm.Register();
+            HolyOasis_PrawnLeg.Register();
+
         }
     }
 }
