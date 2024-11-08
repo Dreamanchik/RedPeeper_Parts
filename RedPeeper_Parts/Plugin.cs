@@ -33,6 +33,8 @@ namespace RedPeeper_Parts
             //    ADVANCED MATERIALS
             RedPeeper_StorageConcentrate.Register();
             RedPeeper_PlasmaLens.Register();
+            RedPeeper_SolarCell.Register();
+            RedPeeper_Spatial_Processor.Register();
             //    BATTERIES
 
             //    CYCLOPS

@@ -40,7 +40,7 @@ public class RedPeeper_CyclopsBridge
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Workbench) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
-            .WithCraftingTime(60f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(40f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Cyclops, TechCategory.Cyclops); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
