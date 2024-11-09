@@ -12,7 +12,6 @@ public class RedPeeper_CyclopsEngine
 {
     //    ЧТОБЫ ПРЕДМЕТ МОЖНО БЫЛО ИСПОЛЬЗОВАТЬ ГДЕ УГОДНО. ДЛЯ ЭТОГО НУЖНО ПРОСТО ВПИСАТЬ (Название класса).Info.(Название функции. Например, TechType). КАК ПРИМЕР - RedPeeper_CyclopsEngine.Info.TechType
     public static PrefabInfo Info { get; private set; }
-
     //    ИКОНКА
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string iconPath = Path.Combine(modFolder, "Assets", "Items", "Cyclops", "CyclopsEngine.png"); // <-- Заменить на нужное. ОГРОМНОЕ ЖЕЛАНИЕ ПАПКИ ДЕЛАТЬ ТАКИМИ ЖЕ КАК И В ПРОЕКТЕ. Структура должна совпадать с папками в моде. Тоесть, если иконка просто находится в папке Assets, то код будет выглядеть как <<"Assets", "CyclopsEngine.png">>, а если находится с папке Assets и потом в папке Items, потом Cyclops и потом Objects, то <<"Assets", "Items", "Cyclops", "Objects", "CyclopsEngine.png">>
@@ -26,7 +25,8 @@ public class RedPeeper_CyclopsEngine
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(3, 4)); // РАЗМЕР В ИНВЕНТАРЕ
-        CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
+        //CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
+        CraftDataHandler.SetBackgroundType(Info.TechType, Stage_1.BackgroundType); // ФОН
 
         var _prefab = new CustomPrefab(Info);
 
