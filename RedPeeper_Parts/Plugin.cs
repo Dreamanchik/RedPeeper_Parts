@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using Nautilus.Handlers;
 using System.Reflection;
 
 namespace RedPeeper_Parts
@@ -48,6 +49,9 @@ namespace RedPeeper_Parts
             //    EXOSUIT
             HolyOasis_PrawnArm.Register();
             HolyOasis_PrawnLeg.Register();
+
+            //  RECIPES
+            CraftDataHandler.SetRecipeData(TechType.Cyclops, CyclopsRecipe.CyclopsRecipeData);
 
         }
     }
