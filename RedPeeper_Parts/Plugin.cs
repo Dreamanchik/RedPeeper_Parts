@@ -51,7 +51,10 @@ namespace RedPeeper_Parts
             HolyOasis_PrawnLeg.Register();
 
             //  RECIPES
-            CraftDataHandler.SetRecipeData(TechType.Cyclops, CyclopsRecipe.CyclopsRecipeData);
+            CraftDataHandler.SetRecipeData(TechType.Cyclops, CyclopsRecipe.RecipeData);
+            CraftDataHandler.SetRecipeData(TechType.Aerogel, AerogelRecipe.RecipeData);
+            CraftDataHandler.SetRecipeData(TechType.Benzene, BenzeneRecipe.RecipeData);
+            CraftDataHandler.SetRecipeData(TechType.AdvancedWiringKit, AdvancedKitlRecipe.RecipeData);
 
         }
     }

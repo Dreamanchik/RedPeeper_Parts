@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 public class CyclopsRecipe
 {
     // Изменяем рецепт циклопа
-    public static RecipeData CyclopsRecipeData = new RecipeData
+    public static RecipeData RecipeData = new RecipeData
     {
         craftAmount = 1,
 

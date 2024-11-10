@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 public class AdvancedKitlRecipe
 {
     // Изменяем рецепт циклопа
-    public static RecipeData AdvancedKitRecipeData = new RecipeData
+    public static RecipeData RecipeData = new RecipeData
     {
         craftAmount = 1,
 

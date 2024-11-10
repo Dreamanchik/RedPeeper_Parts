@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 public class AerogelRecipe
 {
     // Изменяем рецепт циклопа
-    public static RecipeData AerogelRecipeData = new RecipeData
+    public static RecipeData RecipeData = new RecipeData
     {
         craftAmount = 1,
 
