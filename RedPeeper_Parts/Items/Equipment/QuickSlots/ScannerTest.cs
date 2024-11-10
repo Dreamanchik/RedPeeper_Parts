@@ -7,6 +7,15 @@ using Nautilus.Crafting;
 using Nautilus.Handlers;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
+using UnityEngine.ParticleSystemJobs;
+using UnityEngine;
+using Nautilus.Extensions;
+using System.Runtime.InteropServices.ComTypes;
+using HarmonyLib;
+using System.Collections;
+using System.Security.Cryptography.X509Certificates;
+using System;
+using ICSharpCode.SharpZipLib.Core;
 
 public class ScannerTest
 {
@@ -20,9 +29,9 @@ public class ScannerTest
     {
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
-            "",
-            "Накопительный концентрат",
-            "Сложная комбинация органических веществ, способная задерживать, сохранять и передавать электрический ток. Применятся в производстве базовой электроники."
+            "ScannerTest",
+            "Тест сканнера",
+            "Among us"
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(1, 2)); // РАЗМЕР В ИНВЕНТАРЕ
@@ -30,7 +39,14 @@ public class ScannerTest
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, TechType.Polyaniline); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        var _obj = new CloneTemplate(Info, TechType.Scanner); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        _obj.ModifyPrefab += obj =>
+        {
+            var scanner = obj.GetComponent<ScannerTool>();
+            var scannerTest = obj.AddComponent<ScannerTestData>().CopyComponent(scanner);
+            UnityEngine.Object.DestroyImmediate(scanner);
+            
+        };
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
@@ -46,4 +62,38 @@ public class ScannerTest
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
     }
+}
+public class ScannerTestData : ScannerTool
+{   
+    
+    /*public float hitForce = 1669;
+    public ForceMode forceMode = ForceMode.Acceleration;
+    public float attackDist = 3f;
+
+    public override string animToolName { get; } = TechType.Scanner.AsString(true);
+
+    public override void OnToolUseAnim(GUIHand hand)
+    {
+        base.OnToolUseAnim(hand);
+
+        GameObject hitObj = null;
+        Vector3 hitPosition = default;
+        UWE.Utils.TraceFPSTargetPosition(Player.main.gameObject, attackDist, ref hitObj, ref hitPosition);
+        if (!hitObj)
+        {
+            // Nothing is in our attack range. Exit method.
+            return;
+        }
+
+        var liveMixin = hitObj.GetComponentInParent<LiveMixin>();
+        if (liveMixin && IsValidTarget(liveMixin))
+        {
+            var rigidbody = hitObj.GetComponentInParent<Rigidbody>();
+
+            if (rigidbody)
+            {
+                rigidbody.AddForce(MainCamera.camera.transform.forward * hitForce, forceMode);
+            }
+        }
+    }*/
 }
