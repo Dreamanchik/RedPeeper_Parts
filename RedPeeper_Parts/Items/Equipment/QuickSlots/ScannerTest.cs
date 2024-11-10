@@ -8,7 +8,7 @@ using Nautilus.Handlers;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
 
-public class RedPeeper_StorageConcentrate
+public class ScannerTest
 {
     //    ЧТОБЫ ПРЕДМЕТ МОЖНО БЫЛО ИСПОЛЬЗОВАТЬ ГДЕ УГОДНО. ДЛЯ ЭТОГО НУЖНО ПРОСТО ВПИСАТЬ (Название класса).Info.(Название функции. Например, TechType). КАК ПРИМЕР - RedPeeper_CyclopsEngine.Info.TechType
     public static PrefabInfo Info { get; private set; }
@@ -20,7 +20,7 @@ public class RedPeeper_StorageConcentrate
     {
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
-            "RedPeeper_Storage_Concentrate",
+            "",
             "Накопительный концентрат",
             "Сложная комбинация органических веществ, способная задерживать, сохранять и передавать электрический ток. Применятся в производстве базовой электроники."
             )
