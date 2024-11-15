@@ -8,17 +8,20 @@ using System.Threading.Tasks;
 
 public class CyclopsRecipe
 {
-    // Изменяем рецепт циклопа
-    public static RecipeData RecipeData = new RecipeData
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
     {
-        craftAmount = 1,
+        return new RecipeData()
+        {
+            craftAmount = 1,
 
-        Ingredients = 
-    {
-        new CraftData.Ingredient(RedPeeper_CyclopsEngine.Info.TechType),
-        new CraftData.Ingredient(RedPeeper_CyclopsBridge.Info.TechType),
-        new CraftData.Ingredient(RedPeeper_CyclopsHull.Info.TechType)
+            Ingredients =
+        {
+            new CraftData.Ingredient(RedPeeper_CyclopsEngine.Info.TechType),
+            new CraftData.Ingredient(RedPeeper_CyclopsBridge.Info.TechType),
+            new CraftData.Ingredient(RedPeeper_CyclopsHull.Info.TechType)
+        }
+        };
     }
-    };
 }
 

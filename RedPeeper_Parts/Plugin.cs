@@ -30,18 +30,21 @@ namespace RedPeeper_Parts
         private void InitializePrefabs()
         {
             //    РЕГИСТРАЦИЯ ВСЕХ ПРЕФАБОВ
+            //  (Название файла).Register();
             //  ITEMS
             //    ADVANCED MATERIALS
             RedPeeper_StorageConcentrate.Register();
             RedPeeper_PlasmaLens.Register();
             RedPeeper_SolarCell.Register();
             RedPeeper_Spatial_Processor.Register();
+            Logger.LogInfo("ITEMS/ADVANCED MATERIALS LOADED");
             //    BATTERIES
 
             //    CYCLOPS
             RedPeeper_CyclopsEngine.Register();
             RedPeeper_CyclopsHull.Register();
             RedPeeper_CyclopsBridge.Register();
+            Logger.LogInfo("ITEMS/CYCLOPS LOADED");
             //    ELECTRONICS
 
             //    MATERIALS
@@ -49,12 +52,18 @@ namespace RedPeeper_Parts
             //    EXOSUIT
             HolyOasis_PrawnArm.Register();
             HolyOasis_PrawnLeg.Register();
+            Logger.LogInfo("ITEMS/EXOSUIT LOADED");
+            //    EQUIPMENT
+            //      QUICKSLOTS
+            //ScannerTest.Register();
 
             //  RECIPES
-            CraftDataHandler.SetRecipeData(TechType.Cyclops, CyclopsRecipe.RecipeData);
-            CraftDataHandler.SetRecipeData(TechType.Aerogel, AerogelRecipe.RecipeData);
-            CraftDataHandler.SetRecipeData(TechType.Benzene, BenzeneRecipe.RecipeData);
-            CraftDataHandler.SetRecipeData(TechType.AdvancedWiringKit, AdvancedKitlRecipe.RecipeData);
+            //  CraftDataHandler.SetRecipeData(Techtype.(Айди предмета рецепт которого меняем), (Название файла с рецептом).GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Cyclops, CyclopsRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Aerogel, AerogelRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Benzene, BenzeneRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.AdvancedWiringKit, AdvancedKitlRecipe.GetRecipeData());
+            Logger.LogInfo("RECIPES LOADED");
 
         }
     }

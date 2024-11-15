@@ -4,18 +4,13 @@ using System.IO;
 using System.Reflection;
 using Nautilus.Utility;
 using Nautilus.Crafting;
-using Nautilus.Handlers;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
-using UnityEngine.ParticleSystemJobs;
-using UnityEngine;
 using Nautilus.Extensions;
-using System.Runtime.InteropServices.ComTypes;
 using HarmonyLib;
-using System.Collections;
-using System.Security.Cryptography.X509Certificates;
 using System;
-using ICSharpCode.SharpZipLib.Core;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 
 public class ScannerTest
 {
@@ -33,8 +28,7 @@ public class ScannerTest
             "Тест сканнера",
             "Among us"
             )
-            .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
-            .WithSizeInInventory(new Vector2int(1, 2)); // РАЗМЕР В ИНВЕНТАРЕ
+            .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
         //CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
 
         var _prefab = new CustomPrefab(Info);
@@ -48,6 +42,7 @@ public class ScannerTest
             
         };
         _prefab.SetGameObject(_obj);
+        _prefab.SetEquipment(EquipmentType.Hand);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
             new Ingredient(TechType.PurpleBrainCoralPiece, 2),
@@ -64,36 +59,21 @@ public class ScannerTest
     }
 }
 public class ScannerTestData : ScannerTool
-{   
-    
-    /*public float hitForce = 1669;
-    public ForceMode forceMode = ForceMode.Acceleration;
-    public float attackDist = 3f;
-
+{
     public override string animToolName { get; } = TechType.Scanner.AsString(true);
-
-    public override void OnToolUseAnim(GUIHand hand)
+    [HarmonyPatch(typeof(PDAScanner))]
+    public static float MultiplyProgress(float progress)
     {
-        base.OnToolUseAnim(hand);
-
-        GameObject hitObj = null;
-        Vector3 hitPosition = default;
-        UWE.Utils.TraceFPSTargetPosition(Player.main.gameObject, attackDist, ref hitObj, ref hitPosition);
-        if (!hitObj)
-        {
-            // Nothing is in our attack range. Exit method.
-            return;
-        }
-
-        var liveMixin = hitObj.GetComponentInParent<LiveMixin>();
-        if (liveMixin && IsValidTarget(liveMixin))
-        {
-            var rigidbody = hitObj.GetComponentInParent<Rigidbody>();
-
-            if (rigidbody)
-            {
-                rigidbody.AddForce(MainCamera.camera.transform.forward * hitForce, forceMode);
-            }
-        }
-    }*/
+        return progress * (1.0f / 10);
+    }
+    [HarmonyPatch(nameof(PDAScanner.Scan))]
+    [HarmonyTranspiler]
+    static IEnumerable<CodeInstruction> ScanTranspiler(IEnumerable<CodeInstruction> instructions)
+    {
+        return new CodeMatcher(instructions)
+            .MatchForward(false, new CodeMatch(OpCodes.Callvirt, AccessTools.Method(typeof(NoCostConsoleCommand), "get_fastScanCheat")))
+            .Advance(10)
+            .Insert(Transpilers.EmitDelegate<Func<float, float>>(MultiplyProgress))
+            .InstructionEnumeration();
+    }
 }

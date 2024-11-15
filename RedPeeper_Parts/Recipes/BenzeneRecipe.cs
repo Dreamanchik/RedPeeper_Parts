@@ -8,17 +8,20 @@ using System.Threading.Tasks;
 
 public class BenzeneRecipe
 {
-    // Изменяем рецепт циклопа
-    public static RecipeData RecipeData = new RecipeData
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
     {
-        craftAmount = 1,
+        return new RecipeData()
+        {
+            craftAmount = 1,
 
-        Ingredients = 
-    {
-        new CraftData.Ingredient(TechType.BloodOil, 3),
-        new CraftData.Ingredient(TechType.RedRollPlantSeed),
-        new CraftData.Ingredient(TechType.HangingFruit)
+            Ingredients =
+        {
+            new CraftData.Ingredient(TechType.BloodOil, 3),
+            new CraftData.Ingredient(TechType.RedRollPlantSeed),
+            new CraftData.Ingredient(TechType.HangingFruit)
+        }
+        };
     }
-    };
 }
 

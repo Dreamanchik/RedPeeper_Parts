@@ -29,6 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>D:\steam\steamapps\common\Subnautica\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
     <Reference Include="CustomBatteries">
       <HintPath>D:\steam\steamapps\common\Subnautica\BepInEx\plugins\CustomBatteries\CustomBatteries.dll</HintPath>
     </Reference>
