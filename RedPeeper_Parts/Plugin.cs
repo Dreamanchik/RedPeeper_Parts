@@ -62,6 +62,8 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetRecipeData(TechType.Cyclops, CyclopsRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.Aerogel, AerogelRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.Benzene, BenzeneRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.HydrochloricAcid, HydrochloricAcidRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.AramidFibers, AramidFibersRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.AdvancedWiringKit, AdvancedKitlRecipe.GetRecipeData());
             Logger.LogInfo("RECIPES LOADED");
 

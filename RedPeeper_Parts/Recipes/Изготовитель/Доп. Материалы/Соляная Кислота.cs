@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class AdvancedKitlRecipe
+public class HydrochloricAcidRecipe
 {
     // Изменяем рецепт
     public static RecipeData GetRecipeData()
@@ -17,13 +17,10 @@ public class AdvancedKitlRecipe
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.ComputerChip, 2),
-            new CraftData.Ingredient(TechType.Quartz, 3),
-            new CraftData.Ingredient(TechType.WiringKit, 2),
-            new CraftData.Ingredient(TechType.Benzene, 2),
-            new CraftData.Ingredient(TechType.Gold, 3)
+            new CraftData.Ingredient(TechType.WhiteMushroomSpore, 6),
+            new CraftData.Ingredient(TechType.Salt, 3),
+            new CraftData.Ingredient(TechType.PurpleFanSeed, 2)
         }
         };
     }
 }
-

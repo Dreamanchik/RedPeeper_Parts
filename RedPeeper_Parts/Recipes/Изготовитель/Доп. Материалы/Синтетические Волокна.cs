@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class BenzeneRecipe
+public class AramidFibersRecipe
 {
     // Изменяем рецепт
     public static RecipeData GetRecipeData()
@@ -17,11 +17,10 @@ public class BenzeneRecipe
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.BloodOil, 3),
-            new CraftData.Ingredient(TechType.RedRollPlantSeed),
-            new CraftData.Ingredient(TechType.HangingFruit)
+            new CraftData.Ingredient(TechType.Benzene, 2),
+            new CraftData.Ingredient(TechType.FiberMesh, 3),
+            new CraftData.Ingredient(TechType.KooshChunk, 2)
         }
         };
     }
 }
-
