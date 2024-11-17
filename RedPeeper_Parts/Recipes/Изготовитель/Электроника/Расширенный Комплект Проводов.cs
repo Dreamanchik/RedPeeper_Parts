@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class CyclopsRecipe
+public class AdvancedKitlRecipe
 {
     // Изменяем рецепт
     public static RecipeData GetRecipeData()
@@ -17,11 +17,12 @@ public class CyclopsRecipe
 
             Ingredients =
         {
-            new CraftData.Ingredient(RedPeeper_CyclopsEngine.Info.TechType),
-            new CraftData.Ingredient(RedPeeper_CyclopsBridge.Info.TechType),
-            new CraftData.Ingredient(RedPeeper_CyclopsHull.Info.TechType)
+            new CraftData.Ingredient(TechType.ComputerChip, 2),
+            new CraftData.Ingredient(TechType.Quartz, 3),
+            new CraftData.Ingredient(TechType.WiringKit, 2),
+            new CraftData.Ingredient(TechType.Benzene, 2),
+            new CraftData.Ingredient(TechType.Gold, 3)
         }
         };
     }
 }
-
