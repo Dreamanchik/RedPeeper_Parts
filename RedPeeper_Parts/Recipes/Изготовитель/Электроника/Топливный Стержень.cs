@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class HydrochloricAcidRecipe
+public class ReactorRodRecipe
 {
     // Изменяем рецепт
     public static RecipeData GetRecipeData()
@@ -17,9 +17,10 @@ public class HydrochloricAcidRecipe
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.WhiteMushroom, 6),
-            new CraftData.Ingredient(TechType.Salt, 3),
-            new CraftData.Ingredient(TechType.PurpleFanSeed, 2)
+            new CraftData.Ingredient(TechType.Titanium, 3),
+            new CraftData.Ingredient(TechType.Lead, 5),
+            new CraftData.Ingredient(TechType.Glass, 2),
+            new CraftData.Ingredient(TechType.UraniniteCrystal, 8)
         }
         };
     }

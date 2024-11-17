@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class HydrochloricAcidRecipe
+public class WiringKitRecipe
 {
     // Изменяем рецепт
     public static RecipeData GetRecipeData()
@@ -17,9 +17,9 @@ public class HydrochloricAcidRecipe
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.WhiteMushroom, 6),
-            new CraftData.Ingredient(TechType.Salt, 3),
-            new CraftData.Ingredient(TechType.PurpleFanSeed, 2)
+            new CraftData.Ingredient(TechType.Silver, 4),
+            new CraftData.Ingredient(TechType.CopperWire, 1),
+            new CraftData.Ingredient(TechType.Gold, 2)
         }
         };
     }
