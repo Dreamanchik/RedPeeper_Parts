@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class WiringKitRecipe
+public class LubricantRecipe
 {
     // Изменяем рецепт
     public static RecipeData GetRecipeData()
@@ -17,10 +17,9 @@ public class WiringKitRecipe
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Silver, 4),
-            new CraftData.Ingredient(TechType.CopperWire, 1),
-            new CraftData.Ingredient(TechType.Silicone, 2),
-            new CraftData.Ingredient(TechType.Gold, 2)
+            new CraftData.Ingredient(TechType.BluePalmSeed, 2),
+            new CraftData.Ingredient(TechType.CreepvineSeedCluster, 1),
+            new CraftData.Ingredient(TechType.AcidMushroom, 2),
         }
         };
     }

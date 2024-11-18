@@ -42,6 +42,5 @@
     <Folder Include="Items\Batteries\" />
     <Folder Include="Items\Electronics\" />
     <Folder Include="Items\Materials\" />
-    <Folder Include="Recipes\Изготовитель\Материалы\" />
   </ItemGroup>
 </Project>
