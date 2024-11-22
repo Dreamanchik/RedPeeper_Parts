@@ -87,10 +87,35 @@ namespace RedPeeper_Parts
 
             //Электроника
             CraftDataHandler.SetRecipeData(TechType.AdvancedWiringKit, AdvancedKitlRecipe.GetRecipeData());
+            CraftDataHandler.SetItemSize(TechType.AdvancedWiringKit, new Vector2int(2, 2));
+
             CraftDataHandler.SetRecipeData(TechType.CopperWire, CopperWireRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.ComputerChip, ComputerChipRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.ReactorRod, ReactorRodRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.WiringKit, WiringKitRecipe.GetRecipeData());
+
+
+
+
+            //Материалы
+            CraftDataHandler.SetItemSize(TechType.Bleach, new Vector2int(1, 2));
+            CraftDataHandler.SetRecipeData(TechType.Bleach, BleachRecipe.GetRecipeData());
+
+            CraftDataHandler.SetItemSize(TechType.PlasteelIngot, new Vector2int(3, 2));
+            CraftDataHandler.SetRecipeData(TechType.PlasteelIngot, PlasteelIngotRecipe.GetRecipeData());
+
+            CraftDataHandler.SetItemSize(TechType.Silicone, new Vector2int(2, 1));
+            CraftDataHandler.SetRecipeData(TechType.Silicone, SiliconeRecipe.GetRecipeData());
+
+            CraftDataHandler.SetItemSize(TechType.FiberMesh, new Vector2int(2, 1));
+
+            CraftDataHandler.SetRecipeData(TechType.Glass, GlassRecipe.GetRecipeData());
+
+            CraftDataHandler.SetItemSize(TechType.TitaniumIngot, new Vector2int(2, 2));
+            CraftDataHandler.SetRecipeData(TechType.TitaniumIngot, TitaniumIngotRecipe.GetRecipeData());
+
+            CraftDataHandler.SetItemSize(TechType.EnameledGlass, new Vector2int(2, 2));
+            CraftDataHandler.SetRecipeData(TechType.EnameledGlass, EnameledGlassRecipe.GetRecipeData());
             Logger.LogInfo("RECIPES LOADED");
 
         }
