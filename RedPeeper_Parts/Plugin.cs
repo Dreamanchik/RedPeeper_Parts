@@ -87,6 +87,8 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetRecipeData(TechType.CopperWire, CopperWireRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.ComputerChip, ComputerChipRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.ReactorRod, ReactorRodRecipe.GetRecipeData());
+            CraftDataHandler.SetItemSize(TechType.ReactorRod, new Vector2int(2, 3));
+
             CraftDataHandler.SetRecipeData(TechType.WiringKit, WiringKitRecipe.GetRecipeData());
 
 
@@ -111,6 +113,29 @@ namespace RedPeeper_Parts
 
             CraftDataHandler.SetItemSize(TechType.EnameledGlass, new Vector2int(2, 2));
             CraftDataHandler.SetRecipeData(TechType.EnameledGlass, EnameledGlassRecipe.GetRecipeData());
+
+
+
+
+            //Оборудывание
+            CraftDataHandler.SetItemSize(TechType.FirstAidKit, new Vector2int(1, 2));
+            CraftDataHandler.SetRecipeData(TechType.FirstAidKit, FirstAidKitRecipe.GetRecipeData());
+
+
+            CraftDataHandler.SetRecipeData(TechType.Tank, EnameledGlassRecipe.GetRecipeData());
+
+            CraftDataHandler.SetRecipeData(TechType.DoubleTank, EnameledGlassRecipe.GetRecipeData());
+
+            CraftDataHandler.SetItemSize(TechType.Compass, new Vector2int(2, 2));
+            CraftDataHandler.SetRecipeData(TechType.Compass, EnameledGlassRecipe.GetRecipeData());
+
+            CraftDataHandler.SetRecipeData(TechType.Fins, EnameledGlassRecipe.GetRecipeData());
+
+            CraftDataHandler.SetItemSize(TechType.FireExtinguisher, new Vector2int(1, 2));
+            CraftDataHandler.SetRecipeData(TechType.FireExtinguisher, EnameledGlassRecipe.GetRecipeData());
+
+            CraftDataHandler.SetRecipeData(TechType.Rebreather, EnameledGlassRecipe.GetRecipeData());
+
             Logger.LogInfo("RECIPES LOADED");
 
         }
