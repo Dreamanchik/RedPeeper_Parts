@@ -122,19 +122,19 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetRecipeData(TechType.FirstAidKit, FirstAidKitRecipe.GetRecipeData());
 
 
-            CraftDataHandler.SetRecipeData(TechType.Tank, EnameledGlassRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Tank, TankRecipe.GetRecipeData());
 
-            CraftDataHandler.SetRecipeData(TechType.DoubleTank, EnameledGlassRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.DoubleTank,DoubleTankRecipe.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.Compass, new Vector2int(2, 2));
-            CraftDataHandler.SetRecipeData(TechType.Compass, EnameledGlassRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Compass, CompassRecipe.GetRecipeData());
 
-            CraftDataHandler.SetRecipeData(TechType.Fins, EnameledGlassRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Fins, FinsRecipe.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.FireExtinguisher, new Vector2int(1, 2));
-            CraftDataHandler.SetRecipeData(TechType.FireExtinguisher, EnameledGlassRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.FireExtinguisher, FireExtinguisherRecipe.GetRecipeData());
 
-            CraftDataHandler.SetRecipeData(TechType.Rebreather, EnameledGlassRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Rebreather, RebreatherRecipe.GetRecipeData());
 
             Logger.LogInfo("RECIPES LOADED");
 
