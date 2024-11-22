@@ -87,7 +87,7 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetRecipeData(TechType.CopperWire, CopperWireRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.ComputerChip, ComputerChipRecipe.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.ReactorRod, ReactorRodRecipe.GetRecipeData());
-            CraftDataHandler.SetItemSize(TechType.ReactorRod, new Vector2int(2, 3));
+            CraftDataHandler.SetItemSize(TechType.ReactorRod, new Vector2int(3, 4));
 
             CraftDataHandler.SetRecipeData(TechType.WiringKit, WiringKitRecipe.GetRecipeData());
 
