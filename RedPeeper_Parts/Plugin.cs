@@ -56,6 +56,11 @@ namespace RedPeeper_Parts
             //    EQUIPMENT
             //      QUICKSLOTS
             //ScannerTest.Register();
+            DNASampler.Register();
+
+            //  BUILDABLES
+            //      FABRICATORS
+            RedPeeperFabricator_ПЕРЕИМЕНОВАТЬ.Patch();
 
             //  RECIPES
             //  CraftDataHandler.SetRecipeData(Techtype.(Айди предмета рецепт которого меняем), (Название файла с рецептом).GetRecipeData());
