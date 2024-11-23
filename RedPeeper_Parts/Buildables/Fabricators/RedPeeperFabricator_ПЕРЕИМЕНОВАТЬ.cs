@@ -25,9 +25,9 @@ public static class RedPeeperFabricator_ПЕРЕИМЕНОВАТЬ
     public static void Patch()
     {
         Info = PrefabInfo.WithTechType(
-        "RedPeeper_Fabricator",
-        "ФАБРИКАТОР!!!!!",
-        "ААААААААА ФАБРИКАТОР!!!!!!!!!"
+        "RedPeeper_Modified_Fabricator",
+        "Модифицированный изготовитель",
+        "Самодельное устройство, повторяющее и расширяющее функционал стандартного изготовителя. Конструкция этого изготовителя нарушает принципы протокола корпоративной собственности, что может привести к нарушению юрисдикции Альтерры. Применять на свой страх и риск."
         ).WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
 
         var _prefab = new CustomPrefab(Info);

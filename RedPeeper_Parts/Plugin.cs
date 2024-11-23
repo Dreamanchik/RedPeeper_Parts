@@ -53,6 +53,16 @@ namespace RedPeeper_Parts
             HolyOasis_PrawnArm.Register();
             HolyOasis_PrawnLeg.Register();
             Logger.LogInfo("ITEMS/EXOSUIT LOADED");
+
+            //СИНТЕЗИРУЕМОЕ
+            RedPeeper_Airbag.Register();
+            RedPeeper_HighStrengthCladding.Register();
+            RedPeeper_CrystalMembrane.Register();
+            RedPeeper_EffectiveLubrication.Register();
+            RedPeeper_ReferenceChemical.Register();
+            RedPeeper_FuelСoncentrate.Register();
+            Logger.LogInfo("SYNTHESIS LOADED");
+
             //    EQUIPMENT
             //      QUICKSLOTS
             //ScannerTest.Register();
