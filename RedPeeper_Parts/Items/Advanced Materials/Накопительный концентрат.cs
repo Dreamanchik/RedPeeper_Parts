@@ -4,7 +4,6 @@ using System.IO;
 using System.Reflection;
 using Nautilus.Utility;
 using Nautilus.Crafting;
-using Nautilus.Handlers;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
 
@@ -39,8 +38,10 @@ public class RedPeeper_StorageConcentrate
             new Ingredient(TechType.AcidMushroom, 4)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
-            .WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
+            //.WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
+            //.WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
+            .WithFabricatorType(RedPeeperFabricator_ПЕРЕИМЕНОВАТЬ.craftTreeType) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
+            //.WithStepsToFabricatorTab("ShitMenu")
             .WithCraftingTime(3f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 

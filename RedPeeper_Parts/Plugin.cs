@@ -31,6 +31,10 @@ namespace RedPeeper_Parts
         {
             //    РЕГИСТРАЦИЯ ВСЕХ ПРЕФАБОВ
             //  (Название файла).Register();
+
+            //  GENERAL PREFABS
+            DegasiBase.Register();
+
             //  ITEMS
             //    ADVANCED MATERIALS
             RedPeeper_StorageConcentrate.Register();
@@ -132,7 +136,7 @@ namespace RedPeeper_Parts
 
 
 
-            //Оборудывание
+            //Оборудование
             CraftDataHandler.SetItemSize(TechType.FirstAidKit, new Vector2int(1, 2));
             CraftDataHandler.SetRecipeData(TechType.FirstAidKit, FirstAidKitRecipe.GetRecipeData());
 
