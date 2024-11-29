@@ -8,6 +8,7 @@ using static CraftData;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Extensions;
 using Nautilus.Handlers;
+using UnityEngine;
 
 public class RedPeeper_TrainingPeeper
 {
@@ -31,9 +32,11 @@ public class RedPeeper_TrainingPeeper
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, TechType.Polyaniline); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        var _obj = new CloneTemplate(Info, TechType.Peeper); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПАW
         _obj.ModifyPrefab += obj =>
         {
+            //SkinnedMeshRenderer model = obj.GetComponentInChildren<SkinnedMeshRenderer>();
+            //obj = model.gameObject;
             Eatable eatable = obj.EnsureComponent<Eatable>();
             eatable.foodValue = 10f;
             BaseBioReactor.charge[Info.TechType] = 10f;
@@ -47,10 +50,8 @@ public class RedPeeper_TrainingPeeper
             new Ingredient(TechType.AcidMushroom, 4)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            //.WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
-            //.WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
-            .WithFabricatorType(RedPeeperFabricator_ПЕРЕИМЕНОВАТЬ.craftTreeType) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
-            //.WithStepsToFabricatorTab("ShitMenu")
+            .WithFabricatorType(RedPeeperFabricator_ПЕРЕИМЕНОВАТЬ.craftTreeType)
+            .WithStepsToFabricatorTab("ShitMenu")
             .WithCraftingTime(3f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 

@@ -11,7 +11,8 @@ using static CraftData;
 public static class RedPeeperFabricator_ПЕРЕИМЕНОВАТЬ
 {
     public static PrefabInfo Info { get; private set; }
-    public static CraftTree.Type craftTreeType;
+    public static CraftTree.Type craftTreeType { get; private set; }
+    public static ModCraftTreeRoot Root { get; private set; }
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string iconPath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "StorageConcentrate.png");
@@ -40,7 +41,7 @@ public static class RedPeeperFabricator_ПЕРЕИМЕНОВАТЬ
             //    РЕЦЕПТ КОНЕЦ
             ));
         _prefab.SetPdaGroupCategoryAfter(TechGroup.InteriorModules, TechCategory.InteriorModule, TechType.Fabricator);
-        CraftTreeHandler.AddTabNode(craftTreeType, "ShitMenu", "Shit Menu", SpriteManager.Get(TechType.Cyclops));
+        CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "ShitMenu", "Shit Menu", SpriteManager.Get(TechType.Cyclops));
 
         //craftTreeType = fabTreeType;
         _prefab.Register();
