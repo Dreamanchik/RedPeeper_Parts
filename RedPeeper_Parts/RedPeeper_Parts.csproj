@@ -38,8 +38,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Items\Batteries\" />
-    <Folder Include="Items\Electronics\" />
-    <Folder Include="Items\Materials\" />
+    <Folder Include="Новые предметы\Батареи\" />
+    <Folder Include="Новые предметы\Электроника\" />
+    <Folder Include="Новые предметы\Материалы\" />
   </ItemGroup>
 </Project>

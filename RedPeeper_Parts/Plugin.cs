@@ -29,136 +29,176 @@ namespace RedPeeper_Parts
 
         private void InitializePrefabs()
         {
-            //    РЕГИСТРАЦИЯ ВСЕХ ПРЕФАБОВ
-            //  (Название файла).Register();
+            // РЕГИСТРАЦИЯ ВСЕХ ПРЕФАБОВ
+            // (Название файла).Register();
 
-            //  GENERAL PREFABS
+            // Перфабы генерации
             DegasiBase.Register();
 
-            //  ITEMS
-            //    ADVANCED MATERIALS
-            RedPeeper_StorageConcentrate.Register();
-            RedPeeper_PlasmaLens.Register();
-            RedPeeper_SolarCell.Register();
-            RedPeeper_Spatial_Processor.Register();
-            Logger.LogInfo("ITEMS/ADVANCED MATERIALS LOADED");
-            //    BATTERIES
 
-            //    CYCLOPS
-            RedPeeper_CyclopsEngine.Register();
-            RedPeeper_CyclopsHull.Register();
-            RedPeeper_CyclopsBridge.Register();
-            Logger.LogInfo("ITEMS/CYCLOPS LOADED");
-            //    ELECTRONICS
 
-            //    MATERIALS
 
-            //    EXOSUIT
-            HolyOasis_PrawnArm.Register();
-            HolyOasis_PrawnLeg.Register();
-            Logger.LogInfo("ITEMS/EXOSUIT LOADED");
 
-            //СИНТЕЗИРУЕМОЕ
-            RedPeeper_Airbag.Register();
-            RedPeeper_HighStrengthCladding.Register();
-            RedPeeper_CrystalMembrane.Register();
-            RedPeeper_EffectiveLubrication.Register();
-            RedPeeper_ReferenceChemical.Register();
-            RedPeeper_FuelСoncentrate.Register();
-            Logger.LogInfo("SYNTHESIS LOADED");
+            // ПРЕДМЕТЫ
 
-            //    ТЕСТЫ
+            // Новые предметы
+            НакопительныйКонцентрат.Register();
+            ПлазменнаяЛинза.Register();
+            СолнечнаяЯчейка.Register();
+            ПространственныйПроцессор.Register();
+            Logger.LogInfo("Новые предметы загружены");
+
+
+
+
+
+            // Батареи
+
+
+
+
+            // Части Циклопа
+            ДвигательЦиклопа.Register();
+            КорпусЦиклопа.Register();
+            МостикЦиклопа.Register();
+            Logger.LogInfo("Части Циклопа загружены");
+
+
+
+
+
+            // Части Краба
+            МанипуляторКраба.Register();
+            НогаКраба.Register();
+            Logger.LogInfo("Части Краба загружены");
+
+
+
+
+
+            // Синтезируемое
+            ВоздушнаяПодушка.Register();
+            ВысокопрочнаяОбшивка.Register();
+            КристаллическаяМембрана.Register();
+            ПластичнаяСмазка.Register();
+            ПрыжковойБиохимикат.Register();
+            ТопливныйКонцентрат.Register();
+            Logger.LogInfo("Синтезируемые материалы загружены");
+
+
+
+
+
+            // Тестовые предметы
             RedPeeper_TrainingPeeper.Register();
 
-            //    EQUIPMENT
-            //      QUICKSLOTS
-            //ScannerTest.Register();
+
+
+
+            // Снаряжение
+
+
+
+
+            // Регистрация ДНК передатчика
             DNASampler.Register();
 
-            //  BUILDABLES
-            //      FABRICATORS
-            RedPeeperFabricator_ПЕРЕИМЕНОВАТЬ.Patch();
 
-            //  RECIPES
-            //  CraftDataHandler.SetRecipeData(Techtype.(Айди предмета рецепт которого меняем), (Название файла с рецептом).GetRecipeData());
-            CraftDataHandler.SetRecipeData(TechType.Cyclops, CyclopsRecipe.GetRecipeData());
 
-            //Доп. Материалы
+
+            // ПОСТРОЙКИ
+            // Изготовитель
+            МодифицированныйИзготовитель.Patch();
+
+
+
+
+            // Рецепты
+            // CraftDataHandler.SetRecipeData(Techtype.(Айди предмета рецепт которого меняем), (Название файла с рецептом).GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Cyclops, РецептЦиклопа.GetRecipeData());
+
+
+
+
+
+            // Доп. Материалы
             CraftDataHandler.SetItemSize(TechType.Aerogel, new Vector2int(2, 2));
-            CraftDataHandler.SetRecipeData(TechType.Aerogel, AerogelRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Aerogel, РецептАэрогеля.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.Benzene, new Vector2int(1, 2));
-            CraftDataHandler.SetRecipeData(TechType.Benzene, BenzeneRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Benzene, РецептБензола.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.HydrochloricAcid, new Vector2int(1, 2));
-            CraftDataHandler.SetRecipeData(TechType.HydrochloricAcid, HydrochloricAcidRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.HydrochloricAcid, РецептСолянойКислоты.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.AramidFibers, new Vector2int(2, 1));
-            CraftDataHandler.SetRecipeData(TechType.AramidFibers, AramidFibersRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.AramidFibers, РецептСинтетическихВолокон.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.Polyaniline, new Vector2int(1, 2));
-            CraftDataHandler.SetRecipeData(TechType.Polyaniline, PolyanilineRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Polyaniline, РецептПолианилина.GetRecipeData());
 
 
 
 
-            //Электроника
-            CraftDataHandler.SetRecipeData(TechType.AdvancedWiringKit, AdvancedKitlRecipe.GetRecipeData());
-            CraftDataHandler.SetItemSize(TechType.AdvancedWiringKit, new Vector2int(2, 2));
 
-            CraftDataHandler.SetRecipeData(TechType.CopperWire, CopperWireRecipe.GetRecipeData());
-            CraftDataHandler.SetRecipeData(TechType.ComputerChip, ComputerChipRecipe.GetRecipeData());
-            CraftDataHandler.SetRecipeData(TechType.ReactorRod, ReactorRodRecipe.GetRecipeData());
+            // Электроника
+            CraftDataHandler.SetRecipeData(TechType.AdvancedWiringKit, РецептРасширенногоКомплектаПроводов.GetRecipeData());
+            CraftDataHandler.SetItemSize(TechType.AdvancedWiringKit, new Vector2int(3, 2));
+
+            CraftDataHandler.SetRecipeData(TechType.CopperWire, РецептМедногоПровода.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.ComputerChip, РецептМикросхемы.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.ReactorRod, РецептСтержняРеактора.GetRecipeData());
             CraftDataHandler.SetItemSize(TechType.ReactorRod, new Vector2int(3, 4));
 
-            CraftDataHandler.SetRecipeData(TechType.WiringKit, WiringKitRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.WiringKit, РецептКомплектаПроводов.GetRecipeData());
 
 
 
 
-            //Материалы
+
+            // Материалы
             CraftDataHandler.SetItemSize(TechType.Bleach, new Vector2int(1, 2));
-            CraftDataHandler.SetRecipeData(TechType.Bleach, BleachRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Bleach, РецептАнтисептика.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.PlasteelIngot, new Vector2int(3, 2));
-            CraftDataHandler.SetRecipeData(TechType.PlasteelIngot, PlasteelIngotRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.PlasteelIngot, РецептПласталевогоСлитка.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.Silicone, new Vector2int(2, 1));
-            CraftDataHandler.SetRecipeData(TechType.Silicone, SiliconeRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Silicone, РецептСиликоновойРезины.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.FiberMesh, new Vector2int(2, 1));
 
-            CraftDataHandler.SetRecipeData(TechType.Glass, GlassRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Glass, РецептСтекла.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.TitaniumIngot, new Vector2int(2, 2));
-            CraftDataHandler.SetRecipeData(TechType.TitaniumIngot, TitaniumIngotRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.TitaniumIngot, РецептТитановогоСлитка.GetRecipeData());
 
-            CraftDataHandler.SetItemSize(TechType.EnameledGlass, new Vector2int(2, 2));
-            CraftDataHandler.SetRecipeData(TechType.EnameledGlass, EnameledGlassRecipe.GetRecipeData());
-
-
+            CraftDataHandler.SetItemSize(TechType.EnameledGlass, new Vector2int(3, 2));
+            CraftDataHandler.SetRecipeData(TechType.EnameledGlass, РецептЭмалевогоСтекла.GetRecipeData());
 
 
-            //Оборудование
+
+
+
+            // Оборудование
             CraftDataHandler.SetItemSize(TechType.FirstAidKit, new Vector2int(1, 2));
-            CraftDataHandler.SetRecipeData(TechType.FirstAidKit, FirstAidKitRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.FirstAidKit, РецептАптечки.GetRecipeData());
 
-
-            CraftDataHandler.SetRecipeData(TechType.Tank, TankRecipe.GetRecipeData());
-
-            CraftDataHandler.SetRecipeData(TechType.DoubleTank,DoubleTankRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Tank, РецептКислородногоБаллона.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.DoubleTank, РецептКислородногоБаллонаВысокойЁмкости.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.Compass, new Vector2int(2, 2));
-            CraftDataHandler.SetRecipeData(TechType.Compass, CompassRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Compass, РецептКомпаса.GetRecipeData());
 
-            CraftDataHandler.SetRecipeData(TechType.Fins, FinsRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Fins, РецептЛаст.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.FireExtinguisher, new Vector2int(1, 2));
-            CraftDataHandler.SetRecipeData(TechType.FireExtinguisher, FireExtinguisherRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.FireExtinguisher, РецептОгнетушителя.GetRecipeData());
 
-            CraftDataHandler.SetRecipeData(TechType.Rebreather, RebreatherRecipe.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Rebreather, РецептРебризера.GetRecipeData());
 
-            Logger.LogInfo("RECIPES LOADED");
+            Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");
+
 
         }
     }

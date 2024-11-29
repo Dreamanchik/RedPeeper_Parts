@@ -8,7 +8,7 @@ using Nautilus.Handlers;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
 
-public class RedPeeper_Airbag
+public class ВоздушнаяПодушка
 {
     //    ЧТОБЫ ПРЕДМЕТ МОЖНО БЫЛО ИСПОЛЬЗОВАТЬ ГДЕ УГОДНО. ДЛЯ ЭТОГО НУЖНО ПРОСТО ВПИСАТЬ (Название класса).Info.(Название функции. Например, TechType). КАК ПРИМЕР - RedPeeper_CyclopsEngine.Info.TechType
     public static PrefabInfo Info { get; private set; }
