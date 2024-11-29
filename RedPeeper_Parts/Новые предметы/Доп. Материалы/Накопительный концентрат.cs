@@ -7,10 +7,8 @@ using Nautilus.Crafting;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Extensions;
-using Nautilus.Handlers;
-using UnityEngine;
 
-public class RedPeeper_TrainingPeeper
+public class НакопительныйКонцентрат
 {
     //    ЧТОБЫ ПРЕДМЕТ МОЖНО БЫЛО ИСПОЛЬЗОВАТЬ ГДЕ УГОДНО. ДЛЯ ЭТОГО НУЖНО ПРОСТО ВПИСАТЬ (Название класса).Info.(Название функции. Например, TechType). КАК ПРИМЕР - RedPeeper_CyclopsEngine.Info.TechType
     public static PrefabInfo Info { get; private set; }
@@ -22,9 +20,9 @@ public class RedPeeper_TrainingPeeper
     {
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
-            "TrainingPeeper",
-            "(ДЕВ) Тренировочный пискун",
-            "(ДЕВ) Непробиваемый как скала пискун-манекен, приспособленный к любого рода средам, воздействиям и условиям. Функционал неограничен"
+            "RedPeeper_Storage_Concentrate",
+            "Накопительный концентрат",
+            "Сложная комбинация органических веществ, способная задерживать, сохранять и передавать электрический ток. Применятся в производстве базовой электроники."
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(1, 2)); // РАЗМЕР В ИНВЕНТАРЕ
@@ -32,16 +30,7 @@ public class RedPeeper_TrainingPeeper
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, TechType.Peeper); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПАW
-        _obj.ModifyPrefab += obj =>
-        {
-            //SkinnedMeshRenderer model = obj.GetComponentInChildren<SkinnedMeshRenderer>();
-            //obj = model.gameObject;
-            Eatable eatable = obj.EnsureComponent<Eatable>();
-            eatable.foodValue = 10f;
-            BaseBioReactor.charge[Info.TechType] = 10f;
-            SurvivalHandler.GiveHealthOnConsume(Info.TechType, 10f, true);
-        };
+        var _obj = new CloneTemplate(Info, TechType.Polyaniline); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
@@ -50,8 +39,8 @@ public class RedPeeper_TrainingPeeper
             new Ingredient(TechType.AcidMushroom, 4)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithFabricatorType(МодифицированныйИзготовитель.craftTreeType)
-            .WithStepsToFabricatorTab("ShitMenu")
+            .WithFabricatorType(CraftTree.Type.Fabricator)
+            .WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
             .WithCraftingTime(3f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
