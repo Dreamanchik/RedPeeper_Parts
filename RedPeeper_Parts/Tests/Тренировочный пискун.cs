@@ -7,8 +7,9 @@ using Nautilus.Crafting;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Extensions;
+using Nautilus.Handlers;
 
-public class RedPeeper_StorageConcentrate
+public class RedPeeper_TrainingPeeper
 {
     //    ЧТОБЫ ПРЕДМЕТ МОЖНО БЫЛО ИСПОЛЬЗОВАТЬ ГДЕ УГОДНО. ДЛЯ ЭТОГО НУЖНО ПРОСТО ВПИСАТЬ (Название класса).Info.(Название функции. Например, TechType). КАК ПРИМЕР - RedPeeper_CyclopsEngine.Info.TechType
     public static PrefabInfo Info { get; private set; }
@@ -20,9 +21,9 @@ public class RedPeeper_StorageConcentrate
     {
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
-            "RedPeeper_Storage_Concentrate",
-            "Накопительный концентрат",
-            "Сложная комбинация органических веществ, способная задерживать, сохранять и передавать электрический ток. Применятся в производстве базовой электроники."
+            "TrainingPeeper",
+            "(ДЕВ) Тренировочный пискун",
+            "(ДЕВ) Непробиваемый как скала пискун-манекен, приспособленный к любого рода средам, воздействиям и условиям. Функционал неограничен"
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(1, 2)); // РАЗМЕР В ИНВЕНТАРЕ
@@ -31,6 +32,13 @@ public class RedPeeper_StorageConcentrate
         var _prefab = new CustomPrefab(Info);
 
         var _obj = new CloneTemplate(Info, TechType.Polyaniline); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        _obj.ModifyPrefab += obj =>
+        {
+            Eatable eatable = obj.EnsureComponent<Eatable>();
+            eatable.foodValue = 10f;
+            BaseBioReactor.charge[Info.TechType] = 10f;
+            SurvivalHandler.GiveHealthOnConsume(Info.TechType, 10f, true);
+        };
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
@@ -39,8 +47,10 @@ public class RedPeeper_StorageConcentrate
             new Ingredient(TechType.AcidMushroom, 4)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithFabricatorType(CraftTree.Type.Fabricator)
-            .WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
+            //.WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
+            //.WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
+            .WithFabricatorType(RedPeeperFabricator_ПЕРЕИМЕНОВАТЬ.craftTreeType) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
+            //.WithStepsToFabricatorTab("ShitMenu")
             .WithCraftingTime(3f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
