@@ -67,6 +67,9 @@ namespace RedPeeper_Parts
             RedPeeper_FuelСoncentrate.Register();
             Logger.LogInfo("SYNTHESIS LOADED");
 
+            //    ТЕСТЫ
+            RedPeeper_TrainingPeeper.Register();
+
             //    EQUIPMENT
             //      QUICKSLOTS
             //ScannerTest.Register();
