@@ -34,6 +34,7 @@ namespace RedPeeper_Parts
 
             // Перфабы генерации
             DegasiBase.Register();
+            DegasiBasePiece1.Register();
 
 
 
@@ -176,6 +177,7 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetItemSize(TechType.EnameledGlass, new Vector2int(3, 2));
             CraftDataHandler.SetRecipeData(TechType.EnameledGlass, РецептЭмалевогоСтекла.GetRecipeData());
 
+            CraftDataHandler.SetBackgroundType(TechType.PropulsionCannon, Stage_1.BackgroundType);
 
 
 

@@ -37,10 +37,23 @@ public class RedPeeper_TrainingPeeper
         {
             //SkinnedMeshRenderer model = obj.GetComponentInChildren<SkinnedMeshRenderer>();
             //obj = model.gameObject;
+
+            // Мы добавляем компонент, который даётся всей еде
             Eatable eatable = obj.EnsureComponent<Eatable>();
+            // Мы добавляем значение еды. Пискун будет пополнять +10 еды
             eatable.foodValue = 10f;
-            BaseBioReactor.charge[Info.TechType] = 10f;
+            // Мы добавляем значение воды. Пискун будет пополнять +10 воды
+            eatable.waterValue = 10f;
+            // Так как это float чисто теоретически мы можем делать десятичные значения. Не уверен работает ли это и применимо ли где либо, просто как забавный факт
+
+            // Отдельной функцией наш пискун будет добавлять кислород. Эта функция отдельна от eatable,
+            // так что я предположу что для ней даже не обязателен компонент. Требуется тестирование
+            // Наш пискун будет пополнять +10 кислорода
+            SurvivalHandler.GiveOxygenOnConsume(Info.TechType, 10f, true);
+            // Такое же есть и для хп. Наш пискун будет пополнять +10 хп
             SurvivalHandler.GiveHealthOnConsume(Info.TechType, 10f, true);
+            // Вот этой функцией мы можем выставить заряд в биореакторе. Наш пискун даёт базе ровно 10 энергии
+            BaseBioReactor.charge[Info.TechType] = 10f;
         };
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
