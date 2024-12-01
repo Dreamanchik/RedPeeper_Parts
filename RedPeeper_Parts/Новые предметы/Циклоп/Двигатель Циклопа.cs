@@ -25,8 +25,6 @@ public class ДвигательЦиклопа
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(3, 4)); // РАЗМЕР В ИНВЕНТАРЕ
-        //CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
-        CraftDataHandler.SetBackgroundType(Info.TechType, Stage_1.BackgroundType); // ФОН
 
         var _prefab = new CustomPrefab(Info);
 

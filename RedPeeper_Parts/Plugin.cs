@@ -142,15 +142,24 @@ namespace RedPeeper_Parts
 
 
             // Электроника
+
+            CraftDataHandler.SetRecipeData(TechType.CopperWire, РецептМедногоПровода.GetRecipeData());
+            CraftDataHandler.SetItemSize(TechType.CopperWire, new Vector2int(2, 1));
+
+
+            CraftDataHandler.SetRecipeData(TechType.ComputerChip, РецептМикросхемы.GetRecipeData());
+            CraftDataHandler.SetItemSize(TechType.ComputerChip, new Vector2int(2, 2));
+
+            CraftDataHandler.SetRecipeData(TechType.WiringKit, РецептКомплектаПроводов.GetRecipeData());
+            CraftDataHandler.SetItemSize(TechType.WiringKit, new Vector2int(2, 2));
+
+
             CraftDataHandler.SetRecipeData(TechType.AdvancedWiringKit, РецептРасширенногоКомплектаПроводов.GetRecipeData());
             CraftDataHandler.SetItemSize(TechType.AdvancedWiringKit, new Vector2int(3, 2));
 
-            CraftDataHandler.SetRecipeData(TechType.CopperWire, РецептМедногоПровода.GetRecipeData());
-            CraftDataHandler.SetRecipeData(TechType.ComputerChip, РецептМикросхемы.GetRecipeData());
+
             CraftDataHandler.SetRecipeData(TechType.ReactorRod, РецептСтержняРеактора.GetRecipeData());
             CraftDataHandler.SetItemSize(TechType.ReactorRod, new Vector2int(3, 4));
-
-            CraftDataHandler.SetRecipeData(TechType.WiringKit, РецептКомплектаПроводов.GetRecipeData());
 
 
 
@@ -169,12 +178,15 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetItemSize(TechType.FiberMesh, new Vector2int(2, 1));
 
             CraftDataHandler.SetRecipeData(TechType.Glass, РецептСтекла.GetRecipeData());
+            CraftDataHandler.SetItemSize(TechType.Glass, new Vector2int(2, 1));
 
             CraftDataHandler.SetItemSize(TechType.TitaniumIngot, new Vector2int(2, 2));
             CraftDataHandler.SetRecipeData(TechType.TitaniumIngot, РецептТитановогоСлитка.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.EnameledGlass, new Vector2int(3, 2));
             CraftDataHandler.SetRecipeData(TechType.EnameledGlass, РецептЭмалевогоСтекла.GetRecipeData());
+
+            CraftDataHandler.SetItemSize(TechType.Lubricant, new Vector2int(1, 2));
 
 
 
@@ -196,6 +208,35 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetRecipeData(TechType.FireExtinguisher, РецептОгнетушителя.GetRecipeData());
 
             CraftDataHandler.SetRecipeData(TechType.Rebreather, РецептРебризера.GetRecipeData());
+
+
+
+
+            // Инструменты
+            CraftDataHandler.SetItemSize(TechType.LEDLight, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.Flashlight, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.Knife, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.Flare, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.AirBladder, new Vector2int(2, 1));
+            CraftDataHandler.SetItemSize(TechType.DiveReel, new Vector2int(2, 1));
+            CraftDataHandler.SetItemSize(TechType.Welder, new Vector2int(2, 1));
+
+
+            CraftDataHandler.SetItemSize(TechType.Scanner, new Vector2int(2, 2));
+
+
+            CraftDataHandler.SetItemSize(TechType.Builder, new Vector2int(3, 2));
+            CraftDataHandler.SetItemSize(TechType.LaserCutter, new Vector2int(3, 2));
+            CraftDataHandler.SetItemSize(TechType.StasisRifle, new Vector2int(3, 2));
+            CraftDataHandler.SetItemSize(TechType.PropulsionCannon, new Vector2int(3, 2));
+
+            CraftDataHandler.SetBackgroundType(TechType.PropulsionCannon, Stage3_3x2.BackgroundType);
+
+
+
+
+            // Размещаемое
+            CraftDataHandler.SetItemSize(TechType.Beacon, new Vector2int(2, 2));
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");
 

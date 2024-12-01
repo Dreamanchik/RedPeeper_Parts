@@ -24,6 +24,7 @@ public class СолнечнаяЯчейка
             "Солнечная ячейка",
             "Тонкая и чувствительная пластина, способная улавливать солнечный свет, преобразовывая его в стандартную электроэнергию. Предусматривает системы влагозащиты."
             )
+            .WithSizeInInventory(new Vector2int(2, 2))
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
         //.WithSizeInInventory(new Vector2int(1, 1)); // РАЗМЕР В ИНВЕНТАРЕ
         //CraftDataHandler.SetBackgroundType(RedPeeper_CyclopsEngine.Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
