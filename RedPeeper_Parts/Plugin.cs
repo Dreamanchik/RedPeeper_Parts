@@ -34,6 +34,7 @@ namespace RedPeeper_Parts
 
             // Перфабы генерации
             DegasiBase.Register();
+            DegasiBasePiece1.Register();
 
 
 
