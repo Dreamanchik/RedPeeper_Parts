@@ -55,6 +55,7 @@ public class RedPeeper_TrainingPeeper
             // Вот этой функцией мы можем выставить заряд в биореакторе. Наш пискун даёт базе ровно 10 энергии
             BaseBioReactor.charge[Info.TechType] = 10f;
         };
+        _prefab.SetUnlock(TechType.Player);
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
