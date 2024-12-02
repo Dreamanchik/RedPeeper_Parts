@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Experimental.Rendering;
 
-public class Stage_1
+public class Stage3_3x2
 {
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string bgPath = Path.Combine(modFolder, "Assets", "Backgrounds", "Stage_1.png");
