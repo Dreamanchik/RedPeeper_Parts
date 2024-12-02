@@ -64,8 +64,8 @@ public class RedPeeper_TrainingPeeper
             new Ingredient(TechType.AcidMushroom, 4)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithFabricatorType(МодифицированныйИзготовитель.craftTreeType)
-            .WithStepsToFabricatorTab("ShitMenu")
+            .WithFabricatorType(CraftTree.Type.Fabricator)
+            //.WithStepsToFabricatorTab("ShitMenu")
             .WithCraftingTime(3f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
