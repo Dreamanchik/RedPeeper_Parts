@@ -239,6 +239,21 @@ namespace RedPeeper_Parts
             // Размещаемое
             CraftDataHandler.SetItemSize(TechType.Beacon, new Vector2int(2, 2));
 
+
+
+
+
+
+            //Ребеланс еды
+            CraftDataHandler.SetItemSize(TechType.HangingFruit, new Vector2int(3, 2));
+
+
+
+
+            // Новая еда
+            RedPeeper_MelonMousse.Register();
+            RedPeeper_AcidConcentrate.Register();
+
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");
 
 
