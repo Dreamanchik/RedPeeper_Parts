@@ -34,7 +34,13 @@ namespace RedPeeper_Parts
 
             // Перфабы генерации
             DegasiBase.Register();
-            DegasiBasePiece1.Register();
+            DegasiBasePieceCorridorCap.Register();
+            DegasiBasePieceCorridorTopOpen.Register();
+            DegasiBasePieceCorridorTopOpenLadder.Register();
+            DegasiBasePieceMultipurpose.Register();
+            DegasiBasePieceMultipurposePlanters.Register();
+            DegasiBasePieceTCorridorGlass.Register();
+            DegasiBasePieceXCorridor.Register();
 
 
 
