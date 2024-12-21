@@ -3,6 +3,7 @@ using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Extensions;
+using System.Timers;
 using UnityEngine;
 using Ingredient = CraftData.Ingredient;
 
@@ -16,11 +17,18 @@ using Ingredient = CraftData.Ingredient;
         {
             var customPrefab = new CustomPrefab(Info);
 
-            var yeetKnifeObj = new CloneTemplate(Info, TechType.Scanner);
+            var yeetKnifeObj = new CloneTemplate(Info, TechType.Knife);
             yeetKnifeObj.ModifyPrefab += obj =>
             {
-                var yeetKnife = obj.AddComponent<DNASamplerData>();
-                yeetKnife.damage *= 2f;
+                //obj.AddComponent<HeatBlade>();
+                var heatBlade = obj.GetComponent<Knife>();
+                //var scannerComponent = obj.GetComponent<ScannerTool>();
+                var yeetKnife = obj.AddComponent<DNASamplerData>().CopyComponent(heatBlade);
+                Object.DestroyImmediate(heatBlade);
+                //Object.DestroyImmediate(scannerComponent);
+                yeetKnife.damage *= 1f;
+                yeetKnife.hasBashAnimation = false;
+                //yeetKnife.attackSpeed *= 1f;
             };
             customPrefab.SetGameObject(yeetKnifeObj);
             customPrefab.SetRecipe(new RecipeData(new Ingredient(TechType.Titanium, 2)));
@@ -29,14 +37,27 @@ using Ingredient = CraftData.Ingredient;
         }
     }
 
-    public class DNASamplerData : HeatBlade
+    public class DNASamplerData : Knife
     {
-        public float hitForce = 1669;
-        public ForceMode forceMode = ForceMode.Acceleration;
+        //public float hitForce = 1669;
+        //public ForceMode forceMode = ForceMode.Acceleration;
 
-        public override string animToolName { get; } = TechType.Scanner.AsString(true);
-
-        public override void OnToolUseAnim(GUIHand hand)
+    public override string animToolName { get; } = TechType.Scanner.AsString(true);
+    public override bool OnRightHandDown()
+        {
+            Cut();
+            return true;
+        }
+    /*public override bool OnRightHandHeld()
+        {
+            Cut();
+            return true;
+        }*/
+    private void Cut()
+        {
+            OnToolUseAnim(Player.main.guiHand);
+        }
+    public override void OnToolUseAnim(GUIHand hand)
         {
             base.OnToolUseAnim(hand);
 
@@ -50,14 +71,16 @@ using Ingredient = CraftData.Ingredient;
             }
 
             var liveMixin = hitObj.GetComponentInParent<LiveMixin>();
-            if (liveMixin && IsValidTarget(liveMixin))
+            if (liveMixin && IsValidTarget(liveMixin) && liveMixin.health > 0)
             {
                 var rigidbody = hitObj.GetComponentInParent<Rigidbody>();
 
                 if (rigidbody)
                 {
-                    rigidbody.AddForce(MainCamera.camera.transform.forward * hitForce, forceMode);
-                }
+                    CraftData.AddToInventory(TechType.Titanium);
+                    //rigidbody.AddForce(MainCamera.camera.transform.forward * hitForce, forceMode);
+                    return;
+            }
             }
         }
     }
