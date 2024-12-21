@@ -66,7 +66,7 @@ public class RedPeeper_MelonMousse
             .WithFabricatorType(CraftTree.Type.Fabricator)
             //.WithStepsToFabricatorTab("ShitMenu")
             .WithCraftingTime(3f); // ВРЕМЯ КРАФТА
-        _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.Water); // МЕСТОНАХОЖДЕНИЕ В КПК
+        _prefab.SetPdaGroupCategory(TechGroup.Survival, TechCategory.Water); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
     }

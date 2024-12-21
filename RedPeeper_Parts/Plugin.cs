@@ -123,19 +123,19 @@ namespace RedPeeper_Parts
 
 
             // Доп. Материалы
-            CraftDataHandler.SetItemSize(TechType.Aerogel, new Vector2int(2, 2));
+            CraftDataHandler.SetItemSize(TechType.Aerogel, new Vector2int(3, 2));
             CraftDataHandler.SetRecipeData(TechType.Aerogel, РецептАэрогеля.GetRecipeData());
 
-            CraftDataHandler.SetItemSize(TechType.Benzene, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.Benzene, new Vector2int(2, 3));
             CraftDataHandler.SetRecipeData(TechType.Benzene, РецептБензола.GetRecipeData());
 
-            CraftDataHandler.SetItemSize(TechType.HydrochloricAcid, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.HydrochloricAcid, new Vector2int(2, 2));
             CraftDataHandler.SetRecipeData(TechType.HydrochloricAcid, РецептСолянойКислоты.GetRecipeData());
 
-            CraftDataHandler.SetItemSize(TechType.AramidFibers, new Vector2int(2, 1));
+            CraftDataHandler.SetItemSize(TechType.AramidFibers, new Vector2int(3, 2));
             CraftDataHandler.SetRecipeData(TechType.AramidFibers, РецептСинтетическихВолокон.GetRecipeData());
 
-            CraftDataHandler.SetItemSize(TechType.Polyaniline, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.Polyaniline, new Vector2int(2, 3));
             CraftDataHandler.SetRecipeData(TechType.Polyaniline, РецептПолианилина.GetRecipeData());
 
 
@@ -231,8 +231,6 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetItemSize(TechType.StasisRifle, new Vector2int(3, 2));
             CraftDataHandler.SetItemSize(TechType.PropulsionCannon, new Vector2int(3, 2));
 
-            CraftDataHandler.SetBackgroundType(TechType.PropulsionCannon, Stage3_3x2.BackgroundType);
-
 
 
 
@@ -253,6 +251,12 @@ namespace RedPeeper_Parts
             // Новая еда
             RedPeeper_MelonMousse.Register();
             RedPeeper_AcidConcentrate.Register();
+
+            //Клеш Рояль
+            Пекка.Register();
+            Король1.Register();
+            Король2.Register();
+            АрмияСкелетов.Register();
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");
 
