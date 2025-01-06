@@ -47,6 +47,8 @@ namespace RedPeeper_Parts
             ПлазменнаяЛинза.Register();
             СолнечнаяЯчейка.Register();
             ПространственныйПроцессор.Register();
+            Герметик.Register();
+            Мембрана.Register();
             Logger.LogInfo("Новые предметы загружены");
 
 
@@ -243,6 +245,11 @@ namespace RedPeeper_Parts
 
 
             //Ребеланс еды
+            CraftDataHandler.SetItemSize(TechType.HangingFruit, new Vector2int(3, 2));
+
+            CraftDataHandler.SetItemSize(TechType.AcidMushroom, new Vector2int(2, 2));
+            CraftDataHandler.SetItemSize(TechType.WhiteMushroom, new Vector2int(2, 2));
+
             CraftDataHandler.SetItemSize(TechType.HangingFruit, new Vector2int(3, 2));
 
 
