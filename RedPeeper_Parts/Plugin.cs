@@ -34,7 +34,13 @@ namespace RedPeeper_Parts
 
             // Перфабы генерации
             DegasiBase.Register();
-            DegasiBasePiece1.Register();
+            DegasiBasePieceCorridorCap.Register();
+            DegasiBasePieceCorridorTopOpen.Register();
+            DegasiBasePieceCorridorTopOpenLadder.Register();
+            DegasiBasePieceMultipurpose.Register();
+            DegasiBasePieceMultipurposePlanters.Register();
+            DegasiBasePieceTCorridorGlass.Register();
+            DegasiBasePieceXCorridor.Register();
 
 
 
@@ -266,8 +272,17 @@ namespace RedPeeper_Parts
             АрмияСкелетов.Register();
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");
-
-
+        }
+        [HarmonyPatch(typeof(Peeper))]
+        [HarmonyPatch("Start")]
+        public static class PeeperPatch
+        {
+            [HarmonyPostfix]
+            public static void PostFix(Peeper __instance)
+            {
+                Eatable eatable = __instance.GetComponent<Eatable>();
+                eatable.foodValue = 0;
+            }
         }
     }
 }
