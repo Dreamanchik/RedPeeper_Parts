@@ -61,6 +61,24 @@ namespace RedPeeper_Parts
 
 
 
+            // Новая еда
+            RedPeeper_MelonMousse.Register();
+            RedPeeper_AcidConcentrate.Register();
+
+
+
+
+
+            //Клеш Рояль
+            Пекка.Register();
+            Король1.Register();
+            Король2.Register();
+            АрмияСкелетов.Register();
+
+
+
+
+
             // Батареи
 
 
@@ -242,6 +260,14 @@ namespace RedPeeper_Parts
 
 
 
+
+            // Еда
+            CraftDataHandler.SetRecipeData(Мембрана.Info.TechType, РецептМембраны.GetRecipeData());
+
+
+
+
+
             // Размещаемое
             CraftDataHandler.SetItemSize(TechType.Beacon, new Vector2int(2, 2));
 
@@ -258,18 +284,6 @@ namespace RedPeeper_Parts
 
             CraftDataHandler.SetItemSize(TechType.HangingFruit, new Vector2int(3, 2));
 
-
-
-
-            // Новая еда
-            RedPeeper_MelonMousse.Register();
-            RedPeeper_AcidConcentrate.Register();
-
-            //Клеш Рояль
-            Пекка.Register();
-            Король1.Register();
-            Король2.Register();
-            АрмияСкелетов.Register();
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");
         }

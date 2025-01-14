@@ -42,6 +42,7 @@ public class МанипуляторКраба
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
+            .WithStepsToFabricatorTab("Resources", "Electronics")
             .WithCraftingTime(30f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Machines, TechCategory.Machines); // МЕСТОНАХОЖДЕНИЕ В КПК
 

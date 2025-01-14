@@ -61,7 +61,7 @@ public class RedPeeper_AcidConcentrate
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
-            //.WithStepsToFabricatorTab("ShitMenu")
+            .WithStepsToFabricatorTab("Survival", "CookedFood")
             .WithCraftingTime(4f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Survival, TechCategory.Water); // МЕСТОНАХОЖДЕНИЕ В КПК
 

@@ -65,7 +65,7 @@ public class Герметик
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
-            //.WithStepsToFabricatorTab("ShitMenu")
+            .WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
             .WithCraftingTime(5f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 

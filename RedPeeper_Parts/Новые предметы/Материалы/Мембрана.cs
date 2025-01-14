@@ -59,15 +59,22 @@ public class Мембрана
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new CraftData.Ingredient(Герметик.Info.TechType),
-            new Ingredient(TechType.MembrainTreeSeed, 2)
+            new Ingredient(TechType.Titanium, 1)
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
-            //.WithStepsToFabricatorTab("ShitMenu")
+            .WithStepsToFabricatorTab("Resources", "BasicMaterials")
             .WithCraftingTime(5f); // ВРЕМЯ КРАФТА
+        //_prefab.SetRecipe(GetRecipeData()).WithFabricatorType(CraftTree.Type.Fabricator).WithStepsToFabricatorTab("Rsources", "BasicMaterials").WithCraftingTime(5f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
     }
+    /*public static RecipeData GetRecipeData()
+    {
+        return new RecipeData(
+            new CraftData.Ingredient(Герметик.Info.TechType),
+            new Ingredient(TechType.MembrainTreeSeed, 2)
+        );
+    }*/
 }
