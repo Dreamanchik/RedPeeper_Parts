@@ -4,6 +4,7 @@ using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Extensions;
 using RedPeeper_Parts;
+using System;
 using System.Timers;
 using UnityEngine;
 using Ingredient = CraftData.Ingredient;
@@ -25,7 +26,7 @@ public static class DNASampler
             var heatBlade = obj.GetComponent<Knife>();
             //var scannerComponent = obj.GetComponent<ScannerTool>();
             var yeetKnife = obj.AddComponent<DNASamplerData>().CopyComponent(heatBlade);
-            Object.DestroyImmediate(heatBlade);
+            UnityEngine.Object.DestroyImmediate(heatBlade);
             //Object.DestroyImmediate(scannerComponent);
             yeetKnife.damage *= 1f;
             yeetKnife.hasBashAnimation = false;
@@ -72,22 +73,23 @@ public override void OnToolUseAnim(GUIHand hand)
         }
 
         var liveMixin = hitObj.GetComponentInParent<LiveMixin>();
-        var classID = hitObj.GetComponentInParent<PrefabIdentifier>().ClassId;
+        var techTag = hitObj.GetComponentInParent<TechTag>().type;
         if (liveMixin && IsValidTarget(liveMixin) && liveMixin.health > 0)
         {
+            TechType techType = techTag;
             var rigidbody = hitObj.GetComponentInParent<Rigidbody>();
 
             if (rigidbody)
             {
-                if (CreatureList.Creatures.ContainsKey(classID)) {
-                    var techType = CreatureList.Creatures[classID];
-                    CraftData.AddToInventory(techType);
+                if (CreatureList.Creatures.ContainsKey(techType)) {
+                    //var techType = CreatureList.Creatures[classID];
+                    CraftData.AddToInventory(TechType.Titanium);
                     //rigidbody.AddForce(MainCamera.camera.transform.forward * hitForce, forceMode);
                     return;
                 }
                 else
                 {
-                    return;
+                //    return;
                 }
             }
         }

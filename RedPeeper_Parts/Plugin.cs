@@ -247,7 +247,7 @@ namespace RedPeeper_Parts
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");
         }
-        [HarmonyPatch(typeof(Peeper))]
+        /*[HarmonyPatch(typeof())]
         [HarmonyPatch("Start")]
         public static class PeeperPatch
         {
@@ -257,6 +257,7 @@ namespace RedPeeper_Parts
                 Eatable eatable = __instance.GetComponent<Eatable>();
                 eatable.foodValue = 0;
             }
-        }
+        }*/
+        
     }
 }
