@@ -43,6 +43,5 @@
   <ItemGroup>
     <Folder Include="Новые предметы\Батареи\" />
     <Folder Include="Новые предметы\Электроника\" />
-    <Folder Include="Новые предметы\Материалы\" />
   </ItemGroup>
 </Project>
