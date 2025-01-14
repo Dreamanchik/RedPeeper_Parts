@@ -263,6 +263,7 @@ namespace RedPeeper_Parts
 
             // Еда
             CraftDataHandler.SetRecipeData(Мембрана.Info.TechType, РецептМембраны.GetRecipeData());
+            CraftDataHandler.SetRecipeData(ПлазменнаяЛинза.Info.TechType, РецептЛинзы.GetRecipeData());
 
 
 

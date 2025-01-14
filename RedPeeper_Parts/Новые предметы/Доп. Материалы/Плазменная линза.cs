@@ -34,10 +34,7 @@ public class ПлазменнаяЛинза
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(Мембрана.Info.TechType, 3),
-            new Ingredient(TechType.Diamond, 5),
-            new Ingredient(TechType.EnameledGlass, 2),
-            new Ingredient(TechType.ComputerChip, 1)
+            new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
