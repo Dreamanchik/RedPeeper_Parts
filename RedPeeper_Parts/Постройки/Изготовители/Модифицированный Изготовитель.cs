@@ -1,49 +1,56 @@
-﻿using Nautilus.Assets;
+﻿using HarmonyLib;
+using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Handlers;
 using Nautilus.Utility;
+using System.Drawing.Text;
 using System.IO;
 using System.Reflection;
 using static CraftData;
 
-public static class МодифицированныйИзготовитель
+public class МодифицированныйИзготовитель
 {
-    public static PrefabInfo Info { get; private set; }
-    public static CraftTree.Type craftTreeType { get; private set; }
-    public static ModCraftTreeRoot Root { get; private set; }
-
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string iconPath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "StorageConcentrate.png");
-
-    public static void Patch()
+    public static void Register()
     {
-        Info = PrefabInfo.WithTechType(
-        "RedPeeper_Modified_Fabricator",
-        "Модифицированный изготовитель",
-        "Самодельное устройство, повторяющее и расширяющее функционал стандартного изготовителя. Конструкция этого изготовителя нарушает принципы протокола корпоративной собственности, что может привести к нарушению юрисдикции Альтерры. Применять на свой страх и риск."
-        ).WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
+        // Создаём префаб
+        CustomPrefab customFab = new CustomPrefab(
+            "RedPeeper_Modified_Fabricator",
+            "Модифицированный изготовитель",
+            "G"
+            );
 
-        var _prefab = new CustomPrefab(Info);
-        _prefab.CreateFabricator(out CraftTree.Type craftTreeType);
-        var model = new FabricatorTemplate(_prefab.Info, craftTreeType)
+        // Делаем из него фабрикатор
+        customFab.CreateFabricator(out CraftTree.Type treeType);
+        CraftTreeHandler.AddTabNode(treeType, "ShitsNGiggles", "Crap", ImageUtils.LoadSpriteFromFile(iconPath));
+        CraftTreeHandler.AddCraftingNode(treeType, Герметик.Info.TechType);
+        // Иконка
+        customFab.Info.WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
+        // Создаём хрень с фабрикатором
+        FabricatorTemplate fabPrefab = new FabricatorTemplate(customFab.Info, treeType)
         {
-            FabricatorModel = FabricatorTemplate.Model.Workbench,
-            ConstructableFlags = ConstructableFlags.Inside | ConstructableFlags.Ground | ConstructableFlags.Rotatable
+            FabricatorModel = FabricatorTemplate.Model.Workbench
         };
-        _prefab.SetGameObject(model);
-        _prefab.SetRecipe(new RecipeData(
-            //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.PurpleBrainCoralPiece, 2),
-            new Ingredient(TechType.CopperWire, 1),
-            new Ingredient(TechType.AcidMushroom, 4)
-            //    РЕЦЕПТ КОНЕЦ
-            ));
-        _prefab.SetPdaGroupCategoryAfter(TechGroup.InteriorModules, TechCategory.InteriorModule, TechType.Fabricator);
-        CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "ShitMenu", "Shit Menu", SpriteManager.Get(TechType.Cyclops));
+        customFab.SetGameObject(fabPrefab);
 
-        //craftTreeType = fabTreeType;
-        _prefab.Register();
+        // Рецепт
+        RecipeData recipe = new RecipeData()
+        {
+            Ingredients =
+            {
+                // РЕЦЕПТ НАЧАЛО
+                new Ingredient(TechType.Titanium, 1000)
+                // РЕЦЕПТ КОНЕЦ
+            }
+        };
+        customFab.SetRecipe(recipe);
+
+        // Анлок
+        customFab.SetUnlock(TechType.Titanium).WithPdaGroupCategory(TechGroup.InteriorModules, TechCategory.InteriorModule);
+
+        customFab.Register();
     }
 }

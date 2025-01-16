@@ -135,7 +135,8 @@ namespace RedPeeper_Parts
 
             // ПОСТРОЙКИ
             // Изготовитель
-            МодифицированныйИзготовитель.Patch();
+            МодифицированныйИзготовитель.Register();
+            
 
 
 
@@ -314,17 +315,5 @@ namespace RedPeeper_Parts
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");
         }
-        /*[HarmonyPatch(typeof())]
-        [HarmonyPatch("Start")]
-        public static class PeeperPatch
-        {
-            [HarmonyPostfix]
-            public static void PostFix(Peeper __instance)
-            {
-                Eatable eatable = __instance.GetComponent<Eatable>();
-                eatable.foodValue = 0;
-            }
-        }*/
-        
     }
 }
