@@ -37,8 +37,6 @@ public class ПлазменнаяЛинза
             new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
-            .WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
             .WithCraftingTime(8f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
