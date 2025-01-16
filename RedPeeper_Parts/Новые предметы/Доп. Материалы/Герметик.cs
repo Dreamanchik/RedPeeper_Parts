@@ -59,9 +59,7 @@ public class Герметик
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.Salt, 1),
-            new Ingredient(TechType.JellyPlant, 1),
-            new Ingredient(TechType.BluePalmSeed, 2)
+            new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)

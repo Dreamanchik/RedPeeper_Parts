@@ -56,11 +56,7 @@ public class RedPeeper_MelonMousse
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.BulboTreePiece, 1),
-            new Ingredient(TechType.PurpleRattle, 3),
-            new Ingredient(TechType.DisinfectedWater, 1),
-            new Ingredient(TechType.MembrainTreeSeed, 1),
-            new Ingredient(TechType.Melon, 1)
+            new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)

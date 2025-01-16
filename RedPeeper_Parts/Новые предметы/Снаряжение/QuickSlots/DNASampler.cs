@@ -12,7 +12,7 @@ using Ingredient = CraftData.Ingredient;
 public static class DNASampler
 {
     public static PrefabInfo Info { get; } = PrefabInfo
-        .WithTechType("DNASampler", "Shitcrap", "D")
+        .WithTechType("DNASampler", "Максимально недоделанная вещь. Нет, вы её не сможете так легко получить.", "D")
         .WithIcon(SpriteManager.Get(TechType.HeatBlade));
 
     public static void Register()

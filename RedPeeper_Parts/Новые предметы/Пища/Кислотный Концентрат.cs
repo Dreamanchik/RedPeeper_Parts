@@ -56,8 +56,7 @@ public class RedPeeper_AcidConcentrate
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.AcidMushroom, 8),
-            new Ingredient(TechType.Bleach, 1)
+            new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)

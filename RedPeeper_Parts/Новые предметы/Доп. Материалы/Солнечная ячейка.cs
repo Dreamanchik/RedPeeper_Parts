@@ -35,10 +35,7 @@ public class СолнечнаяЯчейка
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.MembrainTreeSeed, 2),
-            new Ingredient(TechType.CopperWire, 1),
-            new Ingredient(TechType.Titanium, 2),
-            new Ingredient(TechType.WiringKit, 1)
+            new Ingredient(TechType.Titanium)
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
             .WithStepsToFabricatorTab("Resources", "AdvancedMaterials")

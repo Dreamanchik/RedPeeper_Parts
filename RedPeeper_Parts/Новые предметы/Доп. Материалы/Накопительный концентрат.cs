@@ -34,9 +34,7 @@ public class НакопительныйКонцентрат
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.PurpleBrainCoralPiece, 2),
-            new Ingredient(TechType.CopperWire, 1),
-            new Ingredient(TechType.AcidMushroom, 4)
+            new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)

@@ -46,10 +46,7 @@ public class ПространственныйПроцессор
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.ComputerChip, 4), 
-            new Ingredient(TechType.ReactorRod, 2), new Ingredient(TechType.CopperWire, 2),
-            new Ingredient(TechType.PrecursorIonCrystal, 3),
-            new Ingredient(TechType.AdvancedWiringKit, 1)
+            new Ingredient(TechType.Titanium)
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
             .WithStepsToFabricatorTab("Resources", "AdvancedMaterials")

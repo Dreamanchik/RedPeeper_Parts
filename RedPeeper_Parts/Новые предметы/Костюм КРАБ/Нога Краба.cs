@@ -34,10 +34,7 @@ public class НогаКраба
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.PlasteelIngot, 1),
-            new Ingredient(TechType.WiringKit, 2),
-            new Ingredient(TechType.Aerogel, 1),
-            new Ingredient(TechType.Silicone, 3)
+            new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем

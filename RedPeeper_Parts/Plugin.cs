@@ -128,7 +128,7 @@ namespace RedPeeper_Parts
 
 
             // Регистрация ДНК передатчика
-            DNASampler.Register();
+            //DNASampler.Register();
 
 
 
@@ -261,14 +261,6 @@ namespace RedPeeper_Parts
 
 
 
-            // Еда
-            CraftDataHandler.SetRecipeData(Мембрана.Info.TechType, РецептМембраны.GetRecipeData());
-            CraftDataHandler.SetRecipeData(ПлазменнаяЛинза.Info.TechType, РецептЛинзы.GetRecipeData());
-
-
-
-
-
             // Размещаемое
             CraftDataHandler.SetItemSize(TechType.Beacon, new Vector2int(2, 2));
 
@@ -284,6 +276,40 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetItemSize(TechType.WhiteMushroom, new Vector2int(2, 2));
 
             CraftDataHandler.SetItemSize(TechType.HangingFruit, new Vector2int(3, 2));
+
+
+
+
+
+            // Материалы МОД
+            CraftDataHandler.SetRecipeData(Мембрана.Info.TechType, РецептМембраны.GetRecipeData());
+
+
+
+
+
+            // Доп. Материалы МОД
+            CraftDataHandler.SetRecipeData(ПлазменнаяЛинза.Info.TechType, РецептЛинзы.GetRecipeData());
+            CraftDataHandler.SetRecipeData(Герметик.Info.TechType, РецептГерметик.GetRecipeData());
+            CraftDataHandler.SetRecipeData(НакопительныйКонцентрат.Info.TechType, РецептКонцентрат.GetRecipeData());
+            CraftDataHandler.SetRecipeData(ПространственныйПроцессор.Info.TechType, РецептПроцессор.GetRecipeData());
+            CraftDataHandler.SetRecipeData(СолнечнаяЯчейка.Info.TechType, РецептЯчейка.GetRecipeData());
+
+
+
+
+
+            // Костюм КРАБ МОД
+            CraftDataHandler.SetRecipeData(МанипуляторКраба.Info.TechType, РецептМанипулятораКраба.GetRecipeData());
+            CraftDataHandler.SetRecipeData(НогаКраба.Info.TechType, РецептНогаКраба.GetRecipeData());
+
+
+
+
+
+            // Еда МОД
+            CraftDataHandler.SetRecipeData(RedPeeper_MelonMousse.Info.TechType, РецептДыневыйМусс.GetRecipeData());
+            CraftDataHandler.SetRecipeData(RedPeeper_AcidConcentrate.Info.TechType, РецептКислотныйКонцентрат.GetRecipeData());
 
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");
