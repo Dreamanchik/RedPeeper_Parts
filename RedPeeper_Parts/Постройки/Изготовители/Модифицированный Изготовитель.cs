@@ -55,6 +55,7 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddCraftingNode(treeType, TechType.LaserCutter, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.Builder, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PropulsionCannon, "RedPeeper_ModStation_CorporateTools");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.CyclopsDecoy, "RedPeeper_ModStation_CorporateTools");
         //  Продвинутые механизмы
         CraftTreeHandler.AddCraftingNode(treeType, МанипуляторКраба.Info.TechType, "RedPeeper_ModStation_AdvancedElectronics");
         CraftTreeHandler.AddCraftingNode(treeType, НогаКраба.Info.TechType, "RedPeeper_ModStation_AdvancedElectronics");
