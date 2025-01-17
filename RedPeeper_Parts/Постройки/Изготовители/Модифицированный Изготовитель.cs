@@ -17,8 +17,12 @@ public class МодифицированныйИзготовитель
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string iconPath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "StorageConcentrate.png");
 
-    public static string texturePath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "ModifiedFabricator_texture.png"); //  <-- Путь к текстуре
-    public static Texture2D mainTexture = ImageUtils.LoadTextureFromFile(texturePath);
+    public static string mainTexturePath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "ModifiedFabricator_texture.png"); //  <-- Путь к текстуре
+    public static Texture2D mainTexture = ImageUtils.LoadTextureFromFile(mainTexturePath);
+    public static string illumTexturePath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "ModifiedFabricator_illum.png"); //  <-- Путь к текстуре
+    public static Texture2D illumTexture = ImageUtils.LoadTextureFromFile(mainTexturePath);
+    public static string specTexturePath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "ModifiedFabricator_spec.png"); //  <-- Путь к текстуре
+    public static Texture2D specTexture = ImageUtils.LoadTextureFromFile(mainTexturePath);
 
     public static string ComponentsPath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "Tabs", "RedPeeper_ModStation_Components.png");
     public static string ChemicalPath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "Tabs", "RedPeeper_ModStation_Chemical.png");
@@ -97,6 +101,8 @@ public class МодифицированныйИзготовитель
     public static void ModifyGameObject(GameObject gameObject)
     {
         SkinnedMeshRenderer mr = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
-        mr.material.mainTexture = mainTexture;
+        mr.material.SetTexture(ShaderPropertyID._Diffusion, mainTexture);
+        mr.material.SetTexture(ShaderPropertyID._Illum, illumTexture);
+        mr.material.SetTexture(ShaderPropertyID._SpecTex, illumTexture);
     }
 }
