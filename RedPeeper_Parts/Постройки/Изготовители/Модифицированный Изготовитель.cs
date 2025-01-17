@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using JetBrains.Annotations;
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
@@ -8,12 +9,16 @@ using Nautilus.Utility;
 using System.Drawing.Text;
 using System.IO;
 using System.Reflection;
+using UnityEngine;
 using static CraftData;
 
 public class МодифицированныйИзготовитель
 {
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string iconPath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "StorageConcentrate.png");
+
+    public static string texturePath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "ModifiedFabricator_texture.png"); //  <-- Путь к текстуре
+    public static Texture2D mainTexture = ImageUtils.LoadTextureFromFile(texturePath);
 
     public static string ComponentsPath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "Tabs", "RedPeeper_ModStation_Components.png");
     public static string ChemicalPath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "Tabs", "RedPeeper_ModStation_Chemical.png");
@@ -88,5 +93,10 @@ public class МодифицированныйИзготовитель
         customFab.SetUnlock(TechType.Titanium).WithPdaGroupCategory(TechGroup.InteriorModules, TechCategory.InteriorModule);
 
         customFab.Register();
+    }
+    public static void ModifyGameObject(GameObject gameObject)
+    {
+        SkinnedMeshRenderer mr = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
+        mr.material.mainTexture = mainTexture;
     }
 }
