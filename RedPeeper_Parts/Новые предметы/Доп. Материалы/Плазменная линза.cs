@@ -25,7 +25,7 @@ public class ПлазменнаяЛинза
             "Комбинация  твёрдых, хрупких и прозрачных соединений, способная преломлять ионы поступающей электроэнергии в лазеры."
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
-            .WithSizeInInventory(new Vector2int(1, 2)); // РАЗМЕР В ИНВЕНТАРЕ
+            .WithSizeInInventory(new Vector2int(3, 2)); // РАЗМЕР В ИНВЕНТАРЕ
         //CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
 
         var _prefab = new CustomPrefab(Info);
