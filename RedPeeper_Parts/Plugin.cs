@@ -55,6 +55,7 @@ namespace RedPeeper_Parts
             ПространственныйПроцессор.Register();
             Герметик.Register();
             Мембрана.Register();
+            ДвухфакторныйИнициализатор.Register();
             Logger.LogInfo("Новые предметы загружены");
 
 
