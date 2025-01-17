@@ -77,6 +77,7 @@ public class МодифицированныйИзготовитель
         // Создаём хрень с фабрикатором
         FabricatorTemplate fabPrefab = new FabricatorTemplate(customFab.Info, treeType)
         {
+            ModifyPrefab = ModifyGameObject,
             FabricatorModel = FabricatorTemplate.Model.Workbench
         };
         customFab.SetGameObject(fabPrefab);
