@@ -37,7 +37,7 @@ public class СолнечнаяЯчейка
             //    РЕЦЕПТ НАЧАЛО
             new Ingredient(TechType.Titanium)
             ))
-            .WithCraftingTime(12f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(10f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ

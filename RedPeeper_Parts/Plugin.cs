@@ -166,6 +166,8 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetItemSize(TechType.Polyaniline, new Vector2int(2, 3));
             CraftDataHandler.SetRecipeData(TechType.Polyaniline, РецептПолианилина.GetRecipeData());
 
+            CraftDataHandler.SetItemSize(TechType.HatchingEnzymes, new Vector2int(2, 3));
+
 
 
 
