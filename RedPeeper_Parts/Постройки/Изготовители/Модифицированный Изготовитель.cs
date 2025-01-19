@@ -47,27 +47,36 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddTabNode(treeType, "RedPeeper_ModStation_AdvancedElectronics", "Продвинутые механизмы", ImageUtils.LoadSpriteFromFile(AdvancedElectronicsPath));
         // Добавляем предметы
         //  Компоненты
-        CraftTreeHandler.AddCraftingNode(treeType, TechType.AdvancedWiringKit, "RedPeeper_ModStation_Components");
-        CraftTreeHandler.AddCraftingNode(treeType, ПлазменнаяЛинза.Info.TechType, "RedPeeper_ModStation_Components");
-        CraftTreeHandler.AddCraftingNode(treeType, СолнечнаяЯчейка.Info.TechType, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, ПлазменнаяЛинза.Info.TechType, "RedPeeper_ModStation_Components"); 
         CraftTreeHandler.AddCraftingNode(treeType, ПространственныйПроцессор.Info.TechType, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, ДвухфакторныйИнициализатор.Info.TechType, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.AdvancedWiringKit, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, СолнечнаяЯчейка.Info.TechType, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.PlasteelIngot, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, Мембрана.Info.TechType, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.EnameledGlass, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.ReactorRod, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.PrecursorIonBattery, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.PrecursorIonPowerCell, "RedPeeper_ModStation_Components");
+
         //  Химикаты
-        CraftTreeHandler.AddCraftingNode(treeType, TechType.Benzene, "RedPeeper_ModStation_Chemical");
-        CraftTreeHandler.AddCraftingNode(treeType, TechType.Bleach, "RedPeeper_ModStation_Chemical");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.HydrochloricAcid, "RedPeeper_ModStation_Chemical");
-        CraftTreeHandler.AddCraftingNode(treeType, TechType.Polyaniline, "RedPeeper_ModStation_Chemical");
-        CraftTreeHandler.AddCraftingNode(treeType, TechType.Aerogel, "RedPeeper_ModStation_Chemical");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.Benzene, "RedPeeper_ModStation_Chemical");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.AramidFibers, "RedPeeper_ModStation_Chemical");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.Aerogel, "RedPeeper_ModStation_Chemical");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.Polyaniline, "RedPeeper_ModStation_Chemical");
+        CraftTreeHandler.AddCraftingNode(treeType, Герметик.Info.TechType, "RedPeeper_ModStation_Chemical");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.Bleach, "RedPeeper_ModStation_Chemical");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.HatchingEnzymes, "RedPeeper_ModStation_Chemical");
-        //  Корпоративные инструменты
+        //  Корпоративная собственность
         CraftTreeHandler.AddCraftingNode(treeType, TechType.StasisRifle, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.LaserCutter, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.Builder, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PropulsionCannon, "RedPeeper_ModStation_CorporateTools");
-        CraftTreeHandler.AddCraftingNode(treeType, TechType.CyclopsDecoy, "RedPeeper_ModStation_CorporateTools");
         //  Продвинутые механизмы
         CraftTreeHandler.AddCraftingNode(treeType, МанипуляторКраба.Info.TechType, "RedPeeper_ModStation_AdvancedElectronics");
         CraftTreeHandler.AddCraftingNode(treeType, НогаКраба.Info.TechType, "RedPeeper_ModStation_AdvancedElectronics");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.CyclopsDecoy, "RedPeeper_ModStation_AdvancedElectronics");
         CraftTreeHandler.AddCraftingNode(treeType, ДвигательЦиклопа.Info.TechType, "RedPeeper_ModStation_AdvancedElectronics");
         CraftTreeHandler.AddCraftingNode(treeType, КорпусЦиклопа.Info.TechType, "RedPeeper_ModStation_AdvancedElectronics");
         CraftTreeHandler.AddCraftingNode(treeType, МостикЦиклопа.Info.TechType, "RedPeeper_ModStation_AdvancedElectronics");
