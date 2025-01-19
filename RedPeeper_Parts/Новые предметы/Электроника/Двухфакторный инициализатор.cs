@@ -18,6 +18,9 @@ public class ДвухфакторныйИнициализатор
     //    ИКОНКА
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string iconPath = Path.Combine(modFolder, "Assets", "Items", "Electronics", "TwoFactorProcessor.png"); // <-- Заменить на нужное. ОГРОМНОЕ ЖЕЛАНИЕ ПАПКИ ДЕЛАТЬ ТАКИМИ ЖЕ КАК И В ПРОЕКТЕ. Структура должна совпадать с папками в моде. Тоесть, если иконка просто находится в папке Assets, то код будет выглядеть как <<"Assets", "CyclopsEngine.png">>, а если находится с папке Assets и потом в папке Items, потом Cyclops и потом Objects, то <<"Assets", "Items", "Cyclops", "Objects", "CyclopsEngine.png">>
+
+    public static string texturePath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "TwoFactorProcessor_texture.png"); //  <-- Путь к текстуре
+    public static Texture2D Texture = ImageUtils.LoadTextureFromFile(texturePath);
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
@@ -35,25 +38,9 @@ public class ДвухфакторныйИнициализатор
         var _obj = new CloneTemplate(Info, TechType.Polyaniline); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПАW
         _obj.ModifyPrefab += obj =>
         {
-            //SkinnedMeshRenderer model = obj.GetComponentInChildren<SkinnedMeshRenderer>();
-            //obj = model.gameObject;
-
-            // Мы добавляем компонент, который даётся всей еде
-            // Eatable eatable = obj.EnsureComponent<Eatable>();
-            // Мы добавляем значение еды. Пискун будет пополнять +10 еды
-            // eatable.foodValue = 10f;
-            // Мы добавляем значение воды. Пискун будет пополнять +10 воды
-            // eatable.waterValue = 10f;
-            // Так как это float чисто теоретически мы можем делать десятичные значения. Не уверен работает ли это и применимо ли где либо, просто как забавный факт
-
-            // Отдельной функцией наш пискун будет добавлять кислород. Эта функция отдельна от eatable,
-            // так что я предположу что для ней даже не обязателен компонент. Требуется тестирование
-            // Наш пискун будет пополнять +10 кислорода
-            // SurvivalHandler.GiveOxygenOnConsume(Info.TechType, 10f, true);
-            // Такое же есть и для хп. Наш пискун будет пополнять +10 хп
-            // SurvivalHandler.GiveHealthOnConsume(Info.TechType, 10f, true);
-            // Вот этой функцией мы можем выставить заряд в биореакторе. Наш пискун даёт базе ровно 10 энергии
-            //BaseBioReactor.charge[Info.TechType] = 210f;
+            MeshRenderer mr = obj.transform.Find("model").gameObject.transform.Find("Mesh").gameObject.GetComponent<MeshRenderer>();
+            mr.material.mainTexture = Texture;
+            mr.material.SetTexture(ShaderPropertyID._Diffusion, Texture);
         };
         _prefab.SetUnlock(TechType.JellyPlant);
         _prefab.SetGameObject(_obj);

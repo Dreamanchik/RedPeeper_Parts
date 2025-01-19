@@ -29,6 +29,8 @@ namespace RedPeeper_Parts
 
         private void InitializePrefabs()
         {
+
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, )
             // РЕГИСТРАЦИЯ ВСЕХ ПРЕФАБОВ
             // (Название файла).Register();
 
