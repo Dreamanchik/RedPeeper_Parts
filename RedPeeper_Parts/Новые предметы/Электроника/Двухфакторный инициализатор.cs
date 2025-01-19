@@ -27,7 +27,7 @@ public class ДвухфакторныйИнициализатор
             "Самодельный процессор, отключающий все внешние ограничения, устанавливаемые в прошивке любого рода оборудования. Использование этой электроники нарушает протокол безопасности корпоративной собственности Альтерры. Применять на свой страх и риск."
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
-            .WithSizeInInventory(new Vector2int(2, 2)); // РАЗМЕР В ИНВЕНТАРЕ
+            .WithSizeInInventory(new Vector2int(3, 2)); // РАЗМЕР В ИНВЕНТАРЕ
         //CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
 
         var _prefab = new CustomPrefab(Info);
@@ -59,12 +59,15 @@ public class ДвухфакторныйИнициализатор
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.Titanium)
+            new Ingredient(TechType.Magnetite, 5),
+            new Ingredient(TechType.CopperWire, 3),
+            new Ingredient(TechType.WiringKit),
+            new Ingredient(TechType.ComputerChip)
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab("Resources", "Electronics")
-            .WithCraftingTime(5f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(10f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.Electronics); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ

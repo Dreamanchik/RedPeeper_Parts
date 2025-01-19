@@ -61,7 +61,7 @@ public class RedPeeper_AcidConcentrate
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab("Survival", "CookedFood")
-            .WithCraftingTime(4f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(5f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Survival, TechCategory.Water); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ

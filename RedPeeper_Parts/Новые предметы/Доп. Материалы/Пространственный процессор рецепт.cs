@@ -18,11 +18,11 @@ public class РецептПроцессор
 
             Ingredients =
         {
-            new Ingredient(TechType.ComputerChip, 4),
-            new Ingredient(TechType.ReactorRod, 2), 
-            new Ingredient(TechType.CopperWire, 2),
+            new Ingredient(TechType.UraniniteCrystal, 5),
+            new Ingredient(TechType.ComputerChip, 3), 
             new Ingredient(TechType.PrecursorIonCrystal, 3),
-            new Ingredient(TechType.AdvancedWiringKit, 1)
+            new Ingredient(TechType.AdvancedWiringKit, 1),
+            new CraftData.Ingredient(ДвухфакторныйИнициализатор.Info.TechType),
         }
         };
     }

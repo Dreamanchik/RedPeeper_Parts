@@ -37,7 +37,7 @@ public class МанипуляторКраба
             new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithCraftingTime(30f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(50f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Machines, TechCategory.Machines); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ

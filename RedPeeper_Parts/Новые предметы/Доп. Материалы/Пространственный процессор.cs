@@ -48,7 +48,7 @@ public class ПространственныйПроцессор
             //    РЕЦЕПТ НАЧАЛО
             new Ingredient(TechType.Titanium)
             ))
-            .WithCraftingTime(120f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(100f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ

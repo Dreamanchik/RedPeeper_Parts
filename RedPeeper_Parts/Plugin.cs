@@ -2,6 +2,7 @@
 using BepInEx.Logging;
 using HarmonyLib;
 using Nautilus.Handlers;
+using Story;
 using System.Reflection;
 
 namespace RedPeeper_Parts
@@ -70,16 +71,6 @@ namespace RedPeeper_Parts
 
 
 
-            //Клеш Рояль
-            Пекка.Register();
-            Король1.Register();
-            Король2.Register();
-            АрмияСкелетов.Register();
-
-
-
-
-
             // Батареи
 
 
@@ -118,7 +109,7 @@ namespace RedPeeper_Parts
 
 
             // Тестовые предметы
-            RedPeeper_TrainingPeeper.Register();
+            // RedPeeper_TrainingPeeper.Register();
 
 
 
@@ -314,6 +305,53 @@ namespace RedPeeper_Parts
             // Еда МОД
             CraftDataHandler.SetRecipeData(RedPeeper_MelonMousse.Info.TechType, РецептДыневыйМусс.GetRecipeData());
             CraftDataHandler.SetRecipeData(RedPeeper_AcidConcentrate.Info.TechType, РецептКислотныйКонцентрат.GetRecipeData());
+
+
+
+
+
+
+
+
+
+            //Убираем предметы из изготовителя
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "Battery");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "PrecursorIonBattery");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "PrecursorIonPowerCell");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "AdvancedWiringKit");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "ReactorRod");
+
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "BasicMaterials", "Bleach");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "BasicMaterials", "EnameledGlass");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "BasicMaterials", "PlasteelIngot");
+
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "AdvancedMaterials", "Benzene");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "AdvancedMaterials", "HydrochloricAcid");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "AdvancedMaterials", "AramidFibers");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "AdvancedMaterials", "Aerogel");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "AdvancedMaterials", "Polyaniline");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "AdvancedMaterials", "HatchingEnzymes");
+
+
+
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Equipment", "ReinforcedDiveSuit");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Equipment", "WaterFiltrationSuit");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Equipment", "PrecursorKey_Purple");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Equipment", "PrecursorKey_Blue");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Equipment", "PrecursorKey_Orange");
+
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Tools", "Knife");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Tools", "Builder");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Tools", "LaserCutter");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Tools", "StasisRifle");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Tools", "PropulsionCannon");
+
+
+
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Machines", "CyclopsDecoy");
+
+            //Лого LINER
+
 
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");

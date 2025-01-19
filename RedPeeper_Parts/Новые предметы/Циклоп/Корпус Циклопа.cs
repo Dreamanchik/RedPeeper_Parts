@@ -41,8 +41,8 @@ public class КорпусЦиклопа
             new Ingredient(TechType.EnameledGlass, 4)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithFabricatorType(CraftTree.Type.Workbench) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
-            .WithCraftingTime(60f); // ВРЕМЯ КРАФТА
+        //    .WithFabricatorType(CraftTree.Type.Workbench) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
+            .WithCraftingTime(150f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Cyclops, TechCategory.Cyclops); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ

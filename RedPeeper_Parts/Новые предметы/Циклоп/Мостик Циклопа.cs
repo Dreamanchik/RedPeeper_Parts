@@ -34,13 +34,16 @@ public class МостикЦиклопа
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.Diamond, 2),
-            new Ingredient(TechType.BluePalmSeed, 2),
-            new Ingredient(TechType.Lead, 3)
+            new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1),
+            new Ingredient(TechType.MapRoomHUDChip, 1),
+            new Ingredient(TechType.AdvancedWiringKit, 1),
+            new Ingredient(TechType.Silicone, 4),
+            new Ingredient(TechType.TitaniumIngot, 2),
+            new Ingredient(TechType.Lead, 4)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithFabricatorType(CraftTree.Type.Workbench) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
-            .WithCraftingTime(40f); // ВРЕМЯ КРАФТА
+       //     .WithFabricatorType(CraftTree.Type.Workbench) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
+            .WithCraftingTime(100f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Cyclops, TechCategory.Cyclops); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ

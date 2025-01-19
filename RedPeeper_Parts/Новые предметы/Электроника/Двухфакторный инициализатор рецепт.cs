@@ -18,10 +18,10 @@ public class РецептИнициализатор
 
             Ingredients =
         {
-            new Ingredient(TechType.CopperWire, 2),
-            new Ingredient(TechType.ComputerChip, 1),
-            new Ingredient(TechType.Magnetite, 3),
-            new Ingredient(TechType.WiringKit, 1)
+            new Ingredient(TechType.Magnetite, 5),
+            new Ingredient(TechType.CopperWire, 3),
+            new Ingredient(TechType.WiringKit),
+            new Ingredient(TechType.ComputerChip)
         }
         };
     }

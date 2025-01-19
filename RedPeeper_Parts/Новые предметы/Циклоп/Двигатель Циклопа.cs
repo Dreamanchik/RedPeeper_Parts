@@ -25,6 +25,7 @@ public class ДвигательЦиклопа
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(3, 4)); // РАЗМЕР В ИНВЕНТАРЕ
+        CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm);
 
         var _prefab = new CustomPrefab(Info);
 
@@ -39,8 +40,8 @@ public class ДвигательЦиклопа
             new Ingredient(TechType.PowerCell, 6)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithFabricatorType(CraftTree.Type.Workbench) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
-            .WithCraftingTime(60f); // ВРЕМЯ КРАФТА
+         //   .WithFabricatorType(CraftTree.Type.Workbench) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
+            .WithCraftingTime(100f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Cyclops, TechCategory.Cyclops); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ

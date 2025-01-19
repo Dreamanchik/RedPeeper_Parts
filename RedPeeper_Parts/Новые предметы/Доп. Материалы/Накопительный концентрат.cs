@@ -38,9 +38,9 @@ public class НакопительныйКонцентрат
             //    РЕЦЕПТ КОНЕЦ
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
-            .WithStepsToFabricatorTab("Resources", "AdvancedMaterials")
-            .WithCraftingTime(3f); // ВРЕМЯ КРАФТА
-        _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
+            .WithStepsToFabricatorTab("Resources", "BasicMaterials")
+            .WithCraftingTime(5f); // ВРЕМЯ КРАФТА
+        _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.BasicMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
     }

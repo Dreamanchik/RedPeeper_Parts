@@ -13,7 +13,7 @@ public class РецептКомплектаПроводов
     {
         return new RecipeData()
         {
-            craftAmount = 1,
+            craftAmount = 2,
 
             Ingredients =
         {
