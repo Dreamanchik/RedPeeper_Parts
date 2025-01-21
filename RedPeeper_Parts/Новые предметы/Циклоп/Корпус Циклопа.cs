@@ -37,8 +37,7 @@ public class КорпусЦиклопа
             new Ingredient(TechType.PlasteelIngot, 4),
             new Ingredient(TechType.AdvancedWiringKit, 1),
             new Ingredient(TechType.Aerogel, 2),
-            new Ingredient(TechType.CopperWire, 4),
-            new Ingredient(TechType.EnameledGlass, 4)
+            new Ingredient(TechType.CopperWire, 4)
             //    РЕЦЕПТ КОНЕЦ
             ))
         //    .WithFabricatorType(CraftTree.Type.Workbench) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
