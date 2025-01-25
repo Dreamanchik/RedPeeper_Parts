@@ -54,7 +54,7 @@ namespace RedPeeper_Parts
             // Новые предметы
             НакопительныйКонцентрат.Register();
             ПлазменнаяЛинза.Register();
-            СолнечнаяЯчейка.Register();
+            СолнечнаяЯчейка.Register(); 
             ПространственныйПроцессор.Register();
             Герметик.Register();
             Мембрана.Register();

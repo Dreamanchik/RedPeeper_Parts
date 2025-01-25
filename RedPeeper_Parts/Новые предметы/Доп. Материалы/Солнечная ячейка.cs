@@ -20,7 +20,7 @@ public class СолнечнаяЯчейка
     {
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
-            "RedPeeper_Solar_Cell",
+            "RP_SolarCell",
             "Солнечная ячейка",
             "Тонкая и чувствительная пластина, способная улавливать солнечный свет, преобразовывая его в стандартную электроэнергию. Предусматривает системы влагозащиты."
             )
@@ -37,8 +37,10 @@ public class СолнечнаяЯчейка
             //    РЕЦЕПТ НАЧАЛО
             new Ingredient(TechType.Titanium)
             ))
+            .WithFabricatorType(CraftTree.Type.Fabricator)
+            .WithStepsToFabricatorTab("Resources", "Electronics")
             .WithCraftingTime(10f); // ВРЕМЯ КРАФТА
-        _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
+        _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.Electronics); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
     }

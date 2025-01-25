@@ -23,6 +23,8 @@ public class МодифицированныйИзготовитель
     public static Texture2D illumTexture = ImageUtils.LoadTextureFromFile(mainTexturePath);
     public static string specTexturePath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "ModifiedFabricator_spec.png"); //  <-- Путь к текстуре
     public static Texture2D specTexture = ImageUtils.LoadTextureFromFile(mainTexturePath);
+    public static string normalTexturePath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "submarine_Workbench_normal.png"); //  <-- Путь к текстуре
+    public static Texture2D normalTexture = ImageUtils.LoadTextureFromFile(mainTexturePath);
 
     public static string ComponentsPath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "Tabs", "RedPeeper_ModStation_Components.png");
     public static string ChemicalPath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "Tabs", "RedPeeper_ModStation_Chemical.png");
@@ -34,7 +36,7 @@ public class МодифицированныйИзготовитель
         CustomPrefab customFab = new CustomPrefab(
             "RedPeeper_Modified_Fabricator",
             "Модифицированный изготовитель",
-            "Самодельное устройство, повторяющее и расширяющее функционал стандартного изготовителя. Конструкция этого изготовителя нарушает принципы протокола корпоративной собственности, что может привести к нарушению юрисдикции Альтерры. Применять на свой страх и риск."
+            "Самодельная и модифицированная версия изготовителя, исключающая все внешние ограничения, устанавливаемые протоколом безопасности Альтерры. Повторяет и расширяет функционал базового изготовителя. Применять на свой страх и риск."
             );
 
         // Делаем из него фабрикатор
@@ -56,6 +58,7 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddCraftingNode(treeType, TechType.EnameledGlass, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.ReactorRod, "RedPeeper_ModStation_Components");
 
+
         //  Химикаты
         CraftTreeHandler.AddCraftingNode(treeType, TechType.HydrochloricAcid, "RedPeeper_ModStation_Chemical");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.Benzene, "RedPeeper_ModStation_Chemical");
@@ -65,6 +68,7 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddCraftingNode(treeType, Герметик.Info.TechType, "RedPeeper_ModStation_Chemical");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.Bleach, "RedPeeper_ModStation_Chemical");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.HatchingEnzymes, "RedPeeper_ModStation_Chemical");
+
 
         //  Корпоративная собственность
         CraftTreeHandler.AddCraftingNode(treeType, TechType.StasisRifle, "RedPeeper_ModStation_CorporateTools");
@@ -104,7 +108,11 @@ public class МодифицированныйИзготовитель
             Ingredients =
             {
                 // РЕЦЕПТ НАЧАЛО
-                new Ingredient(TechType.Titanium, 1000)
+                new Ingredient(TechType.Titanium, 5),
+                new Ingredient(TechType.Lead, 5),
+                new Ingredient(TechType.Diamond, 3),
+                new Ingredient(TechType.WiringKit, 2),
+                new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1),
                 // РЕЦЕПТ КОНЕЦ
             }
         };
@@ -120,6 +128,7 @@ public class МодифицированныйИзготовитель
         SkinnedMeshRenderer mr = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
         mr.material.SetTexture(ShaderPropertyID._MainTex, mainTexture);
         mr.material.SetTexture(ShaderPropertyID._Illum, illumTexture);
-        mr.material.SetTexture(ShaderPropertyID._SpecTex, illumTexture);
+        mr.material.SetTexture(ShaderPropertyID._SpecTex, specTexture);
+        mr.material.SetTexture(ShaderPropertyID._NormalsTex, normalTexture);
     }
 }
