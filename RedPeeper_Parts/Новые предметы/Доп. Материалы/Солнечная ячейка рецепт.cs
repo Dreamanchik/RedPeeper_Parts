@@ -18,7 +18,7 @@ public class РецептЯчейка
 
             Ingredients =
         {
-            new Ingredient(TechType.MembrainTreeSeed, 2),
+            new CraftData.Ingredient(НакопительныйКонцентрат.Info.TechType),
             new Ingredient(TechType.CopperWire, 1),
             new Ingredient(TechType.Titanium, 2),
             new Ingredient(TechType.WiringKit, 1)

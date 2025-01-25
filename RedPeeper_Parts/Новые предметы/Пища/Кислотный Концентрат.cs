@@ -22,7 +22,7 @@ public class RedPeeper_AcidConcentrate
     {
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
-            "RedPeeper_Acid_Concentrate",
+            "RP_AcidConcentrate",
             "Кислотный концентрат",
             "Кинцентрированная настойка, изготовленная из химически активных образцов флоры 4546B. Хорошо освежает, но травмирует пищевод. Теряет полезные свойства со времением. -Marcus_Kat"
             )

@@ -19,7 +19,7 @@ public class РецептКонцентрат
             Ingredients =
         {
             new Ingredient(TechType.PurpleBrainCoralPiece, 2),
-            new Ingredient(TechType.CopperWire, 1),
+            new Ingredient(TechType.Copper, 2),
             new Ingredient(TechType.AcidMushroom, 4)
         }
         };
