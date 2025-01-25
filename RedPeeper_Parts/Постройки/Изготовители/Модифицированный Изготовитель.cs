@@ -77,6 +77,7 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PropulsionCannon, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.ReinforcedDiveSuit, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.WaterFiltrationSuit, "RedPeeper_ModStation_CorporateTools");
+        CraftTreeHandler.AddCraftingNode(treeType, АналоговаяБатарея.Info.TechType, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PrecursorIonBattery, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PrecursorIonPowerCell, "RedPeeper_ModStation_CorporateTools");
 

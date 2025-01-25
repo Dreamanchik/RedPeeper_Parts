@@ -75,6 +75,7 @@ namespace RedPeeper_Parts
 
             // Батареи
             МеднаяБатарейка.Register();
+            АналоговаяБатарея.Register();
 
 
 
