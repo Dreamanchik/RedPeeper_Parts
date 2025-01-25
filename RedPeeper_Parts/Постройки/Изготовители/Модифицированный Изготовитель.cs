@@ -120,6 +120,6 @@ public class МодифицированныйИзготовитель
         SkinnedMeshRenderer mr = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
         mr.material.SetTexture(ShaderPropertyID._MainTex, mainTexture);
         mr.material.SetTexture(ShaderPropertyID._Illum, illumTexture);
-        mr.material.SetTexture(ShaderPropertyID._SpecTex, illumTexture);
+        mr.material.SetTexture(ShaderPropertyID._SpecTex, specTexture);
     }
 }
