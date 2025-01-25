@@ -130,6 +130,6 @@ public class МодифицированныйИзготовитель
         mr.material.SetTexture(ShaderPropertyID._MainTex, mainTexture);
         mr.material.SetTexture(ShaderPropertyID._Illum, illumTexture);
         mr.material.SetTexture(ShaderPropertyID._SpecTex, specTexture);
-        mr.material.SetTexture(ShaderPropertyID._NormalsTex, normalTexture);
+        mr.material.SetTexture(ShaderPropertyID._SpecTex, illumTexture);
     }
 }
