@@ -54,9 +54,31 @@ public class АналоговаяБатарея
             new Ingredient(TechType.Titanium, 2),
             new Ingredient(TechType.CopperWire)
             ))
-            .WithCraftingTime(15f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(10f); // ВРЕМЯ КРАФТА
             // _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
+    }
+}
+
+
+
+public class РецептАнаговойБатареи
+{
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
+    {
+        return new RecipeData()
+        {
+            craftAmount = 1,
+
+            Ingredients =
+        {
+            new Ingredient(TechType.PurpleBrainCoralPiece, 2),
+            new Ingredient(TechType.UraniniteCrystal, 2),
+            new Ingredient(TechType.Titanium, 2),
+            new Ingredient(TechType.CopperWire)
+        }
+        };
     }
 }

@@ -21,7 +21,7 @@ public class НогаКраба
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
             "RPho_PrawnLeg",
-            "Ноги краба",
+            "Нога краба",
             "Механическая конечность, позволяющая крабу перемещаться по физической поверхности. Обладает эффективной термозащитой, формой захвата грунта и виброизоляцией, позволяя ему передвигаться по любого рода поверхностям."
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
@@ -37,9 +37,31 @@ public class НогаКраба
             new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithCraftingTime(50f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(20f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Machines, TechCategory.Machines); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
+    }
+}
+
+
+
+public class РецептНогаКраба
+{
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
+    {
+        return new RecipeData()
+        {
+            craftAmount = 1,
+
+            Ingredients =
+        {
+            new Ingredient(TechType.PlasteelIngot, 1),
+            new Ingredient(TechType.WiringKit, 2),
+            new Ingredient(TechType.Aerogel, 1),
+            new Ingredient(TechType.Silicone, 3)
+        }
+        };
     }
 }

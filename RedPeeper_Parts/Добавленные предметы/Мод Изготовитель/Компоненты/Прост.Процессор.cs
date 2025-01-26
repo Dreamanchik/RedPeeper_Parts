@@ -29,8 +29,8 @@ public class ПространственныйПроцессор
             "Пространственный процессор",
             "Инновационный и невероятно сложный процессор, предназначенный для расчёта и использования квантовых технологий. Применяется для производства высокотехнологичных инструментов, затрагивающих силы времени и пространства."
             )
-            .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
-            //.WithSizeInInventory(new Vector2int(3, 3)); // РАЗМЕР В ИНВЕНТАРЕ
+            .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
+            .WithSizeInInventory(new Vector2int(3, 2)); // РАЗМЕР В ИНВЕНТАРЕ
             CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
 
         var _prefab = new CustomPrefab(Info);
@@ -46,11 +46,38 @@ public class ПространственныйПроцессор
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new Ingredient(TechType.Titanium)
+            new Ingredient(TechType.UraniniteCrystal, 5),
+            new Ingredient(TechType.ComputerChip, 3),
+            new Ingredient(TechType.PrecursorIonCrystal, 3),
+            new Ingredient(TechType.AdvancedWiringKit, 1),
+            new CraftData.Ingredient(ДвухфакторныйИнициализатор.Info.TechType)
             ))
-            .WithCraftingTime(100f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(10f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
+    }
+}
+
+
+
+public class РецептПроцессор
+{
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
+    {
+        return new RecipeData()
+        {
+            craftAmount = 1,
+
+            Ingredients =
+        {
+            new Ingredient(TechType.UraniniteCrystal, 5),
+            new Ingredient(TechType.ComputerChip, 3),
+            new Ingredient(TechType.PrecursorIonCrystal, 3),
+            new Ingredient(TechType.AdvancedWiringKit, 1),
+            new CraftData.Ingredient(ДвухфакторныйИнициализатор.Info.TechType),
+        }
+        };
     }
 }

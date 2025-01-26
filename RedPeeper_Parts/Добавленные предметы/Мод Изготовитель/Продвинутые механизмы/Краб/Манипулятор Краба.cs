@@ -37,9 +37,41 @@ public class МанипуляторКраба
             new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithCraftingTime(50f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(20f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Machines, TechCategory.Machines); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
+    }
+}
+
+
+
+using Nautilus.Crafting;
+using Nautilus.Handlers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static CraftData;
+
+public class РецептМанипулятораКраба
+{
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
+    {
+        return new RecipeData()
+        {
+            craftAmount = 1,
+
+            Ingredients =
+        {
+            new Ingredient(TechType.PlasteelIngot, 1),
+            new Ingredient(TechType.WiringKit, 2),
+            new Ingredient(TechType.Aerogel, 1),
+            new Ingredient(TechType.CopperWire, 2),
+            new Ingredient(TechType.Titanium, 3)
+        }
+        };
     }
 }
