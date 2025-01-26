@@ -26,7 +26,7 @@ public class ПлазменнаяЛинза
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(3, 2)); // РАЗМЕР В ИНВЕНТАРЕ
-        //CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
+            CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
 
         var _prefab = new CustomPrefab(Info);
 
@@ -37,9 +37,30 @@ public class ПлазменнаяЛинза
             new Ingredient(TechType.Titanium)
             //    РЕЦЕПТ КОНЕЦ
             ))
-            .WithCraftingTime(50f); // ВРЕМЯ КРАФТА
+            .WithCraftingTime(10f); // ВРЕМЯ КРАФТА
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
+    }
+}
+
+
+public class РецептЛинзы
+{
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
+    {
+        return new RecipeData()
+        {
+            craftAmount = 1,
+
+            Ingredients =
+        {
+            new Ingredient(Мембрана.Info.TechType, 3),
+            new Ingredient(TechType.Diamond, 5),
+            new Ingredient(TechType.EnameledGlass, 2),
+            new Ingredient(TechType.ComputerChip, 1)
+        }
+        };
     }
 }

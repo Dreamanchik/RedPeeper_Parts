@@ -58,5 +58,27 @@ public class ДвухфакторныйИнициализатор
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.Electronics); // МЕСТОНАХОЖДЕНИЕ В КПК
 
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
+
+
+    }
+}
+
+public class РецептИнициализатор
+{
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
+    {
+        return new RecipeData()
+        {
+            craftAmount = 1,
+
+            Ingredients =
+        {
+            new Ingredient(TechType.Magnetite, 5),
+            new Ingredient(TechType.CopperWire, 3),
+            new Ingredient(TechType.WiringKit),
+            new Ingredient(TechType.ComputerChip)
+        }
+        };
     }
 }

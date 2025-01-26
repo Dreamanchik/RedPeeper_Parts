@@ -69,3 +69,24 @@ public class Герметик
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
     }
 }
+
+
+
+public class РецептГерметик
+{
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
+    {
+        return new RecipeData()
+        {
+            craftAmount = 1,
+
+            Ingredients =
+        {
+            new Ingredient(TechType.Salt, 1),
+            new Ingredient(TechType.JellyPlant, 1),
+            new Ingredient(TechType.BluePalmSeed, 2)
+        }
+        };
+    }
+}
