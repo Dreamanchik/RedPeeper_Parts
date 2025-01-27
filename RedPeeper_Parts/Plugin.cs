@@ -354,6 +354,47 @@ namespace RedPeeper_Parts
 
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Machines", "CyclopsDecoy");
 
+
+
+
+
+            //
+            // Патчим и изменияем получение/количество фрагментов для чертежа
+            PDAHandler.AddCustomScannerEntry(TechType.Titanium, TechType.TitaniumIngot, true, 2 );
+            PDAHandler.AddCustomScannerEntry(TechType.ScrapMetal, TechType.Titanium, true, 2);
+
+            PDAHandler.AddCustomScannerEntry(TechType.CreepvineSeedCluster, TechType.Silicone, true, 2);
+            PDAHandler.AddCustomScannerEntry(TechType.Quartz, TechType.Glass, true, 2);
+
+            PDAHandler.AddCustomScannerEntry(TechType.Copper, TechType.CopperWire, true, 2);
+            PDAHandler.AddCustomScannerEntry(TechType.Silver, TechType.WiringKit, true, 2);
+            PDAHandler.AddCustomScannerEntry(TechType.WiringKit, TechType.ComputerChip, true, 2);
+
+            PDAHandler.AddCustomScannerEntry(TechType.CoralChunk, TechType.Pipe, true, 2);
+            PDAHandler.AddCustomScannerEntry(TechType.CoralChunk, TechType.PipeSurfaceFloater, true, 2);
+
+            PDAHandler.AddCustomScannerEntry(TechType.JellyPlant, TechType.FirstAidKit, true, 2);
+
+
+
+
+
+            PDAHandler.EditFragmentScanTime(TechType.Cyclops, 16f);
+
+            PDAHandler.EditFragmentScanTime(TechType.StasisRifle, 10f);
+            PDAHandler.EditFragmentsToScan(TechType.StasisRifle, 5);
+            PDAHandler.EditFragmentScanTime(TechType.Constructor, 10f);
+            PDAHandler.EditFragmentsToScan(TechType.Constructor, 5);
+            PDAHandler.EditFragmentScanTime(TechType.Beacon, 5f);
+            PDAHandler.EditFragmentsToScan(TechType.Beacon, 4);
+
+            PDAHandler.EditFragmentScanTime(TechType.LaserCutter, 5f);
+            PDAHandler.EditFragmentsToScan(TechType.LaserCutter, 5);
+            PDAHandler.EditFragmentScanTime(TechType.PropulsionCannon, 5f);
+            PDAHandler.EditFragmentsToScan(TechType.PropulsionCannon, 5);
+
+
+
             //Лого LINER
 
 
