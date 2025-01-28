@@ -15,7 +15,7 @@ using static CraftData;
 public class МодифицированныйИзготовитель
 {
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "StorageConcentrate.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "Tabs", "ModifiedFabricator.png");
 
     public static string mainTexturePath = Path.Combine(modFolder, "Assets", "Fabricators", "Modified Fabricator", "ModifiedFabricator_texture.png"); //  <-- Путь к текстуре
     public static Texture2D mainTexture = ImageUtils.LoadTextureFromFile(mainTexturePath);

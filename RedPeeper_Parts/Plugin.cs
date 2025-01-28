@@ -31,10 +31,6 @@ namespace RedPeeper_Parts
         private void InitializePrefabs()
         {
 
-            // CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, )
-            // РЕГИСТРАЦИЯ ВСЕХ ПРЕФАБОВ
-            // (Название файла).Register();
-
             // Перфабы генерации
             DegasiBase.Register();
             DegasiBasePieceCorridorCap.Register();
@@ -137,8 +133,7 @@ namespace RedPeeper_Parts
 
 
 
-            // Рецепты
-            // CraftDataHandler.SetRecipeData(Techtype.(Айди предмета рецепт которого меняем), (Название файла с рецептом).GetRecipeData());
+            // Патчим рецепты
             CraftDataHandler.SetRecipeData(TechType.Cyclops, РецептЦиклопа.GetRecipeData());
 
 
