@@ -7,6 +7,7 @@ using Nautilus.Crafting;
 using Nautilus.Handlers;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
+using UnityEngine;
 
 public class МанипуляторКраба
 {
@@ -30,7 +31,11 @@ public class МанипуляторКраба
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, TechType.ExosuitDrillArmModule); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        var _obj = new CloneTemplate(Info, "16c60cdf-2a1c-4aff-ba9a-4c9b989cced5"); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        _obj.ModifyPrefab += obj =>
+        {
+            obj.EnsureComponent<Pickupable>();
+        };
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО

@@ -45,3 +45,22 @@ public class НакопительныйКонцентрат
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
     }
 }
+
+public class РецептКонцентрат
+{
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
+    {
+        return new RecipeData()
+        {
+            craftAmount = 1,
+
+            Ingredients =
+        {
+            new Ingredient(TechType.PurpleBrainCoralPiece, 2),
+            new Ingredient(TechType.Copper, 2),
+            new Ingredient(TechType.AcidMushroom, 4)
+        }
+        };
+    }
+}

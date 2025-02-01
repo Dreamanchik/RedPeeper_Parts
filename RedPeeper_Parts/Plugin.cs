@@ -40,6 +40,7 @@ namespace RedPeeper_Parts
             DegasiBasePieceMultipurposePlanters.Register();
             DegasiBasePieceTCorridorGlass.Register();
             DegasiBasePieceXCorridor.Register();
+            DrillableReefbackRock.Register();
 
 
 
@@ -53,7 +54,9 @@ namespace RedPeeper_Parts
             СолнечнаяЯчейка.Register(); 
             ПространственныйПроцессор.Register();
             Герметик.Register();
+            ОкаменелостиРифоспинов.Register();
             Мембрана.Register();
+            Мембрана2.Register();
             ДвухфакторныйИнициализатор.Register();
             Logger.LogInfo("Новые предметы загружены");
 
@@ -109,7 +112,8 @@ namespace RedPeeper_Parts
 
 
             // Тестовые предметы
-            // RedPeeper_TrainingPeeper.Register();
+            RedPeeper_TrainingPeeper.Register();
+            DrillablePeeper.Register();
 
 
 
@@ -277,6 +281,7 @@ namespace RedPeeper_Parts
 
             // Материалы МОД
             CraftDataHandler.SetRecipeData(Мембрана.Info.TechType, РецептМембраны.GetRecipeData());
+            CraftDataHandler.SetRecipeData(Мембрана2.Info.TechType, РецептМембраны2.GetRecipeData());
 
 
 
@@ -391,7 +396,6 @@ namespace RedPeeper_Parts
 
 
             //Лого LINER
-
 
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");

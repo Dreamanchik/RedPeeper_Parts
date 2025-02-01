@@ -30,7 +30,11 @@ public class МостикЦиклопа
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, TechType.Magnesium); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        var _obj = new CloneTemplate(Info, "72d0460c-1b50-416b-8a9d-58e415132d3d"); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        _obj.ModifyPrefab += obj =>
+        {
+            obj.EnsureComponent<Pickupable>();
+        };
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО

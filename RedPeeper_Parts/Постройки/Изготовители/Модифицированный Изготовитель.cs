@@ -34,8 +34,8 @@ public class МодифицированныйИзготовитель
     {
         // Создаём префаб
         CustomPrefab customFab = new CustomPrefab(
-            "RedPeeper_Modified_Fabricator",
-            "Модифицированный изготовитель",
+            "RP_Modified_Fabricator", // ID
+            "Модифицированный изготовитель", // НАЗВАНИЕ
             "Самодельная и модифицированная версия изготовителя, исключающая все внешние ограничения, устанавливаемые протоколом безопасности Альтерры. Повторяет и расширяет функционал базового изготовителя. Применять на свой страх и риск."
             );
 
@@ -55,6 +55,7 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddCraftingNode(treeType, TechType.AdvancedWiringKit, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PlasteelIngot, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, Мембрана.Info.TechType, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, Мембрана2.Info.TechType, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.EnameledGlass, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.ReactorRod, "RedPeeper_ModStation_Components");
 

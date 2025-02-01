@@ -20,7 +20,7 @@ public class КорпусЦиклопа
     {
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
-            "RedPeeper_Cyclops_Hull",
+            "RP_CyclopsHull",
             "Корпус Циклопа",
             "Проводящая электричество обшивка, позволяющая Циклопу подниматься и опускаться. Из-за особенности конструкции может легко повредится. Может менять окрас при соответствующей команде с мостика."
             )
@@ -30,7 +30,11 @@ public class КорпусЦиклопа
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, TechType.Magnesium); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        var _obj = new CloneTemplate(Info, "0ba2de19-0f6e-4469-bf77-8c0f9db95875"); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        _obj.ModifyPrefab += obj =>
+        {
+            obj.EnsureComponent<Pickupable>();
+        };
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
