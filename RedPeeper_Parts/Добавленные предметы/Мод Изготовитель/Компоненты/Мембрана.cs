@@ -17,14 +17,18 @@ public class Мембрана
 
     //    ИКОНКА
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "ModifiedFabricator", "Components", "Membrane.png"); // <-- Заменить на нужное. ОГРОМНОЕ ЖЕЛАНИЕ ПАПКИ ДЕЛАТЬ ТАКИМИ ЖЕ КАК И В ПРОЕКТЕ. Структура должна совпадать с папками в моде. Тоесть, если иконка просто находится в папке Assets, то код будет выглядеть как <<"Assets", "CyclopsEngine.png">>, а если находится с папке Assets и потом в папке Items, потом Cyclops и потом Objects, то <<"Assets", "Items", "Cyclops", "Objects", "CyclopsEngine.png">>
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "ModifiedFabricator", "Components", "Membrane", "Membrane.png"); // <-- Заменить на нужное. ОГРОМНОЕ ЖЕЛАНИЕ ПАПКИ ДЕЛАТЬ ТАКИМИ ЖЕ КАК И В ПРОЕКТЕ. Структура должна совпадать с папками в моде. Тоесть, если иконка просто находится в папке Assets, то код будет выглядеть как <<"Assets", "CyclopsEngine.png">>, а если находится с папке Assets и потом в папке Items, потом Cyclops и потом Objects, то <<"Assets", "Items", "Cyclops", "Objects", "CyclopsEngine.png">>
+
+    public static string mainTexturePath = Path.Combine(modFolder, "Assets", "Doodabs", "ModifiedFabricator", "Components", "Membrane", "Membrane_Texture.png");
+    public static string specPath = Path.Combine(modFolder, "Assets", "Doodabs", "ModifiedFabricator", "Components", "Membrane", "Membrane_Spec.png");//  <-- Путь к текстуре
+    public static Texture2D texture = ImageUtils.LoadTextureFromFile(mainTexturePath);
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
             //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
             "RP_Membrane",
             "Мембрана",
-            "Тонкая органическая пластина, синтезированная из образцов мембранного дерева. Подходит для создания герметичных упаковок и высокотехнологичных линз."
+            "Тонкая органическая пластина, синтезированная из биологических образцов флоры и фауны. Подходит для создания герметичных упаковок и высокотехнологичных линз."
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(2, 2)); // РАЗМЕР В ИНВЕНТАРЕ
@@ -32,7 +36,7 @@ public class Мембрана
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, TechType.ComputerChip); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПАW
+        var _obj = new CloneTemplate(Info, TechType.CoralChunk); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПАW
         _obj.ModifyPrefab += obj =>
         {
             BaseBioReactor.charge[Info.TechType] = 120f;
