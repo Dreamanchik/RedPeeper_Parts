@@ -18,9 +18,8 @@ public class ПространственныйПроцессор
     //    ИКОНКА
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "ModifiedFabricator", "Components", "SpatialProcessor", "SpatialProcessor.png"); // <-- Заменить на нужное. ОГРОМНОЕ ЖЕЛАНИЕ ПАПКИ ДЕЛАТЬ ТАКИМИ ЖЕ КАК И В ПРОЕКТЕ. Структура должна совпадать с папками в моде. Тоесть, если иконка просто находится в папке Assets, то код будет выглядеть как <<"Assets", "CyclopsEngine.png">>, а если находится с папке Assets и потом в папке Items, потом Cyclops и потом Objects, то <<"Assets", "Items", "Cyclops", "Objects", "CyclopsEngine.png">>
-
-    public static string texturePath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "SpatialProcessor_texture.png"); //  <-- Путь к текстуре
-    public static Texture2D Texture = ImageUtils.LoadTextureFromFile(texturePath);
+    public static string mainTexturePath = Path.Combine(modFolder, "Assets", "Doodabs", "ModifiedFabricator", "Components", "SpatialProcessor", "SpatialProcessor_texture.png"); //  <-- Путь к текстуре
+    public static Texture2D Texture = ImageUtils.LoadTextureFromFile(mainTexturePath);
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
