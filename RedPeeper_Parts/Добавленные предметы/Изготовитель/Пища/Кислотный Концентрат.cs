@@ -67,3 +67,21 @@ public class RedPeeper_AcidConcentrate
         _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
     }
 }
+
+public class РецептКислотныйКонцентрат
+{
+    // Изменяем рецепт
+    public static RecipeData GetRecipeData()
+    {
+        return new RecipeData()
+        {
+            craftAmount = 1,
+
+            Ingredients =
+        {
+            new Ingredient(TechType.AcidMushroom, 8),
+            new Ingredient(TechType.Bleach, 1)
+        }
+        };
+    }
+}
