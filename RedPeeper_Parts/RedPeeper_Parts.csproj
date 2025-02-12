@@ -39,4 +39,8 @@
       <HintPath>D:\steam\steamapps\common\Subnautica\BepInEx\plugins\CustomBatteries\CustomBatteries.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Добавленные предметы\Изготовитель\Пища\м\" />
+  </ItemGroup>
 </Project>
