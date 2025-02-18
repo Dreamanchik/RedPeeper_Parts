@@ -12,7 +12,11 @@ using UnityEngine;
 
 public class DrillableReefbackRock
 {
-    public static PrefabInfo Info { get; set; } = PrefabInfo.WithTechType("DrillableReefbackRock", "Окаменелости Рифоспинов", "У тебя не должно быть доступа к этому...");
+    public static PrefabInfo Info { get; set; } = PrefabInfo.WithTechType(
+        "DrillableReefbackRock", 
+        "Окаменелости Рифоспинов", 
+        "У тебя не должно быть доступа к этому..."
+        );
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string texturePath = Path.Combine(modFolder, "Assets", "World", "Drillable", "DrillableReefbackRock_texture.png"); //  <-- Путь к текстуре
@@ -26,7 +30,7 @@ public class DrillableReefbackRock
         _clone.ModifyPrefab += obj =>
         {
             PrefabUtils.AddResourceTracker(obj, ОкаменелостиРифоспинов.Info.TechType);
-            Drillable drillable = obj.EnsureComponent<Drillable>();
+            Drillable drillable = obj.EnsureComponent<Drillable>(); 
             Drillable.ResourceType[] resources = drillable.resources;
             int num = 0;
             Drillable.ResourceType resourceType = default(Drillable.ResourceType);

@@ -35,6 +35,23 @@ public class ОкаменелостиРифоспинов
             Vector3 size = new Vector3(0.6f, 0.6f, 0.6f);
             obj.transform.localScale = size;
             obj.EnsureComponent<Pickupable>();
+            Rigidbody rigidBody = obj.EnsureComponent<Rigidbody>();
+            rigidBody.drag = 1;
+            rigidBody.angularDrag = 1;
+            rigidBody.mass = 10;
+            rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
+            rigidBody.isKinematic = false;
+            rigidBody.useGravity = false;
+            obj.EnsureComponent<WorldForces>();
+            WorldForces worldForces = obj.GetComponent<WorldForces>();
+            worldForces.handleGravity = true;
+            worldForces.aboveWaterGravity = 10;
+            worldForces.underwaterGravity = 1;
+            worldForces.handleDrag = true;
+            worldForces.aboveWaterDrag = 0.1f;
+            worldForces.underwaterDrag = 1;
+            worldForces.useRigidbody = rigidBody;
+            worldForces.detectionState = true;
         };
         _prefab.SetGameObject(_obj);
 
