@@ -19,7 +19,7 @@ public class ДвухфакторныйИнициализатор
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "ModifiedFabricator", "Components", "TwoFactorProcessor", "TwoFactorProcessor.png"); // <-- Заменить на нужное. ОГРОМНОЕ ЖЕЛАНИЕ ПАПКИ ДЕЛАТЬ ТАКИМИ ЖЕ КАК И В ПРОЕКТЕ. Структура должна совпадать с папками в моде. Тоесть, если иконка просто находится в папке Assets, то код будет выглядеть как <<"Assets", "CyclopsEngine.png">>, а если находится с папке Assets и потом в папке Items, потом Cyclops и потом Objects, то <<"Assets", "Items", "Cyclops", "Objects", "CyclopsEngine.png">>
 
-    public static string texturePath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "TwoFactorProcessor_texture.png"); //  <-- Путь к текстуре
+    public static string texturePath = Path.Combine(modFolder, "Assets", "Doodads", "ModifiedFabricator", "Components", "TwoFactorProcessor", "TwoFactorProcessor_texture.png"); //  <-- Путь к текстуре
     public static Texture2D Texture = ImageUtils.LoadTextureFromFile(texturePath);
     public static void Register()
     {
@@ -35,12 +35,11 @@ public class ДвухфакторныйИнициализатор
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, TechType.Polyaniline); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПАW
+        var _obj = new CloneTemplate(Info, TechType.ComputerChip); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПАW
         _obj.ModifyPrefab += obj =>
         {
             MeshRenderer mr = obj.transform.Find("model").gameObject.transform.Find("Mesh").gameObject.GetComponent<MeshRenderer>();
-            mr.material.mainTexture = Texture;
-            mr.material.SetTexture(ShaderPropertyID._Diffusion, Texture);
+            mr.material.SetTexture(ShaderPropertyID._MainTex, Texture);
         };
         _prefab.SetUnlock(TechType.JellyPlant);
         _prefab.SetGameObject(_obj);
