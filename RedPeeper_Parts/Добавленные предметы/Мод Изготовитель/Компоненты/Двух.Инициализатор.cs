@@ -40,9 +40,9 @@ public class ДвухфакторныйИнициализатор
         };
         _prefab.SetUnlock(TechType.JellyPlant);
         _prefab.SetGameObject(_obj);
-        _prefab.SetRecipe(new RecipeData(
-            //    Рецепт
-            new Ingredient(TechType.Magnetite, 5),
+        _prefab.SetRecipe (new RecipeData
+
+            (new Ingredient(TechType.Magnetite, 5),
             new Ingredient(TechType.CopperWire, 3),
             new Ingredient(TechType.WiringKit),
             new Ingredient(TechType.ComputerChip)
