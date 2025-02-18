@@ -11,27 +11,25 @@ using UnityEngine;
 
 public class ОкаменелостиРифоспинов
 {
-    //    ЧТОБЫ ПРЕДМЕТ МОЖНО БЫЛО ИСПОЛЬЗОВАТЬ ГДЕ УГОДНО. ДЛЯ ЭТОГО НУЖНО ПРОСТО ВПИСАТЬ (Название класса).Info.(Название функции. Например, TechType). КАК ПРИМЕР - RedPeeper_CyclopsEngine.Info.TechType
     public static PrefabInfo Info { get; private set; }
 
-    //    ИКОНКА
+
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Materials", "ReefbackRock.png"); // <-- Заменить на нужное. ОГРОМНОЕ ЖЕЛАНИЕ ПАПКИ ДЕЛАТЬ ТАКИМИ ЖЕ КАК И В ПРОЕКТЕ. Структура должна совпадать с папками в моде. Тоесть, если иконка просто находится в папке Assets, то код будет выглядеть как <<"Assets", "CyclopsEngine.png">>, а если находится с папке Assets и потом в папке Items, потом Cyclops и потом Objects, то <<"Assets", "Items", "Cyclops", "Objects", "CyclopsEngine.png">>
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Materials", "ReefbackRock.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
-            //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
+
             "RP_ReefbackRock",
             "Окаменелости рифоспинов",
             "Древнее окаменелое образование, появившееся в результате жизнедеятельности дальних предков рифоспина. Состоит из тонких нарезных слоёв, схожих по структуре с мембранами."
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
-            .WithSizeInInventory(new Vector2int(3, 2)); // РАЗМЕР В ИНВЕНТАРЕ
-        //CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
+            .WithSizeInInventory(new Vector2int(3, 2));
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, "a711c0fa-f31e-4426-9164-a9a65557a9a2"); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        var _obj = new CloneTemplate(Info, "a711c0fa-f31e-4426-9164-a9a65557a9a2"); // Перфаб
         _obj.ModifyPrefab += obj =>
         {
             Vector3 size = new Vector3(0.6f, 0.6f, 0.6f);
@@ -57,6 +55,6 @@ public class ОкаменелостиРифоспинов
         };
         _prefab.SetGameObject(_obj);
 
-        _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
+        _prefab.Register(); // Регистрация
     }
 }

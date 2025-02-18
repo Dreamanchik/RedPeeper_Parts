@@ -67,6 +67,7 @@ namespace RedPeeper_Parts
             // Новая еда
             RedPeeper_MelonMousse.Register();
             RedPeeper_AcidConcentrate.Register();
+            ОбедФаберже.Register();
 
 
 
@@ -309,6 +310,7 @@ namespace RedPeeper_Parts
             // Еда МОД
             CraftDataHandler.SetRecipeData(RedPeeper_MelonMousse.Info.TechType, РецептДыневыйМусс.GetRecipeData());
             CraftDataHandler.SetRecipeData(RedPeeper_AcidConcentrate.Info.TechType, РецептКислотныйКонцентрат.GetRecipeData());
+            CraftDataHandler.SetRecipeData(ОбедФаберже.Info.TechType, РецептОбед.GetRecipeData());
 
 
 

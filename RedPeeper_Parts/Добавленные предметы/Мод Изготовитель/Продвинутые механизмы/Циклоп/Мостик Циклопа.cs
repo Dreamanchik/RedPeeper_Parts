@@ -10,46 +10,44 @@ using Nautilus.Assets.Gadgets;
 
 public class МостикЦиклопа
 {
-    //    ЧТОБЫ ПРЕДМЕТ МОЖНО БЫЛО ИСПОЛЬЗОВАТЬ ГДЕ УГОДНО. ДЛЯ ЭТОГО НУЖНО ПРОСТО ВПИСАТЬ (Название класса).Info.(Название функции. Например, TechType). КАК ПРИМЕР - RedPeeper_CyclopsEngine.Info.TechType
     public static PrefabInfo Info { get; private set; }
 
-    //    ИКОНКА
+
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "ModifiedFabricator", "AdvancedElectronics", "Cyclops", "CyclopsBridge.png"); // <-- Заменить на нужное. ОГРОМНОЕ ЖЕЛАНИЕ ПАПКИ ДЕЛАТЬ ТАКИМИ ЖЕ КАК И В ПРОЕКТЕ. Структура должна совпадать с папками в моде. Тоесть, если иконка просто находится в папке Assets, то код будет выглядеть как <<"Assets", "CyclopsEngine.png">>, а если находится с папке Assets и потом в папке Items, потом Cyclops и потом Objects, то <<"Assets", "Items", "Cyclops", "Objects", "CyclopsEngine.png">>
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "ModifiedFabricator", "AdvancedElectronics", "Cyclops", "CyclopsBridge.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
-            //    АЙДИ, НАЗВАНИЕ, ОПИСАНИЕ
+
             "RP_CyclopsBridge",
             "Мостик Циклопа",
             "Центральная рубка Циклопа. Позволяет отдавать команды о запуске двигателя, передвижении, активировать функционал модификаций, режим просмотра внешних камер и редактирования окраски."
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
-            .WithSizeInInventory(new Vector2int(3, 4)); // РАЗМЕР В ИНВЕНТАРЕ
-        CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm); // ФОН
+            .WithSizeInInventory(new Vector2int(3, 4));
+        CraftDataHandler.SetBackgroundType(Info.TechType, CraftData.BackgroundType.ExosuitArm);
 
         var _prefab = new CustomPrefab(Info);
 
-        var _obj = new CloneTemplate(Info, "72d0460c-1b50-416b-8a9d-58e415132d3d"); // КОПИРУЕМ ПРЕФАБ НА ОСНОВЕ ТЕЧТАЙПА
+        var _obj = new CloneTemplate(Info, "72d0460c-1b50-416b-8a9d-58e415132d3d"); // Перфаб
         _obj.ModifyPrefab += obj =>
         {
             obj.EnsureComponent<Pickupable>();
         };
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
-            //    РЕЦЕПТ НАЧАЛО
+
             new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1),
             new Ingredient(TechType.MapRoomHUDChip, 1),
             new Ingredient(TechType.AdvancedWiringKit, 1),
             new Ingredient(TechType.Silicone, 4),
             new Ingredient(TechType.TitaniumIngot, 2),
             new Ingredient(TechType.Lead, 4)
-            //    РЕЦЕПТ КОНЕЦ
             ))
-       //     .WithFabricatorType(CraftTree.Type.Workbench) // В 2.0 отказались от вкладок в мод станции, я не знаю зачем
-            .WithCraftingTime(100f); // ВРЕМЯ КРАФТА
-        _prefab.SetPdaGroupCategory(TechGroup.Cyclops, TechCategory.Cyclops); // МЕСТОНАХОЖДЕНИЕ В КПК
 
-        _prefab.Register(); // РЕГИСТРАЦИЯ ОБЪЕКТА. ПОСЛЕ ЭТОГО НИЧЕГО НЕ ПИШЕМ
+            .WithCraftingTime(100f);
+        _prefab.SetPdaGroupCategory(TechGroup.Cyclops, TechCategory.Cyclops); // КПК
+
+        _prefab.Register(); // Регистрация
     }
 }
