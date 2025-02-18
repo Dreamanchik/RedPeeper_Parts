@@ -38,7 +38,7 @@ public class Герметик
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Titanium)
+            new Ingredient(TechType.Polyaniline)
 
             ))
             .WithCraftingTime(5f);
