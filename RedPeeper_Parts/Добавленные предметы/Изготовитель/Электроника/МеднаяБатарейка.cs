@@ -9,8 +9,11 @@ using Nautilus.Assets.Gadgets;
 using Nautilus.Extensions;
 using UnityEngine;
 
-public class МеднаяБатарейка
+public class МеднаяБатарейка : IBattery
 {
+    public float charge {  get; set; }
+    public float capacity { get; set; }
+
     public static PrefabInfo Info { get; private set; }
 
 
@@ -22,7 +25,7 @@ public class МеднаяБатарейка
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
-            "RedPeeper_CopperBattery",
+            "RP_CopperBattery",
             "Медная батарея",
             "Портативный и мобильный аккумулятор, позволяющий запитать персональные инструменты. Пониженная энергоёмкость."
             )
@@ -49,6 +52,13 @@ public class МеднаяБатарейка
             .WithCraftingTime(5f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.BasicMaterials); // КПК
 
+
         _prefab.Register(); // Регистрация
+    }
+
+    public string GetChargeValueText()
+    {
+        //throw new System.NotImplementedException();
+        throw new();
     }
 }
