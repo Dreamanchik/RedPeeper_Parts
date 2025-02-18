@@ -26,7 +26,7 @@ public static class ПромышленныйСтеллаж
 
         clone.ModifyPrefab += obj =>
         {
-            ConstructableFlags constructableFlags = ConstructableFlags.Inside | ConstructableFlags.Rotatable | ConstructableFlags.Ground | ConstructableFlags.AllowedOnConstructable;
+            ConstructableFlags constructableFlags = ConstructableFlags.Inside | ConstructableFlags.Rotatable | ConstructableFlags.Ground;
 
             GameObject gameObject = obj.transform.Find("biodome_lab_shelf_01").gameObject;
 

@@ -26,7 +26,7 @@ public static class НапольныйШкаф
 
         clone.ModifyPrefab += obj =>
         {
-            ConstructableFlags constructableFlags = ConstructableFlags.Inside | ConstructableFlags.Rotatable | ConstructableFlags.Ground | ConstructableFlags.AllowedOnConstructable;
+            ConstructableFlags constructableFlags = ConstructableFlags.Inside | ConstructableFlags.Rotatable | ConstructableFlags.Ground;
 
             GameObject gameObject = obj.transform.Find("submarine_locker_04").gameObject;
 
