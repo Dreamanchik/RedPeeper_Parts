@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using Nautilus;
 using Nautilus.Handlers;
 using Story;
 using System.Reflection;
@@ -15,13 +16,16 @@ namespace RedPeeper_Parts
 
         private static Assembly Assembly { get; } = Assembly.GetExecutingAssembly();
 
-        private void Awake()
+        public void Awake()
         {
             // set project-scoped logger instance
             Logger = base.Logger;
 
             // Initialize custom prefabs
             InitializePrefabs();
+
+            var harmony = new Harmony(PluginInfo.PLUGIN_GUID);
+            EnergyMixinPatch.Patch(harmony);
 
             // register harmony patches, if there are any
             Harmony.CreateAndPatchAll(Assembly, $"{PluginInfo.PLUGIN_GUID}");
@@ -125,7 +129,7 @@ namespace RedPeeper_Parts
 
 
             // Регистрация ДНК передатчика
-            //DNASampler.Register();
+            DNASampler.Register();
 
 
 
@@ -133,7 +137,10 @@ namespace RedPeeper_Parts
             // ПОСТРОЙКИ
             // Изготовитель
             МодифицированныйИзготовитель.Register();
-            
+            ПромышленныйСтеллаж.Register();
+            АварийныйКонтейнер.Register();
+            НапольныйШкаф.Register();
+            ИонныйНакопитель.Register();
 
 
 
