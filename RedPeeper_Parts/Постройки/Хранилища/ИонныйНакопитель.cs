@@ -22,7 +22,7 @@ public static class ИонныйНакопитель
         float MinPlaceDistance = 1;
         float MaxPlaceDistance = 10;
         CustomPrefab prefab = new CustomPrefab(Info);
-        CloneTemplate clone = new CloneTemplate(Info, "625d01c2-40b7-4c87-a1cc-493ad6101c34");
+        CloneTemplate clone = new CloneTemplate(Info, "dd3bf908-badb-4c8c-a195-eb50be09df63");
 
         clone.ModifyPrefab += obj =>
         {

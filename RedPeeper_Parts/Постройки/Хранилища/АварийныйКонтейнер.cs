@@ -26,7 +26,7 @@ public static class АварийныйКонтейнер
 
         clone.ModifyPrefab += obj =>
         {
-            ConstructableFlags constructableFlags = ConstructableFlags.Inside | ConstructableFlags.Rotatable | ConstructableFlags.Ground | ConstructableFlags.AllowedOnConstructable;
+            ConstructableFlags constructableFlags = ConstructableFlags.Inside | ConstructableFlags.Outside | ConstructableFlags.Rotatable | ConstructableFlags.Ground | ConstructableFlags.AllowedOnConstructable;
 
             GameObject gameObject = obj.transform.Find("Crate_treasure_chest").gameObject;
 
