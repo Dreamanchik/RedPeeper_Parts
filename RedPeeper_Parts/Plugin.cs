@@ -45,6 +45,11 @@ namespace RedPeeper_Parts
             DegasiBasePieceTCorridorGlass.Register();
             DegasiBasePieceXCorridor.Register();
             DrillableReefbackRock.Register();
+            КаменьБезФизики1.Register();
+            КаменьБезФизики2.Register();
+            КаменьБезФизики3.Register();
+            КаменьБезФизики4.Register();
+            КаменьБезФизики5.Register();
 
 
 
@@ -137,6 +142,11 @@ namespace RedPeeper_Parts
             // ПОСТРОЙКИ
             // Изготовитель
             МодифицированныйИзготовитель.Register();
+
+
+
+
+            // Хранилища
             ПромышленныйСтеллаж.Register();
             АварийныйКонтейнер.Register();
             НапольныйШкаф.Register();
