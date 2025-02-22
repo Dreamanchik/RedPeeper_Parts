@@ -50,6 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Добавленные предметы\Прочее\Обломки\" />
     <Folder Include="Шаблоны\" />
   </ItemGroup>
 </Project>
