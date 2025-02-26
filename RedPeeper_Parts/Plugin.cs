@@ -51,6 +51,7 @@ namespace RedPeeper_Parts
             КаменьБезФизики3.Register();
             КаменьБезФизики4.Register();
             КаменьБезФизики5.Register();
+            DunesWreckCopy.Register();
 
 
 
