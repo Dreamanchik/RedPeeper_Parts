@@ -12,7 +12,7 @@ using System.IO;
 public static class ПромышленныйСтеллаж
 {
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Lifepods", "Lifepod12.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Lockers", "IndustrialRack.png");
     public static PrefabInfo Info { get; } = PrefabInfo.WithTechType("RP_IndustrialRack", "Промышленный стеллаж", "Крупное автономное хранилище, вмещающее большое количество объектов. Используется в тяжёлой промышленности.")
         .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
 

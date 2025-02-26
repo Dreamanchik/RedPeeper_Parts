@@ -273,6 +273,7 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetItemSize(TechType.LaserCutter, new Vector2int(3, 2));
             CraftDataHandler.SetItemSize(TechType.StasisRifle, new Vector2int(3, 2));
             CraftDataHandler.SetItemSize(TechType.PropulsionCannon, new Vector2int(3, 2));
+            CraftDataHandler.SetItemSize(TechType.RepulsionCannon, new Vector2int(3, 2));
 
 
 
