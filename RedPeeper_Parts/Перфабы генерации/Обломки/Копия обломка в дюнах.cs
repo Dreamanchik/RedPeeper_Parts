@@ -46,21 +46,6 @@ public class DunesWreckCopy
             GameObject door2 = obj.transform.Find("InteriorEntities/Wrecks_Starship_doors_sealed(Placeholder)").gameObject;
             door2.name = "Door2";
             door2.transform.parent = obj.transform;
-            GameObject door3 = obj.transform.Find("InteriorEntities/Wrecks_Starship_doors_locked_nokey(Placeholder)").gameObject;
-            door3.name = "Door3";
-            door3.transform.parent = obj.transform;
-            GameObject door4 = obj.transform.Find("InteriorEntities/Wrecks_Starship_doors_locked_nokey(Placeholder)").gameObject;
-            door4.name = "Door4";
-            door4.transform.parent = obj.transform;
-            GameObject door5 = obj.transform.Find("InteriorEntities/Wrecks_Starship_doors_locked_nokey(Placeholder)").gameObject;
-            door5.name = "Door5";
-            door5.transform.parent = obj.transform;
-            GameObject door6 = obj.transform.Find("InteriorEntities/Wrecks_Starship_doors_locked_nokey(Placeholder)").gameObject;
-            door6.name = "Door6";
-            door6.transform.parent = obj.transform;
-            GameObject door7 = obj.transform.Find("InteriorEntities/Wrecks_Starship_doors_locked_nokey(Placeholder)").gameObject;
-            door7.name = "Door7";
-            door7.transform.parent = obj.transform;
 
             // Делаю бэкфлип
             GameObject exteriorEntities = obj.transform.Find("ExteriorEntities").gameObject;
