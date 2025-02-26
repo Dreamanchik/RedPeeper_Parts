@@ -36,6 +36,7 @@ namespace RedPeeper_Parts
         {
 
             // Перфабы генерации
+            CleanFoundation.Register();
             DegasiBase.Register();
             DegasiBasePieceCorridorCap.Register();
             DegasiBasePieceCorridorTopOpen.Register();
