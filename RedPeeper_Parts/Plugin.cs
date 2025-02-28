@@ -53,6 +53,8 @@ namespace RedPeeper_Parts
             КаменьБезФизики5.Register();
             DunesWreckCopy.Register();
             GrassyWreckCopy.Register();
+            SealedCrateCopy.Register();
+            CrateCopy.Register();
 
 
 
