@@ -10,10 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class DunesWreckCopy
+public class GrassyWreckCopy
 {
     public static PrefabInfo Info { get; set; } = PrefabInfo.WithTechType(
-        "RP_DunesWreckCopy", 
+        "RP_GrassyWreckCopy", 
         "Обломок", 
         "Обломок Авроры."
         );
@@ -22,7 +22,7 @@ public class DunesWreckCopy
     public static void Register()
     {
         CustomPrefab _prefab = new CustomPrefab(Info);
-        CloneTemplate _clone = new CloneTemplate(Info, "4698f370-fb13-40b3-a0b4-596edc047b52");
+        CloneTemplate _clone = new CloneTemplate(Info, "ad1e0255-d577-43ac-afa6-4cf17e08a067");
         _clone.ModifyPrefab += obj =>
         {
             // Удаляю лут (страшно)
@@ -36,18 +36,17 @@ public class DunesWreckCopy
             wreckHull2.transform.parent = obj.transform;
 
             // Перекидываю спавн дверей, чтобы потом сделать бэкфлип
-            GameObject door1 = obj.transform.Find("InteriorEntities/Starship_doors_frame(Placeholder)").gameObject;
+            GameObject door1 = obj.transform.Find("Doors/Wrecks_Starship_doors_sealed(Placeholder)").gameObject;
             door1.name = "Door1";
             door1.transform.parent = obj.transform;
-            GameObject door2 = obj.transform.Find("InteriorEntities/Wrecks_Starship_doors_sealed(Placeholder)").gameObject;
-            door2.name = "Door2";
-            door2.transform.parent = obj.transform;
 
             // Делаю бэкфлип
             GameObject exteriorEntities = obj.transform.Find("ExteriorEntities").gameObject;
             GameObject.Destroy(exteriorEntities);
-            GameObject interiorEntities = obj.transform.Find("InteriorEntities").gameObject;
+            GameObject interiorEntities = obj.transform.Find("InterioEntities").gameObject;
             GameObject.Destroy(interiorEntities);
+            GameObject doors = obj.transform.Find("Doors").gameObject;
+            GameObject.Destroy(doors);
         };
         _prefab.SetGameObject(_clone);
 
