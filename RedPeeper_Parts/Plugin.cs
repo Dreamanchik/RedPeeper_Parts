@@ -36,6 +36,7 @@ namespace RedPeeper_Parts
         {
 
             // Перфабы генерации
+            // Базы
             CleanFoundation.Register();
             DegasiBase.Register();
             DegasiBasePieceCorridorCap.Register();
@@ -45,16 +46,28 @@ namespace RedPeeper_Parts
             DegasiBasePieceMultipurposePlanters.Register();
             DegasiBasePieceTCorridorGlass.Register();
             DegasiBasePieceXCorridor.Register();
+
+            // Обломки
+            DunesWreckCopy.Register();
+            GrassyWreckCopy.Register();
+
+            // Ящики
+            SealedCrateCopy.Register();
+            CrateCopy.Register();
+
+            // Ресурсы
             DrillableReefbackRock.Register();
+
+            // Камни
             КаменьБезФизики1.Register();
             КаменьБезФизики2.Register();
             КаменьБезФизики3.Register();
             КаменьБезФизики4.Register();
             КаменьБезФизики5.Register();
-            DunesWreckCopy.Register();
-            GrassyWreckCopy.Register();
-            SealedCrateCopy.Register();
-            CrateCopy.Register();
+
+            // КПК
+            PDATest.Register();
+            PDATestEntry.Register();
 
 
 
