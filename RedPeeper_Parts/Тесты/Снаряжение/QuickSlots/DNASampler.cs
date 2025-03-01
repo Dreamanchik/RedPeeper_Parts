@@ -39,6 +39,10 @@ public class DNASampler
             obj.EnsureComponent<DNASamplerLogic>();
             DNASamplerLogic dnaSamplerLogic = obj.GetComponent<DNASamplerLogic>();
             dnaSamplerLogic.mainCollider = obj.transform.Find("collision").gameObject.GetComponent<BoxCollider>();
+            dnaSamplerLogic.hasAnimations = true;
+            dnaSamplerLogic.socket = PlayerTool.Socket.RightHand;
+            dnaSamplerLogic.ikAimLeftArm = false;
+            dnaSamplerLogic.ikAimRightArm = true;
         };
             _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(

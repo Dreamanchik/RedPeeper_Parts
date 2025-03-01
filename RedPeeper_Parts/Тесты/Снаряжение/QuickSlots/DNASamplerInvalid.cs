@@ -81,7 +81,7 @@ public override void OnToolUseAnim(GUIHand hand)
 
             if (rigidbody)
             {
-                if (CreatureList.Creatures.ContainsKey(techType)) {
+                /*if (CreatureList.Creatures.ContainsKey(techType)) {
                     //var techType = CreatureList.Creatures[classID];
                     CraftData.AddToInventory(TechType.Titanium);
                     //rigidbody.AddForce(MainCamera.camera.transform.forward * hitForce, forceMode);
@@ -90,7 +90,7 @@ public override void OnToolUseAnim(GUIHand hand)
                 else
                 {
                 //    return;
-                }
+                }*/
             }
         }
     }
