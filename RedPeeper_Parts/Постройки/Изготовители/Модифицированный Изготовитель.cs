@@ -1,12 +1,9 @@
-﻿using HarmonyLib;
-using JetBrains.Annotations;
-using Nautilus.Assets;
+﻿using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Handlers;
 using Nautilus.Utility;
-using System.Drawing.Text;
 using System.IO;
 using System.Reflection;
 using UnityEngine;

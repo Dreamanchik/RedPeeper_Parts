@@ -6,7 +6,6 @@ using Nautilus.Utility;
 using Nautilus.Crafting;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
-using Nautilus.Extensions;
 using UnityEngine;
 
 public class МеднаяБатарейка : IBattery

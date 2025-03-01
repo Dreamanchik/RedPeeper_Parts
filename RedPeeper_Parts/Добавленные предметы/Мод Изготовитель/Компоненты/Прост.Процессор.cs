@@ -8,7 +8,6 @@ using Nautilus.Handlers;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 public class ПространственныйПроцессор
 {
