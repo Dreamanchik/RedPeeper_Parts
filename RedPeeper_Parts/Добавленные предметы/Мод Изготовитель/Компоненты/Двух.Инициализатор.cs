@@ -6,8 +6,6 @@ using Nautilus.Utility;
 using Nautilus.Crafting;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
-using Nautilus.Extensions;
-using Nautilus.Handlers;
 using UnityEngine;
 
 public class ДвухфакторныйИнициализатор

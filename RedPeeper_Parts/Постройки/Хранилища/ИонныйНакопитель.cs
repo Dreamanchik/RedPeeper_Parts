@@ -1,5 +1,4 @@
-﻿using BepInEx;
-using Nautilus.Crafting;
+﻿using Nautilus.Crafting;
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Utility;

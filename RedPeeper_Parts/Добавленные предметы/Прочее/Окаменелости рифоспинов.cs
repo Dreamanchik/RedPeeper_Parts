@@ -3,10 +3,7 @@ using Nautilus.Assets;
 using System.IO;
 using System.Reflection;
 using Nautilus.Utility;
-using Nautilus.Crafting;
 using static CraftData;
-using Nautilus.Assets.Gadgets;
-using Nautilus.Extensions;
 using UnityEngine;
 
 public class ОкаменелостиРифоспинов
