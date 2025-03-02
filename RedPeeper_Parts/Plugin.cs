@@ -3,8 +3,11 @@ using BepInEx.Logging;
 using HarmonyLib;
 using Nautilus;
 using Nautilus.Handlers;
+using Nautilus.Utility;
 using Story;
+using System;
 using System.Reflection;
+using UnityEngine;
 
 namespace RedPeeper_Parts
 {
@@ -15,6 +18,7 @@ namespace RedPeeper_Parts
         public new static ManualLogSource Logger { get; private set; }
 
         private static Assembly Assembly { get; } = Assembly.GetExecutingAssembly();
+        public static AssetBundle AssetBundle { get; set; } = AssetBundleLoadingUtils.LoadFromAssetsFolder(Plugin.Assembly, "redpeeper");
 
         public void Awake()
         {
@@ -68,6 +72,11 @@ namespace RedPeeper_Parts
             // КПК
             PDATest.Register();
             PDATestEntry.Register();
+
+            // Сканируемое
+            AncientSandworm.Register();
+            AncientSandwormPDA.Register();
+            ScannableShelvesCollider.Register();
 
 
 

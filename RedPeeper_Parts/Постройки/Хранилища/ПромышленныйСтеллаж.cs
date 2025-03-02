@@ -47,7 +47,6 @@ public static class ПромышленныйСтеллаж
             ChildObjectIdentifier childObjectIdentifier = storageRoot.EnsureComponent<ChildObjectIdentifier>();
             storageContainer.storageRoot = childObjectIdentifier;
         };
-
         prefab.SetGameObject(clone);
         prefab.SetPdaGroupCategory(TechGroup.InteriorModules, TechCategory.InteriorModule);
 
