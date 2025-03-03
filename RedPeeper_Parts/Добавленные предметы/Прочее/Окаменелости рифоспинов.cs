@@ -36,7 +36,7 @@ public class ОкаменелостиРифоспинов
             rigidBody.angularDrag = 1;
             rigidBody.mass = 10;
             rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
-            rigidBody.isKinematic = false;
+            rigidBody.isKinematic = true;
             rigidBody.useGravity = false;
             obj.EnsureComponent<WorldForces>();
             WorldForces worldForces = obj.GetComponent<WorldForces>();

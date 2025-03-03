@@ -3,8 +3,11 @@ using BepInEx.Logging;
 using HarmonyLib;
 using Nautilus;
 using Nautilus.Handlers;
+using Nautilus.Utility;
 using Story;
+using System;
 using System.Reflection;
+using UnityEngine;
 
 namespace RedPeeper_Parts
 {
@@ -15,6 +18,7 @@ namespace RedPeeper_Parts
         public new static ManualLogSource Logger { get; private set; }
 
         private static Assembly Assembly { get; } = Assembly.GetExecutingAssembly();
+        public static AssetBundle AssetBundle { get; set; } = AssetBundleLoadingUtils.LoadFromAssetsFolder(Plugin.Assembly, "redpeeper");
 
         public void Awake()
         {
@@ -36,6 +40,7 @@ namespace RedPeeper_Parts
         {
 
             // Перфабы генерации
+            // Базы
             CleanFoundation.Register();
             DegasiBase.Register();
             DegasiBasePieceCorridorCap.Register();
@@ -45,16 +50,33 @@ namespace RedPeeper_Parts
             DegasiBasePieceMultipurposePlanters.Register();
             DegasiBasePieceTCorridorGlass.Register();
             DegasiBasePieceXCorridor.Register();
+
+            // Обломки
+            DunesWreckCopy.Register();
+            GrassyWreckCopy.Register();
+
+            // Ящики
+            SealedCrateCopy.Register();
+            CrateCopy.Register();
+
+            // Ресурсы
             DrillableReefbackRock.Register();
+
+            // Камни
             КаменьБезФизики1.Register();
             КаменьБезФизики2.Register();
             КаменьБезФизики3.Register();
             КаменьБезФизики4.Register();
             КаменьБезФизики5.Register();
-            DunesWreckCopy.Register();
-            GrassyWreckCopy.Register();
-            SealedCrateCopy.Register();
-            CrateCopy.Register();
+
+            // КПК
+            PDATest.Register();
+            PDATestEntry.Register();
+
+            // Сканируемое
+            AncientSandworm.Register();
+            AncientSandwormPDA.Register();
+            ScannableShelvesCollider.Register();
 
 
 
