@@ -3,7 +3,6 @@ using Nautilus.Assets;
 using System.IO;
 using System.Reflection;
 using Nautilus.Utility;
-using static CraftData;
 using UnityEngine;
 
 public class ОкаменелостиРифоспинов

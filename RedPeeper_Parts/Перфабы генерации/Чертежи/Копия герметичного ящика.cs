@@ -8,7 +8,7 @@ public class SealedCrateCopy
 {
     public static PrefabInfo Info { get; set; } = PrefabInfo.WithTechType(
         "RP_SealedCrateCopy",
-        "Герметичный ящик с припасами",
+        "Корпоративный ящик с припасами",
         "С Авроры."
         );
 
