@@ -1,10 +1,4 @@
-﻿using Discord;
-using RedPeeper_Parts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RedPeeper_Parts;
 using UnityEngine;
 
 internal class DNASamplerLogic : PlayerTool
@@ -34,7 +28,7 @@ internal class DNASamplerLogic : PlayerTool
             }
         }
         return result;*/
-        string buttonFormat = LanguageCache.GetButtonFormat("Gay", GameInput.Button.RightHand);
+        string buttonFormat = LanguageCache.GetButtonFormat("Наведитесь на фауну для синтеза ДНК", GameInput.Button.RightHand);
         string inventoryFull = LanguageCache.GetButtonFormat("Инвентарь полон", GameInput.Button.PDA);
         if (this.usingPlayer.HasInventoryRoom(1, 1))
         {
@@ -78,7 +72,7 @@ internal class DNASamplerLogic : PlayerTool
                             if (this.usingPlayer.HasInventoryRoom(1, 1))
                             {
                                 CraftData.AddToInventory(CreatureList.Creatures[id]);
-                                energyMixin.ConsumeEnergy(10f);
+                                energyMixin.ConsumeEnergy(100f);
                                 //ErrorMessage.AddMessage("AAAAAAAAAAAAAAAA");
                             }
                         }

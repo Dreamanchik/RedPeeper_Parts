@@ -136,12 +136,14 @@ namespace RedPeeper_Parts
 
 
             // Синтезируемое
-            ВоздушнаяПодушка.Register();
-            ВысокопрочнаяОбшивка.Register();
-            КристаллическаяМембрана.Register();
-            ПластичнаяСмазка.Register();
             ПрыжковойБиохимикат.Register();
-            ТопливныйКонцентрат.Register();
+            АмоГель.Register();
+            БиоТерм.Register();
+            КомпДавл.Register();
+            ПищФер.Register();
+            СывороткаПлоти.Register();
+            Эхоген.Register();
+            ЭлТкань.Register();
             Logger.LogInfo("Синтезируемые материалы загружены");
 
 
@@ -405,7 +407,6 @@ namespace RedPeeper_Parts
 
 
 
-            //
             // Патчим и изменияем получение/количество фрагментов для чертежа
             PDAHandler.AddCustomScannerEntry(TechType.Titanium, TechType.TitaniumIngot, true, 2 );
             PDAHandler.AddCustomScannerEntry(TechType.ScrapMetal, TechType.Titanium, true, 2);

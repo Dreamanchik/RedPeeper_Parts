@@ -37,7 +37,7 @@ public class Мембрана
         var _obj = new CloneTemplate(Info, TechType.CoralChunk); // Перфаб
         _obj.ModifyPrefab += obj =>
         {
-            BaseBioReactor.charge[Info.TechType] = 120f;
+            BaseBioReactor.charge[Info.TechType] = 100f;
             MeshRenderer mr = obj.transform.Find("Coral_reef_shell_01").gameObject.GetComponent<MeshRenderer>();
             mr.material.SetTexture(ShaderPropertyID._MainTex, texture);
             mr.material.SetTexture(ShaderPropertyID._SpecTex, spec);

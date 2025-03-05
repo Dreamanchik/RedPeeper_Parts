@@ -1,39 +1,29 @@
-﻿using Nautilus.Assets.PrefabTemplates;
-using Nautilus.Assets;
+﻿using Nautilus.Assets;
 using Nautilus.Crafting;
 using Nautilus.Utility;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using static CraftData;
 using System.IO;
 using Nautilus.Assets.Gadgets;
 using UnityEngine;
-using Nautilus.Utility.MaterialModifiers;
 using RedPeeper_Parts;
-using System.Collections;
-using System.Runtime.CompilerServices;
-using Nautilus.Handlers;
-using static GameObjectPoolPrefabMap;
 
 public static class DNASampler
 {
     public static PrefabInfo Info { get; private set; }
 
-    public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Fabricator", "Electronics", "SolarCell.png");
+    // public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+    // public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Fabricator", "Electronics", "SolarCell.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
             "DNASampler",
             "ДНК Передатчик",
-            "А тебя это ебать не должно БОЛЬШИЕ ГОРОДА"
+            "Портативное устройство, позволяющее собирать уникальные образцы ДНК из внутренних оболочек инопланетной фауны. Использует мембраны в качестве упаковочного материала."
             )
-            .WithSizeInInventory(new Vector2int(2, 2))
-            .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
+            .WithSizeInInventory(new Vector2int(3, 2));
+            // .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
 
         CustomPrefab _prefab = new CustomPrefab(Info);
         //var _obj = new CloneTemplate(Info, TechType.Scanner); // Перфаб
@@ -49,7 +39,7 @@ public static class DNASampler
             .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab("Resources", "Electronics")
             .WithCraftingTime(10f);
-        _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.Electronics); // КПК
+        _prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Equipment); // КПК
         _prefab.SetEquipment(EquipmentType.Hand).WithQuickSlotType(QuickSlotType.Selectable);
 
         _prefab.Register(); // Регистрация
@@ -65,6 +55,7 @@ public static class DNASampler
         batterySlot.transform.parent = _obj.transform;
         batterySlot.name = "BatterySlot";
         ChildObjectIdentifier childObjectIdentifier = batterySlot.EnsureComponent<ChildObjectIdentifier>();
+        // Слот батарей
 
         PrefabUtils.AddBasicComponents(_obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Near);
         MaterialUtils.ApplySNShaders(_obj);
