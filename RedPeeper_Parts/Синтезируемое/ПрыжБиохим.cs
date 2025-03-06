@@ -5,7 +5,7 @@ using System.Reflection;
 using Nautilus.Utility;
 using Nautilus.Handlers;
 
-public class ПрыжковойБиохимикат
+public class ПрыжБиохим
 {
     public static PrefabInfo Info { get; private set; }
 

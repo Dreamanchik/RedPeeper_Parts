@@ -5,7 +5,7 @@ using System.Reflection;
 using Nautilus.Utility;
 using Nautilus.Handlers;
 
-public class Эхоген
+public class ЭхоГен
 {
     public static PrefabInfo Info { get; private set; }
 

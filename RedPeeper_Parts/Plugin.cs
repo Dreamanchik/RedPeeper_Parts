@@ -135,21 +135,6 @@ namespace RedPeeper_Parts
 
 
 
-            // Синтезируемое
-            ПрыжковойБиохимикат.Register();
-            АмоГель.Register();
-            БиоТерм.Register();
-            КомпДавл.Register();
-            ПищФер.Register();
-            СывороткаПлоти.Register();
-            Эхоген.Register();
-            ЭлТкань.Register();
-            Logger.LogInfo("Синтезируемые материалы загружены");
-
-
-
-
-
             // Тестовые предметы
             RedPeeper_TrainingPeeper.Register();
             DrillablePeeper.Register();
@@ -440,6 +425,17 @@ namespace RedPeeper_Parts
             PDAHandler.EditFragmentsToScan(TechType.LaserCutter, 5);
             PDAHandler.EditFragmentScanTime(TechType.PropulsionCannon, 5f);
             PDAHandler.EditFragmentsToScan(TechType.PropulsionCannon, 5);
+
+            // Синтезируемое
+            АмоГель.Register();
+            БиоТерм.Register();
+            КомпДавл.Register();
+            ПищФер.Register();
+            ПрыжБиохим.Register();
+            СывороткаПлоти.Register();
+            ЭлТкань.Register();
+            ЭхоГен.Register();
+            Logger.LogInfo("Синтезируемые материалы загружены");
 
 
 
