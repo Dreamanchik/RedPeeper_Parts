@@ -60,7 +60,7 @@ public static class DNASampler
         PrefabUtils.AddBasicComponents(_obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Near);
         MaterialUtils.ApplySNShaders(_obj);
 
-        List<TechType> compatibleBatteries = new List<TechType>(){TechType.Battery, TechType.PrecursorIonBattery};
+        List<TechType> compatibleBatteries = new List<TechType>(){МембраннаяБатарейка.Info.TechType};
         PrefabUtils.AddEnergyMixin(_obj, "BatterySlot", TechType.Battery, compatibleBatteries);
         Rigidbody rb = _obj.EnsureComponent<Rigidbody>();
         rb.mass = 8f;
