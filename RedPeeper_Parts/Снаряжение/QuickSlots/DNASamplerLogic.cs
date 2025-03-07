@@ -60,9 +60,9 @@ internal class DNASamplerLogic : PlayerTool
             {
                 EnergyMixin energyMixin = this.energyMixin;
 
-                LiveMixin liveMixin = gameObject.GetComponent<LiveMixin>();
+                //LiveMixin liveMixin = gameObject.GetComponent<LiveMixin>();
                 string id = gameObject.GetComponent<PrefabIdentifier>().classId;
-                bool flag = liveMixin == null;
+                //bool flag = liveMixin == null;
                 //if (!flag)
                 //{
                     if (energyMixin.charge >= 1f)
