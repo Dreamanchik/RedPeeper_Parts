@@ -63,8 +63,8 @@ internal class DNASamplerLogic : PlayerTool
                 LiveMixin liveMixin = gameObject.GetComponent<LiveMixin>();
                 string id = gameObject.GetComponent<PrefabIdentifier>().classId;
                 bool flag = liveMixin == null;
-                if (!flag)
-                {
+                //if (!flag)
+                //{
                     if (energyMixin.charge >= 1f)
                     {
                         if (CreatureList.Creatures.ContainsKey(id)) 
@@ -77,7 +77,7 @@ internal class DNASamplerLogic : PlayerTool
                             }
                         }
                     }
-                }
+                //}
             }
             result = true;
         }
