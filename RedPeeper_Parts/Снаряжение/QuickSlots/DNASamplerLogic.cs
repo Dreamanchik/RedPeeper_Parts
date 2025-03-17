@@ -45,17 +45,12 @@ internal class DNASamplerLogic : PlayerTool
         {
             return true;
         }
-        bool busy = this._busy;
-        bool result;
-        if (busy)
-        {
-            result = false;
-        }
         else
         {
             GameObject gameObject;
             float num;
-            bool target = Targeting.GetTarget(Player.main.gameObject, 3f, out gameObject, out num);
+            bool target = Targeting.GetTarget(Player.main.gameObject, 2f, out gameObject, out num);
+            bool reefback = gameObject.GetComponent<Reefback>();
             if (target)
             {
                 EnergyMixin energyMixin = this.energyMixin;
@@ -76,12 +71,19 @@ internal class DNASamplerLogic : PlayerTool
                                 //ErrorMessage.AddMessage("AAAAAAAAAAAAAAAA");
                             }
                         }
+                    /*else if (reefback)
+                    {
+                        if (this.usingPlayer.HasInventoryRoom(1, 1))
+                        {
+                            CraftData.AddToInventory(TechType.GasTorpedo);
+                            energyMixin.ConsumeEnergy(100f);
+                        }
+                    }*/
                     }
                 //}
             }
-            result = true;
         }
-        return result;
+        return true;
     }
     public override string animToolName
     {

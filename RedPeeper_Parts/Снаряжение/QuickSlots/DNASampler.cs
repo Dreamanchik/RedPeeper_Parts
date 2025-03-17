@@ -8,6 +8,7 @@ using System.IO;
 using Nautilus.Assets.Gadgets;
 using UnityEngine;
 using RedPeeper_Parts;
+using System.Runtime.CompilerServices;
 
 public static class DNASampler
 {
@@ -19,7 +20,7 @@ public static class DNASampler
     {
         Info = PrefabInfo.WithTechType(
             "DNASampler",
-            "ДНК Передатчик",
+            "ДНК-передатчик",
             "Портативное устройство, позволяющее собирать уникальные образцы ДНК из внутренних оболочек инопланетной фауны. Использует мембраны в качестве упаковочного материала."
             )
             .WithSizeInInventory(new Vector2int(3, 2));
@@ -79,8 +80,8 @@ public static class DNASampler
         dnaSamplerLogic.hasFirstUseAnimation = true;
         PrefabUtils.AddVFXFabricating(_obj, "Model", -0.15f, 0.2f, new Vector3(0.1f, 0.05f, 0f), 1f, new Vector3(90f, 0f, 0f));
 
-        // Return the GameObject with all the components added
-        return _obj;
+            // Return the GameObject with all the components added
+            return _obj;
     }
 }
 
