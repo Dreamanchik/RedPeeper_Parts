@@ -66,6 +66,7 @@ public static class DNASampler
         Rigidbody rb = _obj.EnsureComponent<Rigidbody>();
         rb.mass = 8f;
         rb.useGravity = false;
+        rb.isKinematic = true;
         WorldForces wf = _obj.EnsureComponent<WorldForces>();
         wf.useRigidbody = rb;
         wf.aboveWaterDrag = 0.15f;
