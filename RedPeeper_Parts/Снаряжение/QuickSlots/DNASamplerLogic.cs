@@ -50,12 +50,12 @@ internal class DNASamplerLogic : PlayerTool
             GameObject gameObject;
             float num;
             bool target = Targeting.GetTarget(Player.main.gameObject, 2f, out gameObject, out num);
-            bool reefback = gameObject.GetComponent<Reefback>();
             if (target)
             {
                 EnergyMixin energyMixin = this.energyMixin;
 
                 //LiveMixin liveMixin = gameObject.GetComponent<LiveMixin>();
+                //bool reefback = gameObject.GetComponentInParent<Reefback>();
                 string id = gameObject.GetComponent<PrefabIdentifier>().classId;
                 //bool flag = liveMixin == null;
                 //if (!flag)
@@ -70,18 +70,28 @@ internal class DNASamplerLogic : PlayerTool
                                 energyMixin.ConsumeEnergy(100f);
                                 //ErrorMessage.AddMessage("AAAAAAAAAAAAAAAA");
                             }
+                            /*else
+                            {
+                            ErrorMessage.AddMessage("Нет места!");
+                            }*/
                         }
-                    /*else if (reefback)
-                    {
-                        if (this.usingPlayer.HasInventoryRoom(1, 1))
+                        /*else
                         {
-                            CraftData.AddToInventory(TechType.GasTorpedo);
-                            energyMixin.ConsumeEnergy(100f);
-                        }
-                    }*/
+                            ErrorMessage.AddMessage("Не в списке!");
+                        }*/
+
                     }
+                    /*else
+                    {
+                        ErrorMessage.AddMessage("Отсутствует заряд!");
+                    }*/
+
                 //}
             }
+            /*else
+            {
+                ErrorMessage.AddMessage("Нету цели!");
+            }*/
         }
         return true;
     }

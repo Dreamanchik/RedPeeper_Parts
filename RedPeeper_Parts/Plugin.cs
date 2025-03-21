@@ -78,8 +78,8 @@ namespace RedPeeper_Parts
             AncientSandwormPDA.Register();
             ScannableShelvesCollider.Register();
 
-            // Сигналы
-            RadioTest.Register();
+            // Яйца
+            ЯйцоРифоспина.Register();
 
 
 
