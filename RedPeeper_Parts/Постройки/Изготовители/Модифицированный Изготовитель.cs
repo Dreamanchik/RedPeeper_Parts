@@ -66,6 +66,7 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddCraftingNode(treeType, Герметик.Info.TechType, "RedPeeper_ModStation_Chemical");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.Bleach, "RedPeeper_ModStation_Chemical");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.HatchingEnzymes, "RedPeeper_ModStation_Chemical");
+        CraftTreeHandler.AddCraftingNode(treeType, УпаковочнаяТкань.Info.TechType, "RedPeeper_ModStation_Chemical");
 
 
         //  Корпоративная собственность
@@ -78,6 +79,7 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddCraftingNode(treeType, АналоговаяБатарея.Info.TechType, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PrecursorIonBattery, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PrecursorIonPowerCell, "RedPeeper_ModStation_CorporateTools");
+        CraftTreeHandler.AddCraftingNode(treeType, DNASampler.Info.TechType, "RedPeeper_ModStation_CorporateTools");
 
 
         //  Продвинутые механизмы

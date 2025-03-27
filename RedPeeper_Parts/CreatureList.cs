@@ -10,11 +10,15 @@ namespace RedPeeper_Parts
     {
         public static Dictionary<string, TechType> Creatures = new Dictionary<string, TechType>()
         {
-            {"3fcd548b-781f-46ba-b076-7412608deeef", TechType.Titanium},
-            {"bf9ccd04-60af-4144-aaa1-4ac184c686c2", TechType.PrecursorIonBattery},
-            {"8d3d3c8b-9290-444a-9fea-8e5493ecd6fe", TechType.PrecursorIonBattery},
-            {"5fc7744b-5a2c-4572-8e53-eebf990de434", TechType.Copper},
-            {"RP_ReefbackEgg", TechType.Battery}
+            {"RP_ReefbackEgg", СывороткаПлоти.Info.TechType}, // ЯйцоРифоспина +
+            {"f78942c3-87e7-4015-865a-5ae4d8bd9dcb", ЭхоГен.Info.TechType}, //Жнец +
+            {"ff43eacd-1a9e-4182-ab7b-aa43c16d1e53", БиоТерм.Info.TechType}, //Дракон +
+
+            {"35ee775a-d54c-4e63-a058-95306346d582", ПищФер.Info.TechType}, //Топтун +
+            {"54701bfc-bb1a-4a84-8f79-ba4f76691bef", АмоГель.Info.TechType}, //Призрак +
+
+            {"4c2808fe-e051-44d2-8e64-120ddcdc8abb", КомпДавл.Info.TechType}, //Кальмарокраб +
+            {"e69be2e8-a2e3-4c4c-a979-281fbf221729", ЭлТкань.Info.TechType} //Угорь +
         };
     };
 }

@@ -11,7 +11,7 @@ using System.IO;
 public static class ИонныйНакопитель
 {
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Lifepods", "Lifepod12.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Lockers", "PrecursorLocker.png");
     public static PrefabInfo Info { get; } = PrefabInfo.WithTechType("RP_PrecursorLocker", "Ионный накопитель", "Небольшое автономное хранилище, работающее на основе ионной энергии. Использует технологию ионной матрицы для преобразования объектов в ячейку данных, позволяя увеличить вместительность до возможного максимума.")
         .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
 

@@ -12,10 +12,10 @@ using System.Runtime.CompilerServices;
 
 public static class DNASampler
 {
+    public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "ModifiedFabricator", "CorporateTools", "DNASampler.png");
     public static PrefabInfo Info { get; private set; }
 
-    // public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    // public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Fabricator", "Electronics", "SolarCell.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
@@ -23,12 +23,10 @@ public static class DNASampler
             "ДНК-передатчик",
             "Портативное устройство, позволяющее собирать уникальные образцы ДНК из внутренних оболочек инопланетной фауны. Использует мембраны в качестве упаковочного материала."
             )
-            .WithSizeInInventory(new Vector2int(3, 2));
-            // .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
+            .WithSizeInInventory(new Vector2int(3, 2))
+            .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
 
         CustomPrefab _prefab = new CustomPrefab(Info);
-        //var _obj = new CloneTemplate(Info, TechType.Scanner); // Перфаб
-        //GameObject _obj = Plugin.MyAssetBundle.LoadAsset<GameObject>("Transfuser_Prefab");
         _prefab.SetGameObject(CreatePrefab());
         GadgetExtensions.SetEquipment(_prefab, EquipmentType.Hand);
 
@@ -38,7 +36,6 @@ public static class DNASampler
 
         ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
-            .WithStepsToFabricatorTab("Resources", "Electronics")
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Equipment); // КПК
         _prefab.SetEquipment(EquipmentType.Hand).WithQuickSlotType(QuickSlotType.Selectable);
@@ -61,7 +58,7 @@ public static class DNASampler
         PrefabUtils.AddBasicComponents(_obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Near);
         MaterialUtils.ApplySNShaders(_obj);
 
-        List<TechType> compatibleBatteries = new List<TechType>(){МембраннаяБатарейка.Info.TechType};
+        List<TechType> compatibleBatteries = new List<TechType>(){УпаковочнаяТкань.Info.TechType};
         PrefabUtils.AddEnergyMixin(_obj, "BatterySlot", TechType.Battery, compatibleBatteries);
         Rigidbody rb = _obj.EnsureComponent<Rigidbody>();
         rb.mass = 8f;

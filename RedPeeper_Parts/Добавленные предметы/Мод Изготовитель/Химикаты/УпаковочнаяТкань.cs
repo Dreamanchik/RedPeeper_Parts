@@ -1,35 +1,35 @@
 ﻿using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Assets;
-using System.IO;
-using System.Reflection;
-using Nautilus.Utility;
 using Nautilus.Crafting;
+using Nautilus.Utility;
 using static CraftData;
-using Nautilus.Assets.Gadgets;
+using System.Reflection;
 using UnityEngine;
+using Nautilus.Assets.Gadgets;
+using System.IO;
 
-public class МембраннаяБатарейка : IBattery
+public class УпаковочнаяТкань : IBattery
 {
-    public float charge {  get; set; }
+    public float charge { get; set; }
     public float capacity { get; set; }
 
     public static PrefabInfo Info { get; private set; }
 
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Items", "Electronics", "CopperBattery.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesized", "PackingFabric.png");
 
     public static string texturePath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "TwoFactorProcessor_texture.png");
     public static Texture2D Texture = ImageUtils.LoadTextureFromFile(texturePath);
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
-            "RP_MembraneBattery",
-            "Мембранная батарея",
-            "Портативный и мобильный аккумулятор, позволяющий запитать персональные инструменты. Пониженная энергоёмкость."
+            "RP_PackingFabric",
+            "Упаковочная ткань",
+            "Стерильная среда, синтезированная из структуры мембраны. Подходит для сбора образцов ДНК. Положите в свободный слот ДНК-Передатчика для синтеза образцов ДНК. Одноразовая."
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
-            .WithSizeInInventory(new Vector2int(1, 1));
+            .WithSizeInInventory(new Vector2int(2, 2));
 
         var _prefab = new CustomPrefab(Info);
 
@@ -38,7 +38,7 @@ public class МембраннаяБатарейка : IBattery
         {
 
             Battery batteryComponent = obj.GetComponent<Battery>();
-            batteryComponent._capacity = 50;
+            batteryComponent._capacity = 1;
         };
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
@@ -47,8 +47,7 @@ public class МембраннаяБатарейка : IBattery
 
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
-            .WithStepsToFabricatorTab("Resources", "BasicMaterials")
-            .WithCraftingTime(5f);
+            .WithCraftingTime(3f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.BasicMaterials); // КПК
 
 

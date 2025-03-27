@@ -13,10 +13,10 @@ public class SealedCrateCopy
         "С Авроры."
         );
 
-    public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string texturePath = Path.Combine(modFolder, "Assets", "Doodads", "World", "SealedSupplyCrate", "SealedSupplyCrateTexture.png"); //  <-- Путь к текстуре
-    public static Texture2D modelTexture = ImageUtils.LoadTextureFromFile(texturePath);
-    public static Texture2D coverTexture = ImageUtils.LoadTextureFromFile(texturePath);
+    //public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+    //public static string texturePath = Path.Combine(modFolder, "Assets", "Doodads", "World", "SealedSupplyCrate", "SealedSupplyCrateTexture.png"); //  <-- Путь к текстуре
+    //public static Texture2D modelTexture = ImageUtils.LoadTextureFromFile(texturePath);
+    //public static Texture2D coverTexture = ImageUtils.LoadTextureFromFile(texturePath);
     public static void Register()
     {
         CustomPrefab _prefab = new CustomPrefab(Info);
@@ -29,11 +29,11 @@ public class SealedCrateCopy
 
             // Изменяю текстуру
             // Крышка
-            MeshRenderer coverMR = obj.transform.Find("Crate_treasure_chest/Crate_treasure_chest_GRP/Crate_treasure_chest/Crate_chest_cover_ctrl/crate_chest_cover_GRP/Crate_treasure_chest_cover").gameObject.GetComponent<MeshRenderer>();
-            coverMR.material.SetTexture(ShaderPropertyID._MainTex, modelTexture);
+            //MeshRenderer coverMR = obj.transform.Find("Crate_treasure_chest/Crate_treasure_chest_GRP/Crate_treasure_chest/Crate_chest_cover_ctrl/crate_chest_cover_GRP/Crate_treasure_chest_cover").gameObject.GetComponent<MeshRenderer>();
+            //coverMR.material.SetTexture(ShaderPropertyID._MainTex, modelTexture);
             // Ящик
-            MeshRenderer modelMR = obj.transform.Find("Crate_treasure_chest/Crate_treasure_chest_GRP/Crate_treasure_chest").gameObject.GetComponent<MeshRenderer>();
-            modelMR.material.SetTexture(ShaderPropertyID._MainTex, modelTexture);
+            //MeshRenderer modelMR = obj.transform.Find("Crate_treasure_chest/Crate_treasure_chest_GRP/Crate_treasure_chest").gameObject.GetComponent<MeshRenderer>();
+            //modelMR.material.SetTexture(ShaderPropertyID._MainTex, modelTexture);
         };
         _prefab.SetGameObject(_clone);
 

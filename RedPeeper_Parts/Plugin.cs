@@ -70,13 +70,14 @@ namespace RedPeeper_Parts
             КаменьБезФизики5.Register();
 
             // КПК
-            PDATest.Register();
-            PDATestEntry.Register();
+            //PDATest.Register();
+            //PDATestEntry.Register();
 
             // Сканируемое
             AncientSandworm.Register();
             AncientSandwormPDA.Register();
             ScannableShelvesCollider.Register();
+            ReefbackNestPDA.Register();
 
             // Яйца
             ЯйцоРифоспина.Register();
@@ -113,8 +114,8 @@ namespace RedPeeper_Parts
 
 
             // Батареи
-            МембраннаяБатарейка.Register();
-            МеднаяБатарейка.Register();
+            УпаковочнаяТкань.Register();
+            //МеднаяБатарейка.Register();
             АналоговаяБатарея.Register();
 
 
@@ -140,8 +141,8 @@ namespace RedPeeper_Parts
 
 
             // Тестовые предметы
-            RedPeeper_TrainingPeeper.Register();
-            DrillablePeeper.Register();
+            //RedPeeper_TrainingPeeper.Register();
+            //DrillablePeeper.Register();
 
 
 

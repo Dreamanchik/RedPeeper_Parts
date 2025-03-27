@@ -11,7 +11,7 @@ using System.IO;
 public static class АварийныйКонтейнер
 {
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Lifepods", "Lifepod12.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Lockers", "EmergencyCrate.png");
     public static PrefabInfo Info { get; } = PrefabInfo.WithTechType("RP_EmergencyCrate", "Аварийный контейнер", "Небольшое хранилище, позволяющее вместить небольшое количество припасов для выживания. Оснащён влагозащитой. Можно устанавливать друг на друга.")
         .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
 

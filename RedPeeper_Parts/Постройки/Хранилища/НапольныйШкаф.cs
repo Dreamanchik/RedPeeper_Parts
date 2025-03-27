@@ -11,7 +11,7 @@ using System.IO;
 public static class НапольныйШкаф
 {
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Lifepods", "Lifepod12.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Lockers", "PersonalLocker.png");
     public static PrefabInfo Info { get; } = PrefabInfo.WithTechType("RP_PersonalLocker", "Напольный шкаф", "Относительно небольшое напольное хранилище, предназначенное для хранения личных вещей.")
         .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
 

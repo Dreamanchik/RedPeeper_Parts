@@ -37,7 +37,7 @@ public class AncientSandworm
         MaterialUtils.ApplySNShaders(_obj);
 
 
-        PDAHandler.AddCustomScannerEntry(Info.TechType, 10f, false, "SandwormPDA"); //Течтайп, сколько секунд сканировать, уничтожать ли при сканировании, айди лога
+        PDAHandler.AddCustomScannerEntry(Info.TechType, 10f, false, "RP_SandWorm"); //Течтайп, сколько секунд сканировать, уничтожать ли при сканировании, айди лога
 
         // Return the GameObject with all the components added
         return _obj;
