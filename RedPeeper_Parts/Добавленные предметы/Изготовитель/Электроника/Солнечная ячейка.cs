@@ -35,7 +35,7 @@ public class СолнечнаяЯчейка
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab("Resources", "Electronics")
-            .WithCraftingTime(10f);
+            .WithCraftingTime(7f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.Electronics); // КПК
 
         _prefab.Register(); // Регистрация
@@ -56,7 +56,6 @@ public class РецептЯчейка
         {
             new CraftData.Ingredient(НакопительныйКонцентрат.Info.TechType),
             new Ingredient(TechType.CopperWire, 1),
-            new Ingredient(TechType.Titanium, 2),
             new Ingredient(TechType.WiringKit, 1)
         }
         };

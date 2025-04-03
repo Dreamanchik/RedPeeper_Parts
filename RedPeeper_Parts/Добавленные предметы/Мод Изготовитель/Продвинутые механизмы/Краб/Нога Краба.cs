@@ -77,7 +77,7 @@ public class РецептНогаКраба
 
             Ingredients =
         {
-            new Ingredient(TechType.PlasteelIngot, 1),
+            new Ingredient(TechType.Titanium, 10),
             new Ingredient(TechType.WiringKit, 2),
             new Ingredient(TechType.Aerogel, 1),
             new Ingredient(TechType.Silicone, 3)

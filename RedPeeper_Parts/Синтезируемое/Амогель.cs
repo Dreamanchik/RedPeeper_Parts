@@ -10,7 +10,7 @@ public class АмоГель
     public static PrefabInfo Info { get; private set; }
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesized", "ShockGel.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesis", "ShockGel.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(

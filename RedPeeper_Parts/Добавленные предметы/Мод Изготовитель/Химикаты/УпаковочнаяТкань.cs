@@ -17,7 +17,7 @@ public class УпаковочнаяТкань : IBattery
 
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesized", "PackingFabric.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesis", "PackingFabric.png");
 
     public static string texturePath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "TwoFactorProcessor_texture.png");
     public static Texture2D Texture = ImageUtils.LoadTextureFromFile(texturePath);
@@ -43,7 +43,8 @@ public class УпаковочнаяТкань : IBattery
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Titanium)
+            new Ingredient(TechType.Bleach),
+            new Ingredient(Мембрана.Info.TechType, 2)
 
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)

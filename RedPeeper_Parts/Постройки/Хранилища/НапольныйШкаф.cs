@@ -50,8 +50,8 @@ public static class НапольныйШкаф
         prefab.SetPdaGroupCategory(TechGroup.InteriorModules, TechCategory.InteriorModule);
 
         prefab.SetRecipe(new RecipeData(
-            new Ingredient(TechType.Titanium, 3), 
-            new Ingredient(TechType.Glass, 1)
+            new Ingredient(TechType.Titanium, 8), 
+            new Ingredient(TechType.Lead, 2)
             ));
 
         prefab.Register();

@@ -55,8 +55,7 @@ public static class АварийныйКонтейнер
         prefab.SetPdaGroupCategory(TechGroup.InteriorModules, TechCategory.InteriorModule);
 
         prefab.SetRecipe(new RecipeData(
-            new Ingredient(TechType.Titanium, 3), 
-            new Ingredient(TechType.Glass, 1)
+            new Ingredient(TechType.Titanium, 2)
             ));
 
         prefab.Register();
