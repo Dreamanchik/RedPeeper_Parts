@@ -35,7 +35,7 @@ public class Мембрана2
         {
             BaseBioReactor.charge[Info.TechType] = 120f;
         };
-        _prefab.SetUnlock(TechType.MembrainTreeSeed);
+        _prefab.SetUnlock(ОкаменелостиРифоспинов.Info.TechType);
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО

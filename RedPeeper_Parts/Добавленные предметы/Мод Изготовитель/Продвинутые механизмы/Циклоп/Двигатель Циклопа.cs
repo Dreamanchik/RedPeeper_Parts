@@ -45,6 +45,7 @@ public class ДвигательЦиклопа
 
             ))
             .WithCraftingTime(100f);
+        _prefab.SetUnlock(TechType.Cyclops);
         _prefab.SetPdaGroupCategory(TechGroup.Cyclops, TechCategory.Cyclops); // КПК
 
         _prefab.Register(); // Регистрация

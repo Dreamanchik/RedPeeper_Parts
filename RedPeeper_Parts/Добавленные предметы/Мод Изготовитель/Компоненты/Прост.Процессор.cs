@@ -41,8 +41,7 @@ public class ПространственныйПроцессор
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.UraniniteCrystal, 5),
-            new Ingredient(TechType.ComputerChip, 3),
+            new Ingredient(TechType.UraniniteCrystal, 4),
             new Ingredient(TechType.PrecursorIonCrystal, 3),
             new Ingredient(TechType.AdvancedWiringKit, 1),
             new CraftData.Ingredient(ДвухфакторныйИнициализатор.Info.TechType)
@@ -50,6 +49,7 @@ public class ПространственныйПроцессор
             ))
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // КПК
+        _prefab.SetUnlock(TechType.MercuryOre);
 
         _prefab.Register(); // Регистрация
     }
@@ -68,11 +68,10 @@ public class РецептПроцессор
 
             Ingredients =
         {
-            new Ingredient(TechType.UraniniteCrystal, 5),
-            new Ingredient(TechType.ComputerChip, 3),
+            new Ingredient(TechType.UraniniteCrystal, 4),
             new Ingredient(TechType.PrecursorIonCrystal, 3),
             new Ingredient(TechType.AdvancedWiringKit, 1),
-            new CraftData.Ingredient(ДвухфакторныйИнициализатор.Info.TechType),
+            new CraftData.Ingredient(ДвухфакторныйИнициализатор.Info.TechType)
         }
         };
     }

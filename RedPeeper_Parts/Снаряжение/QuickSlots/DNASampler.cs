@@ -32,12 +32,15 @@ public static class DNASampler
 
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Titanium)
+            new CraftData.Ingredient(TechType.Silicone, 3),
+            new CraftData.Ingredient(TechType.Titanium, 2),
+            new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1)
 
         ))
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Equipment); // КПК
         _prefab.SetEquipment(EquipmentType.Hand).WithQuickSlotType(QuickSlotType.Selectable);
+        _prefab.SetUnlock(TechType.MercuryOre);
 
         _prefab.Register(); // Регистрация
     }

@@ -40,6 +40,7 @@ public class Герметик
             ))
             .WithCraftingTime(5f);
 
+        _prefab.SetUnlock(TechType.JellyPlant);
         _prefab.Register(); // Регистрация
     }
 }

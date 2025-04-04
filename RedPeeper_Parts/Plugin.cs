@@ -1,13 +1,11 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using Nautilus;
 using Nautilus.Handlers;
 using Nautilus.Utility;
-using Story;
-using System;
 using System.Reflection;
 using UnityEngine;
+using CustomDataboxes;
 
 namespace RedPeeper_Parts
 {
@@ -224,15 +222,61 @@ namespace RedPeeper_Parts
             НапольныйШкаф.Register();
             ИонныйНакопитель.Register();
 
-
-
+            // Синтезируемое
+            АмоГель.Register();
+            БиоТерм.Register();
+            КомпДавл.Register();
+            ПищФер.Register();
+            ПрыжБиохим.Register();
+            СывороткаПлоти.Register();
+            ЭлТкань.Register();
+            ЭхоГен.Register();
+            Logger.LogInfo("Синтезируемые материалы загружены");
 
             // Патчим рецепты
-            CraftDataHandler.SetRecipeData(TechType.Cyclops, РецептЦиклопа.GetRecipeData());
 
+            // Модули
+            CraftDataHandler.SetRecipeData(TechType.ExosuitDrillArmModule, РецептБуровойРуки.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.ExosuitGrapplingArmModule, РецептКрюковойРуки.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.ExosuitThermalReactorModule, РецептТермоРеактора.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.VehicleHullModule1, РецептКорпусаЭкзокостюма1.GetRecipeData());
 
+            CraftDataHandler.SetRecipeData(TechType.VehicleArmorPlating, РецептБрониТранспорта.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.VehiclePowerUpgradeModule, РецептУлучшенияЭнергии.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.VehicleStorageModule, РецептМодуляХранения.GetRecipeData());
 
+            CraftDataHandler.SetRecipeData(TechType.SeamothSolarCharge, РецептСолнечнойЗарядки.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.SeamothElectricalDefense, РецептЭлектрообороны.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.SeamothSonarModule, РецептМодуляСонара.GetRecipeData());
 
+            // МодСтанция
+            CraftDataHandler.SetRecipeData(TechType.HighCapacityTank, РецептБаллонаСверхвысокойЁмкости.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.ExoHullModule2, РецептГлубиныПогруженияКостюмаКРАБ2.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.UltraGlideFins, РецептСверхскользкихЛаст.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.SwimChargeFins, РецептЛастыЗарядки.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.PlasteelTank, РецептЛёгкогоБаллонаВысокойЁмкости.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.LithiumIonBattery, РецептЛитийИоннойБатареи.GetRecipeData());
+
+            CraftDataHandler.SetRecipeData(TechType.VehicleHullModule2, РецептМодуляГлубиныПогруженияМотылька2.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.VehicleHullModule3, РецептМодуляГлубиныПогруженияМотылька3.GetRecipeData());
+
+            CraftDataHandler.SetRecipeData(TechType.CyclopsHullModule2, РецептМодуляГлубиныПогруженияЦиклопа2.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.CyclopsHullModule3, РецептМодуляГлубиныПогруженияЦиклопа3.GetRecipeData());
+
+            // Инструменты
+            CraftDataHandler.SetRecipeData(TechType.PropulsionCannon, РецептПропульсионнойПушки.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.StasisRifle, РецептСтазисВинтовки.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.LaserCutter, РецептЛазерногоРезака.GetRecipeData());
+
+            // Интерактивные части базы
+            CraftDataHandler.SetRecipeData(TechType.BaseLadder, РецептЛестницы.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseFiltrationMachine, РецептВодоотчистнойСтанции.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseBulkhead, РецептПереборки.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseUpgradeConsole, РецептКонсолиУлучшения.GetRecipeData());
+
+            // Энергия
+            CraftDataHandler.SetRecipeData(TechType.SolarPanel, РецептСолнечнойПанели.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseBioReactor, РецептБиоРеактора.GetRecipeData());
 
             // Доп. Материалы
             CraftDataHandler.SetItemSize(TechType.Aerogel, new Vector2int(3, 2));
@@ -251,6 +295,10 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetRecipeData(TechType.Polyaniline, РецептПолианилина.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.HatchingEnzymes, new Vector2int(2, 3));
+
+            // Конструктор
+            CraftDataHandler.SetRecipeData(TechType.Exosuit, РецептКраба.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Cyclops, РецептЦиклопа.GetRecipeData());
 
 
 
@@ -436,13 +484,14 @@ namespace RedPeeper_Parts
             PDAHandler.EditFragmentsToScan(TechType.Beacon, 4);
 
             PDAHandler.EditFragmentScanTime(TechType.LaserCutter, 5f);
-            PDAHandler.EditFragmentsToScan(TechType.LaserCutter, 5);
+            PDAHandler.EditFragmentsToScan(TechType.LaserCutter, 6);
             PDAHandler.EditFragmentScanTime(TechType.PropulsionCannon, 5f);
             PDAHandler.EditFragmentsToScan(TechType.PropulsionCannon, 5);
 
 
 
             //Лого LINER
+            
 
 
             Logger.LogInfo("РЕЦЕПТЫ ЗАГРУЖЕНЫ");

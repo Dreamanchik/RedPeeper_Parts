@@ -51,8 +51,8 @@ public static class ПромышленныйСтеллаж
         prefab.SetPdaGroupCategory(TechGroup.InteriorModules, TechCategory.InteriorModule);
 
         prefab.SetRecipe(new RecipeData(
-            new Ingredient(TechType.Titanium, 3), 
-            new Ingredient(TechType.Glass, 1)
+            new Ingredient(TechType.Titanium, 10), 
+            new Ingredient(TechType.Lithium, 2)
             ));
 
         prefab.Register();

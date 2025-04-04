@@ -32,22 +32,22 @@ public class RedPeeper_AcidConcentrate
         {
             Eatable eatable = obj.EnsureComponent<Eatable>();
             BaseBioReactor.charge[Info.TechType] = 100f;
-            eatable.waterValue = 50f;
+            eatable.waterValue = 40f;
             eatable.foodValue = -5f;
 
             SurvivalHandler.GiveOxygenOnConsume(Info.TechType, -30f, true);
             SurvivalHandler.GiveHealthOnConsume(Info.TechType, -49f, true);
         };
-
-        _prefab.SetUnlock(TechType.Melon);
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
-            new Ingredient(TechType.Titanium)
+            new Ingredient(TechType.AcidMushroom, 8),
+            new Ingredient(TechType.Bleach, 1)
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab("Survival", "CookedFood")
             .WithCraftingTime(5f);
         _prefab.SetPdaGroupCategory(TechGroup.Survival, TechCategory.Water); // КПК
+        _prefab.SetUnlock(TechType.AcidMushroom);
         _prefab.Register(); // Регистрация
     }
 }
@@ -65,6 +65,7 @@ public class РецептКислотныйКонцентрат
         {
             new Ingredient(TechType.AcidMushroom, 8),
             new Ingredient(TechType.Bleach, 1)
+
         }
         };
     }

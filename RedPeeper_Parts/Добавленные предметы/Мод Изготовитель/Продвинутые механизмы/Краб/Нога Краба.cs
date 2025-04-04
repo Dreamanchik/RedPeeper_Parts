@@ -59,6 +59,7 @@ public class НогаКраба
             ))
             .WithCraftingTime(20f);
         _prefab.SetPdaGroupCategory(TechGroup.Machines, TechCategory.Machines); // КПК
+        _prefab.SetUnlock(TechType.Exosuit);
 
         _prefab.Register(); // Регистрация
     }
@@ -77,7 +78,7 @@ public class РецептНогаКраба
 
             Ingredients =
         {
-            new Ingredient(TechType.PlasteelIngot, 1),
+            new Ingredient(TechType.Titanium, 10),
             new Ingredient(TechType.WiringKit, 2),
             new Ingredient(TechType.Aerogel, 1),
             new Ingredient(TechType.Silicone, 3)

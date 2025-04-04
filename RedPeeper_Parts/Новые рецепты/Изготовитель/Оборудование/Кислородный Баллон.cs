@@ -2,7 +2,6 @@
 
 public class РецептКислородногоБаллона
 {
-    // Изменяем рецепт
     public static RecipeData GetRecipeData()
     {
         return new RecipeData()
