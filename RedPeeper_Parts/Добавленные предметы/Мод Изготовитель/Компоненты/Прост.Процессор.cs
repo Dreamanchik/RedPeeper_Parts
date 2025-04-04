@@ -49,7 +49,7 @@ public class ПространственныйПроцессор
             ))
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // КПК
-        _prefab.SetUnlock(TechType.MercuryOre);
+        _prefab.SetUnlock(TechType.PropulsionCannon);
 
         _prefab.Register(); // Регистрация
     }

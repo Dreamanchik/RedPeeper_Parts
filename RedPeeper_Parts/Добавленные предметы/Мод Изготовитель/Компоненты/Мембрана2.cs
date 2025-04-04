@@ -67,7 +67,7 @@ public class РецептМембраны2
     {
         List<TechType> linkedItems = new List<TechType>()
         {
-        Мембрана.Info.TechType
+        СолнечнаяЯчейкаДатабокс.Info.TechType
         };
         return new RecipeData()
         {

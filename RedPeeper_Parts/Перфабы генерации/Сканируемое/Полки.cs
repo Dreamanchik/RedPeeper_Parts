@@ -38,7 +38,9 @@ public class ScannableShelvesCollider
         // You can use the optional inputs here to change the look of your object
         MaterialUtils.ApplySNShaders(_obj);
 
-        PDAHandler.AddCustomScannerEntry(Info.TechType, ПромышленныйСтеллаж.Info.TechType, true, 5, 2f, true); // Айди, что открывает, фрагмент ли, сколько нужно для открытия, время сканирования, пропадает ли. Ты ещё можешь привязать кастомный лог КПК, как в древнем захронении
+        PDAHandler.AddCustomScannerEntry(Info.TechType, ПромышленныйСтеллаж.Info.TechType, true, 5, 10f, false); // Айди, что открывает, фрагмент ли, сколько нужно для открытия, время сканирования, пропадает ли. Ты ещё можешь привязать кастомный лог КПК, как в древнем захронении
+        // PDAHandler.AddCustomScannerEntry(Info.TechType, АварийныйКонтейнер.Info.TechType, true, 2, 3f, false);
+        // PDAHandler.AddCustomScannerEntry(Info.TechType, НапольныйШкаф.Info.TechType, true, 4, 3f, false);
         BoxCollider scanCollider = _obj.EnsureComponent<BoxCollider>();
         //BoxCollider findScanCollider = _obj.GetComponent<BoxCollider>();
         //findScanCollider.extents.Set(3.8f, 5f, 1.5f);

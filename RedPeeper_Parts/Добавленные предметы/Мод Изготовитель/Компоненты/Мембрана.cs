@@ -8,7 +8,7 @@ using Nautilus.Assets.Gadgets;
 using Nautilus.Handlers;
 using UnityEngine;
 
-public class Мембрана
+public class СолнечнаяЯчейкаДатабокс
 {
   
     public static PrefabInfo Info { get; private set; }

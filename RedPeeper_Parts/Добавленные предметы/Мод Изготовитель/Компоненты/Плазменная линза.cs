@@ -36,7 +36,7 @@ public class ПлазменнаяЛинза
             ))
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // КПК
-        _prefab.SetUnlock(TechType.MercuryOre);
+        _prefab.SetUnlock(TechType.LaserCutter);
 
         _prefab.Register(); // Регистрация
     }
@@ -54,7 +54,7 @@ public class РецептЛинзы
 
             Ingredients =
         {
-            new Ingredient(Мембрана.Info.TechType, 3),
+            new Ingredient(СолнечнаяЯчейкаДатабокс.Info.TechType, 3),
             new Ingredient(TechType.Diamond, 5),
             new Ingredient(TechType.EnameledGlass, 2),
             new Ingredient(TechType.ComputerChip, 1)

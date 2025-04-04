@@ -93,7 +93,7 @@ namespace RedPeeper_Parts
             ПространственныйПроцессор.Register();
             Герметик.Register();
             ОкаменелостиРифоспинов.Register();
-            Мембрана.Register();
+            СолнечнаяЯчейкаДатабокс.Register();
             Мембрана2.Register();
             ДвухфакторныйИнициализатор.Register();
             Logger.LogInfo("Новые предметы загружены");
@@ -115,6 +115,7 @@ namespace RedPeeper_Parts
             УпаковочнаяТкань.Register();
             //МеднаяБатарейка.Register();
             АналоговаяБатарея.Register();
+            Энергоячейка2.Register();
 
 
 
@@ -179,6 +180,9 @@ namespace RedPeeper_Parts
             ЭлТкань.Register();
             ЭхоГен.Register();
             Logger.LogInfo("Синтезируемые материалы загружены");
+
+
+            СолнечнаяЯчейкаДатабокс2.Register();
 
             // Патчим рецепты
 
@@ -246,6 +250,12 @@ namespace RedPeeper_Parts
             // Конструктор
             CraftDataHandler.SetRecipeData(TechType.Exosuit, РецептКраба.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.Cyclops, РецептЦиклопа.GetRecipeData());
+
+            // ДеталиБазы
+            CraftDataHandler.SetRecipeData(TechType.BaseLargeRoom, РецептБольшойКомнаты.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseObservatory, РецептОбсеватории.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseMoonpool, РецептСтыковочнойШахты.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseRoom, РецептМногоцелевойКомнаты.GetRecipeData());
 
 
 
@@ -366,7 +376,7 @@ namespace RedPeeper_Parts
 
 
             // Материалы МОД
-            CraftDataHandler.SetRecipeData(Мембрана.Info.TechType, РецептМембраны.GetRecipeData());
+            CraftDataHandler.SetRecipeData(СолнечнаяЯчейкаДатабокс.Info.TechType, РецептМембраны.GetRecipeData());
             CraftDataHandler.SetRecipeData(Мембрана2.Info.TechType, РецептМембраны2.GetRecipeData());
 
 
