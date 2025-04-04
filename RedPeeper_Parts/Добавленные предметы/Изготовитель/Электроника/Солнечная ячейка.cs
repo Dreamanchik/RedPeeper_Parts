@@ -38,6 +38,7 @@ public class СолнечнаяЯчейка
             .WithCraftingTime(7f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.Electronics); // КПК
 
+        _prefab.SetUnlock(TechType.MercuryOre);
         _prefab.Register(); // Регистрация
     }
 }

@@ -59,6 +59,7 @@ public class НогаКраба
             ))
             .WithCraftingTime(20f);
         _prefab.SetPdaGroupCategory(TechGroup.Machines, TechCategory.Machines); // КПК
+        _prefab.SetUnlock(TechType.Exosuit);
 
         _prefab.Register(); // Регистрация
     }

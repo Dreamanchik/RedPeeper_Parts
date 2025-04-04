@@ -44,6 +44,7 @@ public class КорпусЦиклопа
 
             ))
             .WithCraftingTime(150f);
+        _prefab.SetUnlock(TechType.Cyclops);
         _prefab.SetPdaGroupCategory(TechGroup.Cyclops, TechCategory.Cyclops); // КПК
 
         _prefab.Register(); // Регистрация

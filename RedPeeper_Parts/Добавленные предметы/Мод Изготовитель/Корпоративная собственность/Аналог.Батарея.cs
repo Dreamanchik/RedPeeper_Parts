@@ -46,6 +46,7 @@ public class АналоговаяБатарея
 
             ))
             .WithCraftingTime(10f);
+        _prefab.SetUnlock(АналоговаяБатарея.Info.TechType);
 
         _prefab.Register(); // Регистрация
     }

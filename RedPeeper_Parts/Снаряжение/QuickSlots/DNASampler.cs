@@ -37,10 +37,10 @@ public static class DNASampler
             new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1)
 
         ))
-            .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Equipment); // КПК
         _prefab.SetEquipment(EquipmentType.Hand).WithQuickSlotType(QuickSlotType.Selectable);
+        _prefab.SetUnlock(TechType.MercuryOre);
 
         _prefab.Register(); // Регистрация
     }

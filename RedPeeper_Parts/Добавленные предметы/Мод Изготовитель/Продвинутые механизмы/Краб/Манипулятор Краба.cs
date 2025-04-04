@@ -39,6 +39,7 @@ public class МанипуляторКраба
 
             ))
             .WithCraftingTime(20f);
+        _prefab.SetUnlock(TechType.Exosuit);
         _prefab.SetPdaGroupCategory(TechGroup.Machines, TechCategory.Machines); // КПК
 
         _prefab.Register(); // Регистрация

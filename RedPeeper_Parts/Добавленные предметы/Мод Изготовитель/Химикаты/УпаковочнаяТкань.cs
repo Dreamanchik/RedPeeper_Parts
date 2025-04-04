@@ -47,11 +47,12 @@ public class УпаковочнаяТкань : IBattery
             new Ingredient(Мембрана.Info.TechType, 2)
 
             ))
-            .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithCraftingTime(3f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.BasicMaterials); // КПК
 
 
+        _prefab.SetUnlock(Мембрана.Info.TechType);
+        _prefab.SetUnlock(Мембрана2.Info.TechType);
         _prefab.Register(); // Регистрация
     }
 

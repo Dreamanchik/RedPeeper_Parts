@@ -35,7 +35,7 @@ public class ДвухфакторныйИнициализатор
             MeshRenderer mr = obj.transform.Find("model").gameObject.transform.Find("Mesh").gameObject.GetComponent<MeshRenderer>();
             mr.material.SetTexture(ShaderPropertyID._MainTex, Texture);
         };
-        _prefab.SetUnlock(TechType.JellyPlant);
+        _prefab.SetUnlock(DNASampler.Info.TechType);
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe (new RecipeData
 

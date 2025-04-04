@@ -51,7 +51,7 @@ public class МеднаяБатарейка : IBattery
             .WithCraftingTime(5f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.BasicMaterials); // КПК
 
-
+        _prefab.SetUnlock(TechType.MercuryOre);
         _prefab.Register(); // Регистрация
     }
 

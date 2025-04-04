@@ -36,6 +36,7 @@ public class ПлазменнаяЛинза
             ))
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // КПК
+        _prefab.SetUnlock(TechType.MercuryOre);
 
         _prefab.Register(); // Регистрация
     }

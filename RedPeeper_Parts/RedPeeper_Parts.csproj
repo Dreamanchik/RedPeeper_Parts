@@ -47,6 +47,9 @@
     <Reference Include="CustomBatteries">
       <HintPath>D:\steam\steamapps\common\Subnautica\BepInEx\plugins\CustomBatteries\CustomBatteries.dll</HintPath>
     </Reference>
+    <Reference Include="CustomDataboxes">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Subnautica\BepInEx\plugins\CustomDataboxes\CustomDataboxes.dll</HintPath>
+    </Reference>
     <Reference Include="FMODUnity">
       <HintPath>D:\steam\steamapps\common\Subnautica\Subnautica_Data\Managed\FMODUnity.dll</HintPath>
     </Reference>
@@ -56,7 +59,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Добавленные предметы\Прочее\Обломки\" />
+    <Folder Include="Прочее\Обломки\" />
     <Folder Include="Шаблоны\" />
   </ItemGroup>
 </Project>

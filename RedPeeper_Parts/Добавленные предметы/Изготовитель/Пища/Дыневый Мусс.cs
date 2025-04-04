@@ -35,7 +35,6 @@ public class RedPeeper_MelonMousse
             eatable.foodValue = 40f;
             eatable.waterValue = 60f;
         };
-        _prefab.SetUnlock(TechType.Melon);
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe
             
@@ -50,6 +49,7 @@ public class RedPeeper_MelonMousse
             .WithStepsToFabricatorTab("Survival", "CookedFood")
             .WithCraftingTime(5f);
         _prefab.SetPdaGroupCategory(TechGroup.Survival, TechCategory.Water); // КПК
+        _prefab.SetUnlock(TechType.Melon);
 
         _prefab.Register(); // Регистрация
     }
