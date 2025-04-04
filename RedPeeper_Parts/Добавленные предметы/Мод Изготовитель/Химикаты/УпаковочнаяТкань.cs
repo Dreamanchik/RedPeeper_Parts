@@ -46,7 +46,6 @@ public class УпаковочнаяТкань : IBattery
             new Ingredient(TechType.Titanium)
 
             ))
-            .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithCraftingTime(3f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.BasicMaterials); // КПК
 

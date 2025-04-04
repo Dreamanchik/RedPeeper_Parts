@@ -10,11 +10,11 @@ public class ПищФер
     public static PrefabInfo Info { get; private set; }
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesis", "DigestiveEnzyme.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesized", "DigestiveEnzyme.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
-            "RP_Digestive_enzyme",
+            "RP_DigestiveEnzyme",
             "Пищеварительный фермент",
             "Клетки желудка морского топтуна, позволяющие ему переваривать даже грубую пищу. Подходит для создания специализированного и сложного биотоплива."
             )

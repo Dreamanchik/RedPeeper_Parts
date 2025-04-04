@@ -10,7 +10,7 @@ public class ЭхоГен
     public static PrefabInfo Info { get; private set; }
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesis", "EcholocationGene.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesized", "EcholocationGene.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(

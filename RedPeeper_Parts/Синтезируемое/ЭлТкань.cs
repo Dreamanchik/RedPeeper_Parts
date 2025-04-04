@@ -10,11 +10,11 @@ public class ЭлТкань
     public static PrefabInfo Info { get; private set; }
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesis", "ShockGel.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesized", "ElectricFabric.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
-            "RP_ShockGel",
+            "RP_ElectricFabric",
             "Электролизирующая ткань",
             "Биологический механизм, позволяющий электрическим угрям накапливать и использовать ионы поступающей энергии для защиты. Подходит для создания сложных механизмов, затрагивающих системы электроэнергии."
             )

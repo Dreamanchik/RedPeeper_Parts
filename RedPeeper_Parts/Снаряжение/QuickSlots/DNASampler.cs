@@ -35,7 +35,6 @@ public static class DNASampler
             new Ingredient(TechType.Titanium)
 
         ))
-            .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Equipment); // КПК
         _prefab.SetEquipment(EquipmentType.Hand).WithQuickSlotType(QuickSlotType.Selectable);
