@@ -44,14 +44,14 @@ public class УпаковочнаяТкань : IBattery
         _prefab.SetRecipe(new RecipeData(
 
             new Ingredient(TechType.Bleach),
-            new Ingredient(Мембрана.Info.TechType, 2)
+            new Ingredient(СолнечнаяЯчейкаДатабокс.Info.TechType, 2)
 
             ))
             .WithCraftingTime(3f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.BasicMaterials); // КПК
 
 
-        _prefab.SetUnlock(Мембрана.Info.TechType);
+        _prefab.SetUnlock(СолнечнаяЯчейкаДатабокс.Info.TechType);
         _prefab.SetUnlock(Мембрана2.Info.TechType);
         _prefab.Register(); // Регистрация
     }

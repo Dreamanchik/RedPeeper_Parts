@@ -10,13 +10,13 @@ public class КомпДавл
     public static PrefabInfo Info { get; private set; }
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesis", "PressureCompensator.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesized", "PressureCompensator.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
             "RP_Pressure_Compensator",
             "Компенсатор давления",
-            "Биологический механизм, позволяющий древним поплавкам выдерживать огромное давление воды. Может использоваться в создании продвинутых модулей глубины транспорта."
+            "Биологический механизм, позволяющий кальмарокрабам выдерживать огромное давление воды. Может использоваться в создании продвинутых модулей глубины транспорта."
             )
             .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
             .WithSizeInInventory(new Vector2int(3, 2));

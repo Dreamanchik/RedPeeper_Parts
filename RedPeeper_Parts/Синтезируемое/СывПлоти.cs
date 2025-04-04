@@ -10,7 +10,7 @@ public class СывороткаПлоти
     public static PrefabInfo Info { get; private set; }
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesis", "SerumofSteelFlesh.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "Synthesized", "SerumofSteelFlesh.png");
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
