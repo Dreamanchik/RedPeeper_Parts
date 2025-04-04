@@ -115,6 +115,7 @@ namespace RedPeeper_Parts
             УпаковочнаяТкань.Register();
             //МеднаяБатарейка.Register();
             АналоговаяБатарея.Register();
+            Энергоячейка2.Register();
 
 
 
@@ -246,6 +247,12 @@ namespace RedPeeper_Parts
             // Конструктор
             CraftDataHandler.SetRecipeData(TechType.Exosuit, РецептКраба.GetRecipeData());
             CraftDataHandler.SetRecipeData(TechType.Cyclops, РецептЦиклопа.GetRecipeData());
+
+            // ДеталиБазы
+            CraftDataHandler.SetRecipeData(TechType.BaseLargeRoom, РецептБольшойКомнаты.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseObservatory, РецептОбсеватории.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseMoonpool, РецептСтыковочнойШахты.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.BaseRoom, РецептМногоцелевойКомнаты.GetRecipeData());
 
 
 

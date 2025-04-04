@@ -70,16 +70,17 @@ public class МодифицированныйИзготовитель
 
 
         //  Корпоративная собственность
+        CraftTreeHandler.AddCraftingNode(treeType, DNASampler.Info.TechType, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.StasisRifle, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.LaserCutter, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.Builder, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PropulsionCannon, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.ReinforcedDiveSuit, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.WaterFiltrationSuit, "RedPeeper_ModStation_CorporateTools");
-        CraftTreeHandler.AddCraftingNode(treeType, АналоговаяБатарея.Info.TechType, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PrecursorIonBattery, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PrecursorIonPowerCell, "RedPeeper_ModStation_CorporateTools");
-        CraftTreeHandler.AddCraftingNode(treeType, DNASampler.Info.TechType, "RedPeeper_ModStation_CorporateTools");
+        CraftTreeHandler.AddCraftingNode(treeType, АналоговаяБатарея.Info.TechType, "RedPeeper_ModStation_CorporateTools");
+        CraftTreeHandler.AddCraftingNode(treeType, Энергоячейка2.Info.TechType, "RedPeeper_ModStation_CorporateTools");
 
 
         //  Продвинутые механизмы

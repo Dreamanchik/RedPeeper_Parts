@@ -40,7 +40,7 @@ public static class DNASampler
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Equipment); // КПК
         _prefab.SetEquipment(EquipmentType.Hand).WithQuickSlotType(QuickSlotType.Selectable);
-        _prefab.SetUnlock(TechType.MercuryOre);
+        _prefab.SetUnlock(DNASampler.Info.TechType);
 
         _prefab.Register(); // Регистрация
     }
