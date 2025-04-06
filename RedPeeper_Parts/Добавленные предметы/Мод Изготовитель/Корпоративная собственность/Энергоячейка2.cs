@@ -29,10 +29,7 @@ public class Энергоячейка2
         var _prefab = new CustomPrefab(Info);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.UraniniteCrystal, 4),
-            new Ingredient(TechType.PrecursorIonCrystal, 3),
-            new Ingredient(TechType.AdvancedWiringKit, 1),
-            new CraftData.Ingredient(ДвухфакторныйИнициализатор.Info.TechType)
+            new Ingredient(TechType.Titanium, 1000)
 
             ))
             .WithCraftingTime(3f);

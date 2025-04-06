@@ -38,7 +38,6 @@ namespace RedPeeper_Parts
         {
 
             //Убираем предметы из изготовителя
-            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "Battery");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "PrecursorIonBattery");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "PrecursorIonPowerCell");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "AdvancedWiringKit");
@@ -63,7 +62,6 @@ namespace RedPeeper_Parts
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Equipment", "PrecursorKey_Blue");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Equipment", "PrecursorKey_Orange");
 
-            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Tools", "Knife");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Tools", "Builder");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Tools", "LaserCutter");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Personal", "Tools", "StasisRifle");
@@ -224,7 +222,7 @@ namespace RedPeeper_Parts
             ИонныйНакопитель.Register();
 
             // Синтезируемое
-            АмоГель.Register();
+            /*АмоГель.Register();
             БиоТерм.Register();
             КомпДавл.Register();
             ПищФер.Register();
@@ -232,7 +230,7 @@ namespace RedPeeper_Parts
             СывороткаПлоти.Register();
             ЭлТкань.Register();
             ЭхоГен.Register();
-            Logger.LogInfo("Синтезируемые материалы загружены");
+            Logger.LogInfo("Синтезируемые материалы загружены");*/
 
 
             СолнечнаяЯчейкаДатабокс2.Register();
@@ -442,6 +440,12 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetRecipeData(НакопительныйКонцентрат.Info.TechType, РецептКонцентрат.GetRecipeData());
             CraftDataHandler.SetRecipeData(ПространственныйПроцессор.Info.TechType, РецептПроцессор.GetRecipeData());
             CraftDataHandler.SetRecipeData(СолнечнаяЯчейка.Info.TechType, РецептЯчейка.GetRecipeData());
+
+
+
+
+            // Корпоративная МОД
+            CraftDataHandler.SetRecipeData(Энергоячейка2.Info.TechType, РецептЭнергоячейки2.GetRecipeData());
 
 
 
