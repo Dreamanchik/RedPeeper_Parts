@@ -12,7 +12,7 @@ public class РецептЭнергоячейки
             Ingredients =
         {
             new CraftData.Ingredient(МеднаяБатарейка.Info.TechType, 2),
-            new CraftData.Ingredient(TechType.Titanium, 999)
+            new CraftData.Ingredient(TechType.Silicone, 1)
         }
         };
     }

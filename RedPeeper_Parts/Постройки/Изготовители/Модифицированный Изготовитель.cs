@@ -81,6 +81,7 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PrecursorIonPowerCell, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, АналоговаяБатарея.Info.TechType, "RedPeeper_ModStation_CorporateTools");
         CraftTreeHandler.AddCraftingNode(treeType, Энергоячейка2.Info.TechType, "RedPeeper_ModStation_CorporateTools");
+        CraftTreeHandler.AddCraftingNode(treeType, СветоваяБатарейка.Info.TechType, "RedPeeper_ModStation_CorporateTools");
 
 
         //  Продвинутые механизмы

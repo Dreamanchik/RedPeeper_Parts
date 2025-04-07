@@ -7,28 +7,28 @@ using Nautilus.Crafting;
 using static CraftData;
 using Nautilus.Assets.Gadgets;
 
-public class МеднаяБатарейка : IBattery
+public class СветоваяБатарейка : IBattery
 {
-    public float charge {  get; set; }
+    public float charge { get; set; }
     public float capacity { get; set; }
 
     public static PrefabInfo Info { get; private set; }
 
 
     public static string modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    public static string iconPath = Path.Combine(modFolder, "Assets", "Items", "Electronics", "CopperBattery.png");
+    public static string iconPath = Path.Combine(modFolder, "Assets", "Doodads", "ModifiedFabricator", "CorporateTools", "LightBattery.png");
 
     // public static string texturePath = Path.Combine(modFolder, "Assets", "Items", "Advanced Materials", "TwoFactorProcessor_texture.png");
     // public static Texture2D Texture = ImageUtils.LoadTextureFromFile(texturePath);
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
-            "RP_CopperBattery",
-            "Медная батарея",
-            "Портативный и мобильный аккумулятор, позволяющий запитать персональные инструменты. Пониженная энергоёмкость."
+            "RP_LightBattery",
+            "Световая батарея",
+            "Использует световые отражения и тонкие пластины для рефракции света, превращая его в электричество. Энергоэффективный источник питания."
             )
-            .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath));
-            //.WithSizeInInventory(new Vector2int(1, 1));
+            .WithIcon(ImageUtils.LoadSpriteFromFile(iconPath))
+            .WithSizeInInventory(new Vector2int(2, 2));
 
         var _prefab = new CustomPrefab(Info);
 
@@ -37,20 +37,20 @@ public class МеднаяБатарейка : IBattery
         {
 
             Battery batteryComponent = obj.GetComponent<Battery>();
-            batteryComponent._capacity = 60;
+            batteryComponent._capacity = 250;
         };
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Titanium),
-            new Ingredient(TechType.Copper),
-            new Ingredient(НакопительныйКонцентрат.Info.TechType)
+            new Ingredient(TechType.Diamond),
+            new Ingredient(СолнечнаяЯчейкаДатабокс.Info.TechType, 2),
+            new Ingredient(МеднаяБатарейка.Info.TechType)
 
             ))
-            .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab("Resources", "BasicMaterials")
-            .WithCraftingTime(5f);
+            .WithCraftingTime(8f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.Electronics); // КПК
+        _prefab.SetUnlock(СветоваяБатарейка.Info.TechType);
 
         //_prefab.SetUnlock(TechType.MercuryOre);
         _prefab.Register(); // Регистрация

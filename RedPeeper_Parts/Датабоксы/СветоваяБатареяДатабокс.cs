@@ -2,18 +2,18 @@
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 
-public class СолнечнаяЯчейкаДатабокс2
+public class СветоваяБатареяДатабокс
 {
-  
+
     public static PrefabInfo Info { get; private set; }
 
     public static void Register()
     {
         Info = PrefabInfo.WithTechType(
 
-            "RP_SolarCellDatabox2",
+            "RP_LightBattertDatabox",
             "Ящик с данными",
-            "Содержит чертёж солнечной ячейки."
+            "Содержит чертёж световой батареи."
             );
         var _prefab = new CustomPrefab(Info);
 
@@ -21,7 +21,7 @@ public class СолнечнаяЯчейкаДатабокс2
         _obj.ModifyPrefab += obj =>
         {
             BlueprintHandTarget blueprint = obj.GetComponent<BlueprintHandTarget>();
-            blueprint.unlockTechType = СолнечнаяЯчейка.Info.TechType;
+            blueprint.unlockTechType = СветоваяБатарейка.Info.TechType;
         };
         _prefab.SetUnlock(TechType.MembrainTreeSeed);
         _prefab.SetGameObject(_obj);

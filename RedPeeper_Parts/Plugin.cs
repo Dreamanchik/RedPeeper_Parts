@@ -5,7 +5,6 @@ using Nautilus.Handlers;
 using Nautilus.Utility;
 using System.Reflection;
 using UnityEngine;
-using CustomDataboxes;
 
 namespace RedPeeper_Parts
 {
@@ -42,6 +41,7 @@ namespace RedPeeper_Parts
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "PrecursorIonPowerCell");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "AdvancedWiringKit");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "ReactorRod");
+            CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "Electronics", "Battery");
 
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "BasicMaterials", "Bleach");
             CraftTreeHandler.RemoveNode(CraftTree.Type.Fabricator, "Resources", "BasicMaterials", "EnameledGlass");
@@ -148,9 +148,10 @@ namespace RedPeeper_Parts
 
             // Батареи
             УпаковочнаяТкань.Register();
-            //МеднаяБатарейка.Register();
+            МеднаяБатарейка.Register();
             АналоговаяБатарея.Register();
             Энергоячейка2.Register();
+            СветоваяБатарейка.Register();
 
 
 
@@ -234,6 +235,7 @@ namespace RedPeeper_Parts
 
 
             СолнечнаяЯчейкаДатабокс2.Register();
+            СветоваяБатареяДатабокс.Register();
 
             // Патчим рецепты
 
@@ -332,6 +334,8 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetRecipeData(TechType.ReactorRod, РецептСтержняРеактора.GetRecipeData());
             CraftDataHandler.SetItemSize(TechType.ReactorRod, new Vector2int(3, 4));
 
+            CraftDataHandler.SetRecipeData(TechType.PowerCell, РецептЭнергоячейки.GetRecipeData());
+
 
 
 
@@ -384,6 +388,10 @@ namespace RedPeeper_Parts
 
 
             // Инструменты
+            CraftDataHandler.SetRecipeData(TechType.Scanner, РецептСканера.GetRecipeData());
+            CraftDataHandler.SetRecipeData(TechType.Flashlight, РецептФонарика.GetRecipeData());
+
+
             CraftDataHandler.SetItemSize(TechType.LEDLight, new Vector2int(1, 2));
             CraftDataHandler.SetItemSize(TechType.Flashlight, new Vector2int(1, 2));
             CraftDataHandler.SetItemSize(TechType.Knife, new Vector2int(1, 2));
