@@ -11,7 +11,7 @@ public class РецептСиликоновойРезины
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.CreepvineSeedCluster, 6)
+            new CraftData.Ingredient(TechType.CreepvineSeedCluster, 3)
         }
         };
     }

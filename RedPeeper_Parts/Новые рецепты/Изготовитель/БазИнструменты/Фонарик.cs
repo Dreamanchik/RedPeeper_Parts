@@ -1,6 +1,6 @@
 ﻿using Nautilus.Crafting;
 
-public class РецептОгнетушителя
+public class РецептФонарика
 {
     // Изменяем рецепт
     public static RecipeData GetRecipeData()
@@ -11,8 +11,8 @@ public class РецептОгнетушителя
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 1),
-            new CraftData.Ingredient(TechType.CoralChunk, 2),
+            new CraftData.Ingredient(МеднаяБатарейка.Info.TechType),
+            new CraftData.Ingredient(TechType.Glass)
         }
         };
     }

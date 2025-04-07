@@ -42,7 +42,7 @@ public class АналоговаяБатарея
             new Ingredient(TechType.PurpleBrainCoralPiece, 2),
             new Ingredient(TechType.UraniniteCrystal, 2),
             new Ingredient(TechType.Titanium, 2),
-            new Ingredient(TechType.CopperWire)
+            new Ingredient(TechType.Copper, 1)
 
             ))
             .WithCraftingTime(10f);
@@ -68,7 +68,7 @@ public class РецептАнаговойБатареи
             new Ingredient(TechType.PurpleBrainCoralPiece, 2),
             new Ingredient(TechType.UraniniteCrystal, 2),
             new Ingredient(TechType.Titanium, 2),
-            new Ingredient(TechType.CopperWire)
+            new Ingredient(TechType.Copper, 1)
         }
         };
     }
