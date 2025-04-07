@@ -51,9 +51,9 @@ public class МодифицированныйИзготовитель
         CraftTreeHandler.AddCraftingNode(treeType, ДвухфакторныйИнициализатор.Info.TechType, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.AdvancedWiringKit, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.PlasteelIngot, "RedPeeper_ModStation_Components");
+        CraftTreeHandler.AddCraftingNode(treeType, TechType.EnameledGlass, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, СолнечнаяЯчейкаДатабокс.Info.TechType, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, Мембрана2.Info.TechType, "RedPeeper_ModStation_Components");
-        CraftTreeHandler.AddCraftingNode(treeType, TechType.EnameledGlass, "RedPeeper_ModStation_Components");
         CraftTreeHandler.AddCraftingNode(treeType, TechType.ReactorRod, "RedPeeper_ModStation_Components");
 
 

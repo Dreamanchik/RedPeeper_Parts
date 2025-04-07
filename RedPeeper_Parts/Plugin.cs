@@ -417,6 +417,13 @@ namespace RedPeeper_Parts
             // Размещаемое
             CraftDataHandler.SetItemSize(TechType.Beacon, new Vector2int(2, 2));
 
+            // Руки КРАБа
+            CraftDataHandler.SetItemSize(TechType.ExosuitDrillArmModule, new Vector2int(3, 2));
+            CraftDataHandler.SetItemSize(TechType.ExosuitClawArmModule, new Vector2int(3, 2));
+            CraftDataHandler.SetItemSize(TechType.ExosuitTorpedoArmModule, new Vector2int(3, 2));
+            CraftDataHandler.SetItemSize(TechType.ExosuitGrapplingArmModule, new Vector2int(3, 2));
+            CraftDataHandler.SetItemSize(TechType.ExosuitPropulsionArmModule, new Vector2int(3, 2));
+
 
 
 
