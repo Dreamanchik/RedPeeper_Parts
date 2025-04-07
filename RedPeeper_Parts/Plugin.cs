@@ -343,7 +343,7 @@ namespace RedPeeper_Parts
 
 
             // Материалы
-            CraftDataHandler.SetItemSize(TechType.Bleach, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.Bleach, new Vector2int(2, 2));
             CraftDataHandler.SetRecipeData(TechType.Bleach, РецептАнтисептика.GetRecipeData());
 
             CraftDataHandler.SetItemSize(TechType.PlasteelIngot, new Vector2int(3, 2));
@@ -355,7 +355,7 @@ namespace RedPeeper_Parts
             CraftDataHandler.SetItemSize(TechType.FiberMesh, new Vector2int(2, 1));
 
             CraftDataHandler.SetRecipeData(TechType.Glass, РецептСтекла.GetRecipeData());
-            CraftDataHandler.SetItemSize(TechType.Glass, new Vector2int(2, 1));
+            CraftDataHandler.SetItemSize(TechType.Glass, new Vector2int(2, 2));
 
             CraftDataHandler.SetItemSize(TechType.TitaniumIngot, new Vector2int(2, 2));
             CraftDataHandler.SetRecipeData(TechType.TitaniumIngot, РецептТитановогоСлитка.GetRecipeData());
@@ -370,7 +370,7 @@ namespace RedPeeper_Parts
 
 
             // Оборудование
-            CraftDataHandler.SetItemSize(TechType.FirstAidKit, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.FirstAidKit, new Vector2int(2, 2));
             CraftDataHandler.SetRecipeData(TechType.FirstAidKit, РецептАптечки.GetRecipeData());
 
             CraftDataHandler.SetRecipeData(TechType.Tank, РецептКислородногоБаллона.GetRecipeData());
@@ -396,11 +396,11 @@ namespace RedPeeper_Parts
 
             CraftDataHandler.SetItemSize(TechType.LEDLight, new Vector2int(1, 2));
             CraftDataHandler.SetItemSize(TechType.Flashlight, new Vector2int(1, 2));
-            CraftDataHandler.SetItemSize(TechType.Knife, new Vector2int(1, 2));
+            CraftDataHandler.SetItemSize(TechType.Knife, new Vector2int(2, 2));
             CraftDataHandler.SetItemSize(TechType.Flare, new Vector2int(1, 2));
             CraftDataHandler.SetItemSize(TechType.AirBladder, new Vector2int(2, 1));
-            CraftDataHandler.SetItemSize(TechType.DiveReel, new Vector2int(2, 1));
-            CraftDataHandler.SetItemSize(TechType.Welder, new Vector2int(2, 1));
+            CraftDataHandler.SetItemSize(TechType.DiveReel, new Vector2int(2, 2));
+            CraftDataHandler.SetItemSize(TechType.Welder, new Vector2int(2, 2));
 
 
             CraftDataHandler.SetItemSize(TechType.Scanner, new Vector2int(2, 2));
