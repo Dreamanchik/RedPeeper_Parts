@@ -6,6 +6,7 @@ using Nautilus.Utility;
 using System.Reflection;
 using UnityEngine;
 using CustomDataboxes;
+using RedPeeper;
 
 namespace RedPeeper_Parts
 {
@@ -25,6 +26,7 @@ namespace RedPeeper_Parts
 
             // Initialize custom prefabs
             InitializePrefabs();
+            StructureLoading.RegisterStructures();
 
             var harmony = new Harmony(PluginInfo.PLUGIN_GUID);
             EnergyMixinPatch.Patch(harmony);
