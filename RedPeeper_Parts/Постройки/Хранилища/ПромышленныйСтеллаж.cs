@@ -18,7 +18,7 @@ public static class ПромышленныйСтеллаж
     public static void Register()
     {
         float PlaceDistance = 5;
-        float MinPlaceDistance = 1;
+        float MinPlaceDistance = 1.5f;
         float MaxPlaceDistance = 10;
         CustomPrefab prefab = new CustomPrefab(Info);
         CloneTemplate clone = new CloneTemplate(Info, "33acd899-72fe-4a98-85f9-b6811974fbeb");
@@ -28,6 +28,7 @@ public static class ПромышленныйСтеллаж
             ConstructableFlags constructableFlags = ConstructableFlags.Inside | ConstructableFlags.Rotatable | ConstructableFlags.Ground;
 
             GameObject gameObject = obj.transform.Find("biodome_lab_shelf_01").gameObject;
+            GameObject model = gameObject.transform.Find("biodome_lab_shelf_01").gameObject;
 
             Constructable constructable = PrefabUtils.AddConstructable(obj, Info.TechType, constructableFlags, gameObject);
             constructable.placeDefaultDistance = PlaceDistance;
@@ -46,6 +47,11 @@ public static class ПромышленныйСтеллаж
             storageRoot.name = "StorageRoot";
             ChildObjectIdentifier childObjectIdentifier = storageRoot.EnsureComponent<ChildObjectIdentifier>();
             storageContainer.storageRoot = childObjectIdentifier;
+
+            MeshFilter MshFlt = model.GetComponent<MeshFilter>();
+            Bounds bounds = MshFlt.sharedMesh.bounds;
+            ConstructableBounds Coll = obj.AddComponent<ConstructableBounds>();
+            Coll.bounds = new OrientedBounds(new Vector3(bounds.center.x, bounds.center.y + 1, bounds.center.z), new Quaternion(0 ,0 ,0, 0), new Vector3(bounds.size.x / 2.5f, bounds.size.y / 2.5f, bounds.size.z / 2.5f));
         };
         prefab.SetGameObject(clone);
         prefab.SetPdaGroupCategory(TechGroup.InteriorModules, TechCategory.InteriorModule);
