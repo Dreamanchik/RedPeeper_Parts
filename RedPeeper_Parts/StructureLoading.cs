@@ -5,7 +5,6 @@ using Nautilus.Handlers;
 using Newtonsoft.Json;
 using RedPeeper.StructureFormat;
 using RedPeeper_Parts;
-using RedPeeper.StructureFormat;
 
 namespace RedPeeper;
 
