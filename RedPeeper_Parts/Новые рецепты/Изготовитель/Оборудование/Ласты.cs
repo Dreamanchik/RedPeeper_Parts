@@ -11,7 +11,7 @@ public class РецептЛаст
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Silicone, 4),
+            new Ingredient(TechType.Silicone, 4),
         }
         };
     }

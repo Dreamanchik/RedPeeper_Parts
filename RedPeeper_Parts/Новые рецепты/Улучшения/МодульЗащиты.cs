@@ -9,9 +9,9 @@ public class РецептБрониТранспорта
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.Titanium, 4),
-                new CraftData.Ingredient(TechType.Lead, 2),
-                new CraftData.Ingredient(TechType.Lithium, 2)
+                new Ingredient(TechType.Titanium, 4),
+                new Ingredient(TechType.Lead, 2),
+                new Ingredient(TechType.Lithium, 2)
             }
         };
     }

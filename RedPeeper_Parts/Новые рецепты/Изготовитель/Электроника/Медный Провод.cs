@@ -11,8 +11,8 @@ public class РецептМедногоПровода
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Copper, 3),
-            new CraftData.Ingredient(TechType.AcidMushroom, 2),
+            new Ingredient(TechType.Copper, 3),
+            new Ingredient(TechType.AcidMushroom, 2),
         }
         };
     }

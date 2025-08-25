@@ -10,7 +10,7 @@ public class РецептСолнечнойЗарядки
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.AdvancedWiringKit, 1),
+                new Ingredient(TechType.AdvancedWiringKit, 1),
                 new Ingredient(СолнечнаяЯчейка.Info.TechType, 1),
             }
         };

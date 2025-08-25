@@ -13,7 +13,7 @@ public class РецептСолнечнойПанели
             Ingredients =
         {
             new Ingredient(СолнечнаяЯчейка.Info.TechType, 2),
-            new CraftData.Ingredient(TechType.Titanium, 2),
+            new Ingredient(TechType.Titanium, 2),
         }
         };
     }

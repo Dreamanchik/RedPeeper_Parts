@@ -11,9 +11,9 @@ public class РецептСмазки
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.BluePalmSeed, 2),
-            new CraftData.Ingredient(TechType.CreepvineSeedCluster, 1),
-            new CraftData.Ingredient(TechType.AcidMushroom, 2),
+            new Ingredient(TechType.BluePalmSeed, 2),
+            new Ingredient(TechType.CreepvineSeedCluster, 1),
+            new Ingredient(TechType.AcidMushroom, 2),
         }
         };
     }

@@ -10,9 +10,9 @@ public class РецептЛитийИоннойБатареи
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Battery, 1),
-            new CraftData.Ingredient(TechType.Lithium, 4),
-            new CraftData.Ingredient(TechType.Polyaniline, 1),
+            new Ingredient(TechType.Battery, 1),
+            new Ingredient(TechType.Lithium, 4),
+            new Ingredient(TechType.Polyaniline, 1),
         }
         };
     }

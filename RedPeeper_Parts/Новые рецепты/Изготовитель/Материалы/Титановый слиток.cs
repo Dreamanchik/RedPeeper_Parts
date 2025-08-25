@@ -11,7 +11,7 @@ public class РецептТитановогоСлитка
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 20)
+            new Ingredient(TechType.Titanium, 20)
         }
         };
     }

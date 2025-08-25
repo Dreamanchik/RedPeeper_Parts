@@ -11,9 +11,9 @@ public class РецептРебризера
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.WiringKit, 1),
-            new CraftData.Ingredient(TechType.FiberMesh, 2),
-            new CraftData.Ingredient(TechType.Silicone, 2),
+            new Ingredient(TechType.WiringKit, 1),
+            new Ingredient(TechType.FiberMesh, 2),
+            new Ingredient(TechType.Silicone, 2),
         }
         };
     }

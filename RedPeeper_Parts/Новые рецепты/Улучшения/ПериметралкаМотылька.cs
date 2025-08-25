@@ -10,9 +10,9 @@ public class РецептЭлектрообороны
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.Gold, 4),
+                new Ingredient(TechType.Gold, 4),
                 new Ingredient(ЭлТкань.Info.TechType, 1),
-                new CraftData.Ingredient(TechType.ShellGrassSeed, 2)
+                new Ingredient(TechType.ShellGrassSeed, 2)
             }
         };
     }

@@ -42,9 +42,9 @@ public class МеднаяБатарейка : IBattery
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Titanium),
-            new Ingredient(TechType.Copper),
-            new Ingredient(НакопительныйКонцентрат.Info.TechType)
+            new Ingredient(TechType.Titanium, 1),
+            new Ingredient(TechType.Copper, 1),
+            new Ingredient(НакопительныйКонцентрат.Info.TechType, 1)
 
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)

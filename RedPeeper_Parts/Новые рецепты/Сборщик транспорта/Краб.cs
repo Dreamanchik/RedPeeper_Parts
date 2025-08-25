@@ -16,8 +16,8 @@ public class РецептКраба
             new Ingredient(НогаКраба.Info.TechType, 2),
             new Ingredient(КомпДавл.Info.TechType, 1),
             new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1),
-            new CraftData.Ingredient(TechType.PlasteelIngot, 1),
-            new CraftData.Ingredient(TechType.Nickel, 2),
+            new Ingredient(TechType.PlasteelIngot, 1),
+            new Ingredient(TechType.Nickel, 2),
         }
         };
     }

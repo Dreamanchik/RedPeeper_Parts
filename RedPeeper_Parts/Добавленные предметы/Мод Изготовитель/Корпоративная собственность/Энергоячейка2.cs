@@ -58,7 +58,7 @@ public class РецептЭнергоячейки2
 
             Ingredients =
         {
-            new CraftData.Ingredient(АналоговаяБатарея.Info.TechType, 1),
+            new Ingredient(АналоговаяБатарея.Info.TechType, 1),
             new Ingredient(TechType.Silicone, 1),
         }
         };

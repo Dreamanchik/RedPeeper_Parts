@@ -11,10 +11,10 @@ public class РецептМодуляГлубиныПогруженияМоты�
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.VehicleHullModule2, 1),
-            new CraftData.Ingredient(TechType.PlasteelIngot, 1),
-            new CraftData.Ingredient(TechType.Aerogel, 1),
-            new CraftData.Ingredient(TechType.AramidFibers, 1),
+            new Ingredient(TechType.VehicleHullModule2, 1),
+            new Ingredient(TechType.PlasteelIngot, 1),
+            new Ingredient(TechType.Aerogel, 1),
+            new Ingredient(TechType.AramidFibers, 1),
             new Ingredient(СывороткаПлоти.Info.TechType, 1),
         }
         };

@@ -10,7 +10,7 @@ public class РецептЛестницы
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 2),
+            new Ingredient(TechType.Titanium, 2),
         }
         };
     }

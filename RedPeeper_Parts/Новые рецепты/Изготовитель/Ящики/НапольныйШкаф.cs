@@ -11,8 +11,8 @@ public class РецептНапольногоШкафа
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 6),
-            new CraftData.Ingredient(TechType.Glass, 1),
+            new Ingredient(TechType.Titanium, 6),
+            new Ingredient(TechType.Glass, 1),
         }
         };
     }

@@ -11,9 +11,9 @@ public class РецептСверхскользкихЛаст
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Fins, 1),
-            new CraftData.Ingredient(TechType.AluminumOxide, 2),
-            new CraftData.Ingredient(TechType.Aerogel, 1),
+            new Ingredient(TechType.Fins, 1),
+            new Ingredient(TechType.AluminumOxide, 2),
+            new Ingredient(TechType.Aerogel, 1),
             new Ingredient(АмоГель.Info.TechType, 1),
         }
         };

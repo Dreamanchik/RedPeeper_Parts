@@ -11,8 +11,8 @@ public class РецептФонарика
 
             Ingredients =
         {
-            new CraftData.Ingredient(МеднаяБатарейка.Info.TechType),
-            new CraftData.Ingredient(TechType.Glass)
+            new Ingredient(МеднаяБатарейка.Info.TechType, 1),
+            new Ingredient(TechType.Glass, 1)
         }
         };
     }

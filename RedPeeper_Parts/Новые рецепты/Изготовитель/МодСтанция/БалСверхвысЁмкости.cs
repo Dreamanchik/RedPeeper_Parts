@@ -11,10 +11,10 @@ public class РецептБаллонаСверхвысокойЁмкости
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.DoubleTank, 1),
-            new CraftData.Ingredient(TechType.PlasteelIngot, 1),
-            new CraftData.Ingredient(TechType.AluminumOxide, 2),
-            new CraftData.Ingredient(TechType.Benzene, 1),
+            new Ingredient(TechType.DoubleTank, 1),
+            new Ingredient(TechType.PlasteelIngot, 1),
+            new Ingredient(TechType.AluminumOxide, 2),
+            new Ingredient(TechType.Benzene, 1),
             new Ingredient(КомпДавл.Info.TechType, 1),
         }
         };

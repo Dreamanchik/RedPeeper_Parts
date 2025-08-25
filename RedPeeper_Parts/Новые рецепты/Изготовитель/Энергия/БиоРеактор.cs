@@ -13,10 +13,10 @@ public class РецептБиоРеактора
             Ingredients =
         {
             new Ingredient(ПищФер.Info.TechType, 1),
-            new CraftData.Ingredient(TechType.TitaniumIngot, 1),
-            new CraftData.Ingredient(TechType.Lead, 1),
-            new CraftData.Ingredient(TechType.Lubricant, 2),
-            new CraftData.Ingredient(TechType.WiringKit, 1),
+            new Ingredient(TechType.TitaniumIngot, 1),
+            new Ingredient(TechType.Lead, 1),
+            new Ingredient(TechType.Lubricant, 2),
+            new Ingredient(TechType.WiringKit, 1),
         }
         };
     }

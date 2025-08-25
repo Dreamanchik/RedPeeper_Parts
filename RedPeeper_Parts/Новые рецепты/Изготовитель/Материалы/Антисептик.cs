@@ -11,8 +11,8 @@ public class РецептАнтисептика
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.CoralChunk, 3),
-            new CraftData.Ingredient(TechType.Salt, 2),
+            new Ingredient(TechType.CoralChunk, 3),
+            new Ingredient(TechType.Salt, 2),
         }
         };
     }

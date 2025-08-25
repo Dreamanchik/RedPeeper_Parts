@@ -12,9 +12,9 @@ public class РецептСтроителя
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Silicone, 2),
-            new CraftData.Ingredient(TechType.Titanium, 2),
-            new CraftData.Ingredient(TechType.WiringKit, 1),
+            new Ingredient(TechType.Silicone, 2),
+            new Ingredient(TechType.Titanium, 2),
+            new Ingredient(TechType.WiringKit, 1),
             new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1),
         }
         };

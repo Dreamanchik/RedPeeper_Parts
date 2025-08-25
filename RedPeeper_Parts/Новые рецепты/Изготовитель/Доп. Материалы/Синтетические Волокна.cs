@@ -11,9 +11,9 @@ public class РецептСинтетическихВолокон
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Benzene, 2),
-            new CraftData.Ingredient(TechType.FiberMesh, 3),
-            new CraftData.Ingredient(TechType.KooshChunk, 2)
+            new Ingredient(TechType.Benzene, 2),
+            new Ingredient(TechType.FiberMesh, 3),
+            new Ingredient(TechType.KooshChunk, 2)
         }
         };
     }

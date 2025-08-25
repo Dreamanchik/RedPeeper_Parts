@@ -54,7 +54,7 @@ public class НогаКраба
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Titanium)
+            new Ingredient(TechType.Titanium, 1)
 
             ))
             .WithCraftingTime(20f);

@@ -11,8 +11,8 @@ public class РецептНастенногоШкафа
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 4),
-            new CraftData.Ingredient(TechType.Copper, 1),
+            new Ingredient(TechType.Titanium, 4),
+            new Ingredient(TechType.Copper, 1),
         }
         };
     }

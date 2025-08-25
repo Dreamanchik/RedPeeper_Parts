@@ -44,7 +44,7 @@ public class ПространственныйПроцессор
             new Ingredient(TechType.UraniniteCrystal, 4),
             new Ingredient(TechType.PrecursorIonCrystal, 3),
             new Ingredient(TechType.AdvancedWiringKit, 1),
-            new CraftData.Ingredient(ДвухфакторныйИнициализатор.Info.TechType)
+            new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1)
 
             ))
             .WithCraftingTime(10f);
@@ -71,7 +71,7 @@ public class РецептПроцессор
             new Ingredient(TechType.UraniniteCrystal, 4),
             new Ingredient(TechType.PrecursorIonCrystal, 3),
             new Ingredient(TechType.AdvancedWiringKit, 1),
-            new CraftData.Ingredient(ДвухфакторныйИнициализатор.Info.TechType)
+            new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1)
         }
         };
     }

@@ -11,9 +11,9 @@ public class РецептАптечки
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.FiberMesh, 2),
-            new CraftData.Ingredient(TechType.Bleach, 1),
-            new CraftData.Ingredient(TechType.JellyPlant, 1),
+            new Ingredient(TechType.FiberMesh, 2),
+            new Ingredient(TechType.Bleach, 1),
+            new Ingredient(TechType.JellyPlant, 1),
         }
         };
     }

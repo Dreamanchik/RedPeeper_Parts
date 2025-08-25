@@ -10,9 +10,9 @@ public class РецептТермоРеактора
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.Polyaniline, 2),
-                new CraftData.Ingredient(TechType.Kyanite, 4),
-                new CraftData.Ingredient(TechType.AdvancedWiringKit, 1),
+                new Ingredient(TechType.Polyaniline, 2),
+                new Ingredient(TechType.Kyanite, 4),
+                new Ingredient(TechType.AdvancedWiringKit, 1),
                 new Ingredient(БиоТерм.Info.TechType, 2),
             }
         };

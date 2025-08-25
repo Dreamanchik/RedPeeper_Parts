@@ -11,10 +11,10 @@ public class РецептСтержняРеактора
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 3),
-            new CraftData.Ingredient(TechType.Lead, 4),
-            new CraftData.Ingredient(TechType.Glass, 2),
-            new CraftData.Ingredient(TechType.UraniniteCrystal, 6)
+            new Ingredient(TechType.Titanium, 3),
+            new Ingredient(TechType.Lead, 4),
+            new Ingredient(TechType.Glass, 2),
+            new Ingredient(TechType.UraniniteCrystal, 6)
         }
         };
     }

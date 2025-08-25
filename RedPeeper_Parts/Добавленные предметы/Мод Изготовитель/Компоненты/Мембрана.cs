@@ -46,8 +46,8 @@ public class СолнечнаяЯчейкаДатабокс
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new CraftData.Ingredient(Герметик.Info.TechType),
-            new CraftData.Ingredient(TechType.MembrainTreeSeed, 2)
+            new Ingredient(Герметик.Info.TechType, 1),
+            new Ingredient(TechType.MembrainTreeSeed, 2)
 
             ))
             .WithCraftingTime(5f);
@@ -70,8 +70,8 @@ public class РецептМембраны
 
             Ingredients =
         {
-            new CraftData.Ingredient(Герметик.Info.TechType),
-            new CraftData.Ingredient(TechType.MembrainTreeSeed, 2)
+            new Ingredient(Герметик.Info.TechType, 1),
+            new Ingredient(TechType.MembrainTreeSeed, 2)
         }
         };
     }

@@ -10,9 +10,9 @@ public class РецептПласталевогоСлитка
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.TitaniumIngot, 1),
-            new CraftData.Ingredient(TechType.Lithium, 4),
-            new CraftData.Ingredient(TechType.Diamond, 2),
+            new Ingredient(TechType.TitaniumIngot, 1),
+            new Ingredient(TechType.Lithium, 4),
+            new Ingredient(TechType.Diamond, 2),
         }
         };
     }

@@ -10,9 +10,9 @@ public class РецептРеактивныхУскорителей
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.TitaniumIngot, 1),
-                new CraftData.Ingredient(TechType.Nickel, 4),
-                new CraftData.Ingredient(TechType.Sulphur, 6),
+                new Ingredient(TechType.TitaniumIngot, 1),
+                new Ingredient(TechType.Nickel, 4),
+                new Ingredient(TechType.Sulphur, 6),
                 new Ingredient(АмоГель.Info.TechType, 2),
             }
         };

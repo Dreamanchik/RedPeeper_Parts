@@ -11,8 +11,8 @@ public class РецептЭнергоячейки
 
             Ingredients =
         {
-            new CraftData.Ingredient(МеднаяБатарейка.Info.TechType, 2),
-            new CraftData.Ingredient(TechType.Silicone, 1)
+            new Ingredient(МеднаяБатарейка.Info.TechType, 2),
+            new Ingredient(TechType.Silicone, 1)
         }
         };
     }

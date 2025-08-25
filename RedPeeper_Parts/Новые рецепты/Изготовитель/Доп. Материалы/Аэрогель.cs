@@ -11,10 +11,10 @@ public class РецептАэрогеля
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.JellyPlant, 5),
-            new CraftData.Ingredient(TechType.AluminumOxide, 3),
-            new CraftData.Ingredient(TechType.SeaCrownSeed, 2),
-            new CraftData.Ingredient(TechType.Quartz, 2)
+            new Ingredient(TechType.JellyPlant, 5),
+            new Ingredient(TechType.AluminumOxide, 3),
+            new Ingredient(TechType.SeaCrownSeed, 2),
+            new Ingredient(TechType.Quartz, 2)
         }
         };
     }

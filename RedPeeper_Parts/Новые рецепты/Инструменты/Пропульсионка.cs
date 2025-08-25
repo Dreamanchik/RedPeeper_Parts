@@ -12,8 +12,8 @@ public class РецептПропульсионнойПушки
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Silicone, 1),
-            new CraftData.Ingredient(TechType.Titanium, 2),
+            new Ingredient(TechType.Silicone, 1),
+            new Ingredient(TechType.Titanium, 2),
             new Ingredient(ПространственныйПроцессор.Info.TechType, 1),
         }
         };

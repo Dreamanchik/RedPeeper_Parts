@@ -11,9 +11,9 @@ public class РецептЭмалевогоСтекла
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Glass, 2),
-            new CraftData.Ingredient(TechType.Lead, 3),
-            new CraftData.Ingredient(TechType.StalkerTooth, 1),
+            new Ingredient(TechType.Glass, 2),
+            new Ingredient(TechType.Lead, 3),
+            new Ingredient(TechType.StalkerTooth, 1),
         }
         };
     }

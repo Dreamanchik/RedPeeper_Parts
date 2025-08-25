@@ -10,9 +10,9 @@ public class РецептПереборки
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 2),
-            new CraftData.Ingredient(TechType.Lead, 2),
-            new CraftData.Ingredient(TechType.Silicone, 2),
+            new Ingredient(TechType.Titanium, 2),
+            new Ingredient(TechType.Lead, 2),
+            new Ingredient(TechType.Silicone, 2),
         }
         };
     }

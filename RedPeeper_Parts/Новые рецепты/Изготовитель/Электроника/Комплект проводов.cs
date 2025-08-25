@@ -11,10 +11,10 @@ public class РецептКомплектаПроводов
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Silver, 4),
-            new CraftData.Ingredient(TechType.CopperWire, 1),
-            new CraftData.Ingredient(TechType.Silicone, 2),
-            new CraftData.Ingredient(TechType.Gold, 2)
+            new Ingredient(TechType.Silver, 4),
+            new Ingredient(TechType.CopperWire, 1),
+            new Ingredient(TechType.Silicone, 2),
+            new Ingredient(TechType.Gold, 2)
         }
         };
     }

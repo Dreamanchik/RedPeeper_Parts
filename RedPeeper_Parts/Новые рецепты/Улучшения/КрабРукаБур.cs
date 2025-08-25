@@ -10,10 +10,10 @@ public class РецептБуровойРуки
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.PlasteelIngot, 2),
-                new CraftData.Ingredient(TechType.AdvancedWiringKit, 1),
+                new Ingredient(TechType.PlasteelIngot, 2),
+                new Ingredient(TechType.AdvancedWiringKit, 1),
                 new Ingredient(СывороткаПлоти.Info.TechType, 1),
-                new CraftData.Ingredient(TechType.Diamond, 4)
+                new Ingredient(TechType.Diamond, 4)
             }
         };
     }

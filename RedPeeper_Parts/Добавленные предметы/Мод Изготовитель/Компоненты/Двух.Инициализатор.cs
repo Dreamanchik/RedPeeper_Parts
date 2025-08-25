@@ -41,8 +41,8 @@ public class ДвухфакторныйИнициализатор
 
             (new Ingredient(TechType.Magnetite, 5),
             new Ingredient(TechType.CopperWire, 3),
-            new Ingredient(TechType.WiringKit),
-            new Ingredient(TechType.ComputerChip)
+            new Ingredient(TechType.WiringKit, 1),
+            new Ingredient(TechType.ComputerChip, 1)
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab("Resources", "Electronics")
@@ -68,8 +68,8 @@ public class РецептИнициализатор
         {
             new Ingredient(TechType.Magnetite, 5),
             new Ingredient(TechType.CopperWire, 3),
-            new Ingredient(TechType.WiringKit),
-            new Ingredient(TechType.ComputerChip)
+            new Ingredient(TechType.WiringKit, 1),
+            new Ingredient(TechType.ComputerChip, 1)
         }
         };
     }

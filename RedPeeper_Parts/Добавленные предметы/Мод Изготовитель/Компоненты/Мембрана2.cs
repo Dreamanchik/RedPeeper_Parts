@@ -39,7 +39,7 @@ public class Мембрана2
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
             //    РЕЦЕПТ НАЧАЛО
-            new CraftData.Ingredient(TechType.Titanium, 1000)
+            new Ingredient(TechType.Titanium, 1000)
             //    РЕЦЕПТ КОНЕЦ
             ))
             //.WithFabricatorType(CraftTree.Type.Fabricator)
@@ -52,7 +52,7 @@ public class Мембрана2
     /*public static RecipeData GetRecipeData()
     {
         return new RecipeData(
-            new CraftData.Ingredient(Герметик.Info.TechType),
+            new Ingredient(Герметик.Info.TechType),
             new Ingredient(TechType.MembrainTreeSeed, 2)
         );
     }*/
@@ -76,7 +76,7 @@ public class РецептМембраны2
 
             Ingredients =
         {
-            new CraftData.Ingredient(ОкаменелостиРифоспинов.Info.TechType, 2)
+            new Ingredient(ОкаменелостиРифоспинов.Info.TechType, 2)
         }
         };
     }

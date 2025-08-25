@@ -11,9 +11,9 @@ public class РецептМикросхемы
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.WiringKit, 2),
-            new CraftData.Ingredient(TechType.JeweledDiskPiece, 4),
-            new CraftData.Ingredient(TechType.SpikePlantSeed, 2),
+            new Ingredient(TechType.WiringKit, 2),
+            new Ingredient(TechType.JeweledDiskPiece, 4),
+            new Ingredient(TechType.SpikePlantSeed, 2),
         }
         };
     }

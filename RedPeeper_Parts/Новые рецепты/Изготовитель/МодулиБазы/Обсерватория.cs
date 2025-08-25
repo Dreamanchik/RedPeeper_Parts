@@ -10,8 +10,8 @@ public class РецептОбсеватории
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 1),
-            new CraftData.Ingredient(TechType.EnameledGlass, 1),
+            new Ingredient(TechType.Titanium, 1),
+            new Ingredient(TechType.EnameledGlass, 1),
         }
         };
     }

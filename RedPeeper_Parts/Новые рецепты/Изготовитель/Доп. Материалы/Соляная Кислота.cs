@@ -11,9 +11,9 @@ public class РецептСолянойКислоты
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.WhiteMushroom, 6),
-            new CraftData.Ingredient(TechType.Salt, 3),
-            new CraftData.Ingredient(TechType.PurpleFanSeed, 2)
+            new Ingredient(TechType.WhiteMushroom, 6),
+            new Ingredient(TechType.Salt, 3),
+            new Ingredient(TechType.PurpleFanSeed, 2)
         }
         };
     }

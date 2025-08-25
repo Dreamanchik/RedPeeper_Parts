@@ -11,8 +11,8 @@ public class РецептСтекла
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Quartz, 2),
-            new CraftData.Ingredient(TechType.CoralChunk, 1),
+            new Ingredient(TechType.Quartz, 2),
+            new Ingredient(TechType.CoralChunk, 1),
         }
         };
     }

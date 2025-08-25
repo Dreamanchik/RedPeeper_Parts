@@ -42,9 +42,9 @@ public class СветоваяБатарейка : IBattery
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Diamond),
+            new Ingredient(TechType.Diamond, 1),
             new Ingredient(СолнечнаяЯчейкаДатабокс.Info.TechType, 2),
-            new Ingredient(МеднаяБатарейка.Info.TechType)
+            new Ingredient(МеднаяБатарейка.Info.TechType, 1)
 
             ))
             .WithStepsToFabricatorTab("Resources", "BasicMaterials")

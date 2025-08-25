@@ -32,7 +32,7 @@ public class НакопительныйКонцентрат
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Titanium)
+            new Ingredient(TechType.Titanium, 1)
 
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)

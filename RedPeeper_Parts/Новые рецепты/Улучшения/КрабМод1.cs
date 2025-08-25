@@ -10,9 +10,9 @@ public class РецептКорпусаЭкзокостюма1
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.PlasteelIngot, 1),
-                new CraftData.Ingredient(TechType.Nickel, 2),
-                new CraftData.Ingredient(TechType.AluminumOxide, 4),
+                new Ingredient(TechType.PlasteelIngot, 1),
+                new Ingredient(TechType.Nickel, 2),
+                new Ingredient(TechType.AluminumOxide, 4),
                 new Ingredient(СывороткаПлоти.Info.TechType, 1),
                 new Ingredient(КомпДавл.Info.TechType, 1),
             }

@@ -11,8 +11,8 @@ public class РецептОгнетушителя
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 1),
-            new CraftData.Ingredient(TechType.CoralChunk, 2),
+            new Ingredient(TechType.Titanium, 1),
+            new Ingredient(TechType.CoralChunk, 2),
         }
         };
     }

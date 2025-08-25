@@ -11,12 +11,12 @@ public class РецептРасширенногоКомплектаПровод�
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.ComputerChip, 2),
-            new CraftData.Ingredient(TechType.Quartz, 3),
-            new CraftData.Ingredient(TechType.WiringKit, 2),
-            new CraftData.Ingredient(TechType.Polyaniline, 1),
-            new CraftData.Ingredient(TechType.Benzene, 2),
-            new CraftData.Ingredient(TechType.Gold, 3)
+            new Ingredient(TechType.ComputerChip, 2),
+            new Ingredient(TechType.Quartz, 3),
+            new Ingredient(TechType.WiringKit, 2),
+            new Ingredient(TechType.Polyaniline, 1),
+            new Ingredient(TechType.Benzene, 2),
+            new Ingredient(TechType.Gold, 3)
         }
         };
     }

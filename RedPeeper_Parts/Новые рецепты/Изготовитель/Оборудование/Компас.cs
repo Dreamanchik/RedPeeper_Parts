@@ -11,8 +11,8 @@ public class РецептКомпаса
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.WiringKit, 1),
-            new CraftData.Ingredient(TechType.Magnetite, 2),
+            new Ingredient(TechType.WiringKit, 1),
+            new Ingredient(TechType.Magnetite, 2),
         }
         };
     }

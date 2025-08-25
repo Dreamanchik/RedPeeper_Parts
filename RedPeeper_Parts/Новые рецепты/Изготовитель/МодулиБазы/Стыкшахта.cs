@@ -10,11 +10,11 @@ public class РецептСтыковочнойШахты
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.TitaniumIngot, 1),
-            new CraftData.Ingredient(TechType.Lead, 4),
-            new CraftData.Ingredient(TechType.Lubricant, 2),
-            new CraftData.Ingredient(TechType.ComputerChip, 1),
-            new CraftData.Ingredient(TechType.WiringKit, 1),
+            new Ingredient(TechType.TitaniumIngot, 1),
+            new Ingredient(TechType.Lead, 4),
+            new Ingredient(TechType.Lubricant, 2),
+            new Ingredient(TechType.ComputerChip, 1),
+            new Ingredient(TechType.WiringKit, 1),
         }
         };
     }

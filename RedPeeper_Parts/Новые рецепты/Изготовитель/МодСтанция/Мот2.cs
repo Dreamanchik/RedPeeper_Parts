@@ -11,10 +11,10 @@ public class РецептМодуляГлубиныПогруженияМоты�
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.VehicleHullModule1, 1),
-            new CraftData.Ingredient(TechType.TitaniumIngot, 1),
-            new CraftData.Ingredient(TechType.Magnetite, 4),
-            new CraftData.Ingredient(TechType.EnameledGlass, 1),
+            new Ingredient(TechType.VehicleHullModule1, 1),
+            new Ingredient(TechType.TitaniumIngot, 1),
+            new Ingredient(TechType.Magnetite, 4),
+            new Ingredient(TechType.EnameledGlass, 1),
             new Ingredient(КомпДавл.Info.TechType, 1),
         }
         };

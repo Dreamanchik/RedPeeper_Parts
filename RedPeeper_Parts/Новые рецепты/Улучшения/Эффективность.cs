@@ -10,8 +10,8 @@ public class РецептУлучшенияЭнергии
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.AluminumOxide, 2),
-                new CraftData.Ingredient(TechType.UraniniteCrystal, 1),
+                new Ingredient(TechType.AluminumOxide, 2),
+                new Ingredient(TechType.UraniniteCrystal, 1),
                 new Ingredient(АмоГель.Info.TechType, 1),
             }
         };

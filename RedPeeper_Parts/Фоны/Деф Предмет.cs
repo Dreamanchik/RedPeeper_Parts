@@ -28,7 +28,7 @@ public class Предмет
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Titanium)
+            new Ingredient(TechType.Titanium, 1)
 
             ))
             .WithFabricatorType(CraftTree.Type.Fabricator)
@@ -52,7 +52,7 @@ public class РецептПредмет
 
             Ingredients =
         {
-            new CraftData.Ingredient(НакопительныйКонцентрат.Info.TechType),
+            new Ingredient(НакопительныйКонцентрат.Info.TechType, 1),
             new Ingredient(TechType.Titanium, 1),
         }
         };

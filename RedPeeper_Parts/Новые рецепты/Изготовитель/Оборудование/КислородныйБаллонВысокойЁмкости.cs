@@ -11,10 +11,10 @@ public class РецептКислородногоБаллонаВысокойЁ�
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Tank, 1),
-            new CraftData.Ingredient(TechType.Lithium, 4),
-            new CraftData.Ingredient(TechType.ComputerChip, 1),
-            new CraftData.Ingredient(TechType.SnakeMushroomSpore, 4),
+            new Ingredient(TechType.Tank, 1),
+            new Ingredient(TechType.Lithium, 4),
+            new Ingredient(TechType.ComputerChip, 1),
+            new Ingredient(TechType.SnakeMushroomSpore, 4),
         }
         };
     }

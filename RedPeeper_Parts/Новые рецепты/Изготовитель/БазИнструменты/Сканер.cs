@@ -11,8 +11,8 @@ public class РецептСканера
 
             Ingredients =
         {
-            new CraftData.Ingredient(МеднаяБатарейка.Info.TechType),
-            new CraftData.Ingredient(TechType.Titanium, 2)
+            new Ingredient(МеднаяБатарейка.Info.TechType, 1),
+            new Ingredient(TechType.Titanium, 2)
         }
         };
     }

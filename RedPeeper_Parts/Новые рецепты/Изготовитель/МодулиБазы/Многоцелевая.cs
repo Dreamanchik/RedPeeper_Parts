@@ -10,8 +10,8 @@ public class РецептМногоцелевойКомнаты
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.TitaniumIngot, 1),
-            new CraftData.Ingredient(TechType.Lead, 3),
+            new Ingredient(TechType.TitaniumIngot, 1),
+            new Ingredient(TechType.Lead, 3),
         }
         };
     }

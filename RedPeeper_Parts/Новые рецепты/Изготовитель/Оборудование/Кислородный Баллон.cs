@@ -10,9 +10,9 @@ public class РецептКислородногоБаллона
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 8),
-            new CraftData.Ingredient(TechType.Glass, 1),
-            new CraftData.Ingredient(TechType.Silicone, 1),
+            new Ingredient(TechType.Titanium, 8),
+            new Ingredient(TechType.Glass, 1),
+            new Ingredient(TechType.Silicone, 1),
         }
         };
     }

@@ -11,9 +11,9 @@ public class РецептПолианилина
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.HydrochloricAcid, 2),
-            new CraftData.Ingredient(TechType.Gold, 3),
-            new CraftData.Ingredient(TechType.Silver, 2)
+            new Ingredient(TechType.HydrochloricAcid, 2),
+            new Ingredient(TechType.Gold, 3),
+            new Ingredient(TechType.Silver, 2)
         }
         };
     }

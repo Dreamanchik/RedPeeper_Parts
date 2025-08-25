@@ -11,8 +11,8 @@ public class РецептЛёгкогоБаллонаВысокойЁмкост�
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.DoubleTank, 1),
-            new CraftData.Ingredient(TechType.TitaniumIngot, 1),
+            new Ingredient(TechType.DoubleTank, 1),
+            new Ingredient(TechType.TitaniumIngot, 1),
             new Ingredient(КомпДавл.Info.TechType, 1),
         }
         };

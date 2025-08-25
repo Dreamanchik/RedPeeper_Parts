@@ -11,9 +11,9 @@ public class РецептВодоотчистнойСтанции
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Titanium, 1),
-            new CraftData.Ingredient(TechType.CopperWire, 2),
-            new CraftData.Ingredient(TechType.Aerogel, 1),
+            new Ingredient(TechType.Titanium, 1),
+            new Ingredient(TechType.CopperWire, 2),
+            new Ingredient(TechType.Aerogel, 1),
             new Ingredient(АмоГель.Info.TechType, 1),
         }
         };

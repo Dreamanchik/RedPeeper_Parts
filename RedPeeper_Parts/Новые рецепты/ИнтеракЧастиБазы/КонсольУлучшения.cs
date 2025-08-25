@@ -12,8 +12,8 @@ public class РецептКонсолиУлучшения
             Ingredients =
         {
             new Ingredient(ДвухфакторныйИнициализатор.Info.TechType, 1),
-            new CraftData.Ingredient(TechType.Titanium, 4),
-            new CraftData.Ingredient(TechType.CopperWire, 1),
+            new Ingredient(TechType.Titanium, 4),
+            new Ingredient(TechType.CopperWire, 1),
         }
         };
     }

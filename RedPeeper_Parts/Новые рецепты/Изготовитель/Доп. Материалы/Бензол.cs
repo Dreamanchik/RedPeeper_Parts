@@ -11,9 +11,9 @@ public class РецептБензола
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.BloodOil, 3),
-            new CraftData.Ingredient(TechType.RedRollPlantSeed),
-            new CraftData.Ingredient(TechType.HangingFruit)
+            new Ingredient(TechType.BloodOil, 3),
+            new Ingredient(TechType.RedRollPlantSeed, 1),
+            new Ingredient(TechType.HangingFruit, 1)
         }
         };
     }

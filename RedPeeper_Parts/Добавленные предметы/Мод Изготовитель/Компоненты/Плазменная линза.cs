@@ -32,7 +32,7 @@ public class ПлазменнаяЛинза
         var _obj = new CloneTemplate(Info, TechType.Aerogel); // Перфаб
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
-            new Ingredient(TechType.Titanium)
+            new Ingredient(TechType.Titanium, 1)
             ))
             .WithCraftingTime(10f);
         _prefab.SetPdaGroupCategory(TechGroup.Resources, TechCategory.AdvancedMaterials); // КПК

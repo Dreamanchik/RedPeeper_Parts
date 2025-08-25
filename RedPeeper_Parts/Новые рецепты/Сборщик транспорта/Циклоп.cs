@@ -11,9 +11,9 @@ public class РецептЦиклопа
 
             Ingredients =
         {
-            new CraftData.Ingredient(ДвигательЦиклопа.Info.TechType),
-            new CraftData.Ingredient(МостикЦиклопа.Info.TechType),
-            new CraftData.Ingredient(КорпусЦиклопа.Info.TechType)
+            new Ingredient(ДвигательЦиклопа.Info.TechType, 1),
+            new Ingredient(МостикЦиклопа.Info.TechType, 1),
+            new Ingredient(КорпусЦиклопа.Info.TechType, 1)
         }
         };
     }

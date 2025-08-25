@@ -9,9 +9,9 @@ public class РецептМодуляХранения
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.Titanium, 4),
-                new CraftData.Ingredient(TechType.Glass, 1),
-                new CraftData.Ingredient(TechType.Lithium, 2)
+                new Ingredient(TechType.Titanium, 4),
+                new Ingredient(TechType.Glass, 1),
+                new Ingredient(TechType.Lithium, 2)
             }
         };
     }

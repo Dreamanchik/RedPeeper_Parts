@@ -12,8 +12,8 @@ public class РецептЛазерногоРезака
 
             Ingredients =
         {
-            new CraftData.Ingredient(TechType.Silicone, 3),
-            new CraftData.Ingredient(TechType.Titanium, 2),
+            new Ingredient(TechType.Silicone, 3),
+            new Ingredient(TechType.Titanium, 2),
             new Ingredient(ПлазменнаяЛинза.Info.TechType, 1),
         }
         };

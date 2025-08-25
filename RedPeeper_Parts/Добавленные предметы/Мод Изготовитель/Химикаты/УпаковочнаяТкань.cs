@@ -43,7 +43,7 @@ public class УпаковочнаяТкань : IBattery
         _prefab.SetGameObject(_obj);
         _prefab.SetRecipe(new RecipeData(
 
-            new Ingredient(TechType.Bleach),
+            new Ingredient(TechType.Bleach, 1),
             new Ingredient(СолнечнаяЯчейкаДатабокс.Info.TechType, 2)
 
             ))
